@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Gabel" script="Gabel.lua" walkinterval="2000" floorchange="0">
+<health now="100" max="100"/>
+<look type="80" head="0" body="0" legs="0" feet="0" addons="0"/>
+<parameters>
+<parameter key="message_walkaway" value="Humans..."/>
+<parameter key="idletime" value="60"/>
+<parameter key="message_farewell" value="Finally."/>
+<parameter key="message_idletimeout" value="Humans..."/>
+<parameter key="message_greet" value="Welcome, human |PLAYERNAME|, to our humble abode."/>
+<parameter key="message_farewell" value="Farewell, stranger. May Uman open your minds and your hearts to Daraman's wisdom!"/>
+</parameters>
+</npc>

@@ -1,0 +1,9 @@
+<npc name="Captain Haba" script="Captain Haba.lua" floorchange="0" walkinterval="3000" speed="140">
+	<health now="100" max="100"/>
+	<look type="98" corpse="6080"/>
+	<parameters>
+<parameter key="message_decline" value=""/>
+<parameter key="message_nothaveitem" value=""/>
+<parameter key="message_needmoremoney" value=""/>
+	</parameters>
+</npc>

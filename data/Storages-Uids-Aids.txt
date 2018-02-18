@@ -1,0 +1,458 @@
+---//////////////////////////////////////////----
+Last Used Storage = 2084
+Last Used Aid = 31257
+Last Used Uid = 31293
+Last used Global Storage = 112
+---//////////////////////////////////////////----
+---//////////////////Storages////////////////////////----
+
+---/////////////////////Aid/Uid/////////////////////----
+Annihilathor Uid Lever = 30000
+Annihilathor Uid Door = 30001
+Annihilathor Uid Reward = 30002
+Silver Key 3001 Quest Uid = 30003
+Silver Key 3003 Quest Uid = 30004
+Silver Key Quest Lever Uid = 30005
+Silver Key 3004 Quest Uid = 30006
+Silver Key 3005 Quest Uid = 30007
+Silver Key 3006 Quest Uid = 30008
+Silver Key 3007 Quest Uid = 30009
+Silver Key 3008 Quest Uid = 30010
+Golden Key 3304 Quest Uid = 30011
+Golden Key 3304 Bright Sword Quest Uid = 30012
+Bone Key 3520 Quest Uid = 30013
+Key 3600 Club Ring/Garlic Necklace Quest Uid = 30014-30015
+Silver Key 3600 Quest Uid = 30016
+Silver Key 3620 Quest Uid = 30017
+Key 3667 Bag Of Items Quest Uid = 30018
+Silver Key 3610 Quest Uid = 30019
+Key 3142 Noble/Crown helmet Quest Uid = 30020-30021
+Silver Key 3667 Quest Uid = 30022
+Copper Key 3801 Quest Uid = 30023
+Copper Key 3800 Quest Uid = 30024
+Copper Key 3802 Quest Uid = 30025
+Golden key 3980 Quest Uid = 30026
+Silver Key 4009 Quest Uid = 30027
+Senja Magic Wall Lever Uid = 30028
+Copper Key 4501 Quest Uid = 30029
+Key 4502 Broad/White Pear Quest Uid = 30030-30031
+Copper Key 4503 Quest Uid = 30032
+Dwarven Armor Quest Uid = 30033
+Vampire Shield Quest Uid = 30034-30036
+UH Quest Uid = 30037
+Dark Helmet Quest Uid = 30038
+Copper Key 4501 Quest Uid = 30039
+Scimitar/Barbarian Axe Quest Uid = 30040-30041
+Behemoth Quest Uids = 30042-30045
+Orc Leader Quest Uid = 30046
+Black Knight Quest Uids = 30047-30048
+Blood Herb Quest Uid = 30049
+Mummy Quest Uid = 30050
+Dwarven/War Hammer Quest Uids = 30051-30052
+Crusader Helmet Quest Uid = 30053
+Crystal Wand Quest Uid = 30054-30055
+Dark Armor Quest Uid = 30056
+Poison Arrow/Bow Quest Uid = 30057
+--Deeper Fibula Quests
+Tower Shield Quest Uid = 30058
+Warrior Helmet Quest Uid = 30059
+Dwarven Ring Quest Uid = 30060
+Elven Amulet Quest Uid = 30061
+Kight Axe Quest Uid = 30062
+----
+Black Knight Villa Silver Key 5010 Quest Uid = 30063
+Demon Helmet Quest Uids = 30064-30066
+Demon Helmet Quest Lever Uid = 30067
+Devil Helmet Quest Uids = 30068-30070
+Big Ruby Quest Uids = 30071-30072
+Silver Key 3002 Quest Uid = 30073
+Ice Rapier Quest Uid = 30074
+Elves Bow/Burst Arrow Quest Uids = 30075-30076
+Steel Shield Quest Uids = 30077-30078
+AB Tower Quest Uids = 30079-30082
+Brooch Quest Uid = 30083
+Simple Fanfare Quest Uid = 30084
+Dragon Necklace Quest Uid = 30085
+Fire Axe Quest Uid = 30086
+Dwarf Geomancer Quest Uids = 30087-30088
+Gaint Smithhammer Quest Uids = 30089-30090
+Griffin Shield/Dwarven Axe Quest Uids = 30091-30092
+Iron Hammer Quest Uid = 30093
+Dead Huamn Quest Uid = 30094
+Small Emerald Quest Uid = 30095
+Beholder Quest Uid = 30096
+Goblin Quest Uid = 30097
+Magician Hat Quest Uid = 30098
+Necormancer Quest Uid = 30099
+Knight Axe Quest Uids = 31000-31002
+Orc Spearman Quest Uid = 31003
+Fire Devil Quest Uid = 31004
+Ghost Ship Plate Armor Quest Uid = 31005
+Orc Leader Quest Uid = 31006
+Twohanded Sword Quest Uid = 31007
+Power Ring Quest Uids = 31008-31009
+Warlock Book Cases Quest Uids = 31010-31012
+Time Ring Quest Uids = 31013-31014
+Scale Armor Quest Uid = 31015
+Blank Runes Quest Uid = 31016
+Six Small Rubies Quest Uid = 31017
+Witches Quest Uid = 31018
+Spike Sword Quest Uid = 31019
+Protection Amulet Quest Uids = 31020-31021
+Steel Helmet Quest Uids = 31022-31024
+Desert Quest Uids = 31025-31026
+Outlaw Keys Quests Uids = 31027-31029
+10 Throwing Stars Quest Uid = 31030
+Crystal Ball Quest Uids = 31031-31033
+Traingle Tower Quest Uid = 31034
+Brass Legs Quest Uids = 31035-31036
+Voodoo Doll Quest Uid = 31037-31038
+Wedding Ring Quest Uids = 31039-31040
+Ankra White Pearl Quest Uid = 31041
+Dead Body Brass AL Quest Uid = 31042
+Copper Key 3899 Quest(Paradox Tower) Uid = 31043
+Banshee Quest Rewards Uids = 31044-31049
+Hydra Egg Quest Uid = 31050
+Stone Herb Quest Uid = 31051
+Parchment Quest Uid = 31052
+Witches Cap Spot Quest Uid = 31053
+Dark Shield/Battle Hammer Quest Uids = 31054-31055
+Naginata Quest Uid = 31056
+Battle Axe Quest Uid = 31057
+Golden Key 3304 Quest Lever Uid = 31058
+
+The Queen Of The Banshees Quest:
+	Magic Wall Levers Uids = 31059-31060
+	Dead Human Reward Uid = 31061
+
+	First Seal: The Hidden Seal
+		Enter Flame Uid = 31062
+		THe Hidden Seal Storage = 1000
+
+	Sixth Seal: The Seal of Logic
+		Enter Flame Uid = 31063
+		Campfires Levers Aid = 30000
+		The Seal of Logic Storage = 1001
+
+	Fifth Seal: The Seal of True Path
+		Enter Flame Uid = 31064
+		Tiles Effect Aid = 30001
+		Tiles Teleport Back Aid = 30002
+		The Seal of True Path Storage = 1002
+
+	Fourth Seal: The Seal of Sacrifice
+		Enter Flame Uid = 31065
+		Sacrifice Uid = 31066
+		The Seal of Sacrifice Storage = 1003
+
+	Third Seal: The Seal of Demonrage
+		Enter Flame Uid = 31067
+		summonWarlockTiles Aid = 30003
+		Warlock Tiles Storage = 1008
+		globalStorageValue = 100
+		Levers Uids = 31068-31072
+		The Seal of Demonrage Storage = 1004
+
+	Second Seal: The Plague Seal
+		Enter Flame Uid = 31073
+		Enter Teleport Aids = 30004
+		The Plague Seal Storage = 1005
+
+	Last Seal: The Kiss of the Banshee Queen
+		Enter Last Flame Uid = 31074
+		Door Aid to Doors = 30005
+		Kiss Storage = 1006
+		Last Flame Storage 1007
+
+Pits Of Inferno Quest:
+	holyTibe Quest Uid: 31081
+	graveStone Portal Uid = 31082
+	holyTible Tile Uids = 31083-31084
+	oilLever Uid = 31085
+	pickStone Uid = 31086
+	vocationPath Knight Fire Aids = 30012-30017
+	vocationPath Druid Fire Aids = 30018-30023
+	vocationPath Sorcerer Fire Aids = 30024-30029
+	vocationPath Paladin Fire Aids = 30030-30035
+	vocationLever Uids = 31087-31090
+	pitsOfInferno 15 levers Globalstorage = 101
+	all15Lever Uids = 31091-31106
+	skeletonRiddle Book Quest Uid = 31107
+	ladderLevers Uids = 31108-31109
+	ladderCreation Tile Uid = 31110
+	teleportTiles Uid = 31111-31135
+	mazeStone Lever Removal Uid = 31136-31137
+	secondTrap Uid = 31138
+	rewardSkeleton Pirate Backpack Uid = 31139
+	secondTrap Lever Uid = 31140
+	Thrones Uids/Storages = 31141-31147
+	PuminTeleport Uid = 31148
+	bazirTiles Uids = 31149-31153
+	checkThrones Uids = 31154-31160
+	shortCuts Aids = 30036-30037
+	shortCuts Storages = 1020-1021
+	Trap Aid = 30038
+	POI 3 WP Chest Reward Aid/Storage = 30039/1022
+	POI other rewards Uids = 31161-31165
+	bazir Maze Lever Uids = 31166-31176
+	fire Throne Lever Uid = 31177
+	bazir Mirror Uids = 31178-31179
+	fountain Aids = 30040
+	shortCut Door Uid = 31180
+	shortCut Door Aid = 30041
+	Pumin Teleport Storage = 1083
+
+Tombs Coalbasin Uids = 31181-31188
+
+The Ancient Tombs Quest:
+	Thalas Switches Global Storage = 102
+	Thalas Switches Aid = 30042
+	Thalas SwitchesDone Enter TP Uid = 31189
+	Thalas Poison Tile Uid = 31190
+
+	Exit Bosses Room Uids = 31191-/Ashmunrah Boss Area Teleport Uid = 31198
+	Exit Bosses Room Globalstor = 103-110
+
+	Diprath Switches Global Storage = 111
+	Diprath Switches Aid = 30043
+	Diprath SwitchesDone Enter Teleport Uid = 31199
+
+	Vashresamun Musical Instruments Aid = 30044
+	Vashresamun Musical Door Uid = 31200
+	Vashresamun Musical Instruments Storage = 1023/1024
+
+	Morguthis Flame Stepin Uids/Storages = 31201-31207/1025-1031
+	Morguthis FlamesDone Enter Teleport Uid = 31208
+
+	Rahemos Find Carrot Switch/Door Aid = 30045
+
+	Ashmunrah Boss Area Switches Aid = 30046
+	Ashmunrah Boss Area GlobalStor = 112
+
+	Craft Ancient Helmet Counter Uid = 31209
+
+	Reward Tombs Uid = 31210-31216
+	Reward Tomb Aid = 30047
+	Questlog Start Storage = 1032
+
+Mystic Flame Exit Tombs Uids = 31217-31224
+Ankra Teleport Top Pyramid Uids = 31225-31226
+
+Outfit Quests:
+	questLog Storage = 1033
+
+	Assassin Outfit Quest:
+		AssassinBaseOutfit Storage = 1034
+		AssassinFirstAddon Storage = 1035
+		AssassinSecondAddon Storage = 1036
+
+	Barbarian Addon Quest:
+		BarbarianAddon Storage = 1037
+		BarbarianAddonWaitTimer Storage = 1038
+
+	Beggar Outfit Quest:
+		BeggarBaseOutfit Storage = 1039
+		BeggarFirstAddon Storage = 1040
+		BeggarSecondAddon Storage = 1041
+		Favourite Staff Chest Uid = 31227
+		Door To Staff Uid/Storage = 31228/1042
+		BeggarBeardAddonWaitTimer = 1046
+		BeggarOutfitWaitTimer = 1047
+	
+	Citizen Addon Quest
+		CitizenBackpackAddon Storage = 1043
+		CitizenBackpackAddonWaitTimer Storage = 1044
+		CitizenHatAddon Storage = 1045
+
+	Druid Addon Quest
+		DruidBodyAddon Storage = 1048
+		DruidHatAddon Storage = 1049
+
+	Hunter Addon Quest
+		HunterBodyAddon Storage = 1051
+		HunterHatAddon Storage = 1052
+		musicSheets Storage = 1053-1056
+		teleportPiano Uid = 31230
+		ElaneCross Bow Uid = 31231
+
+	Knight Addon Quest
+		KnightSwordAddon Storage = 1057
+		KnightHatAddon Storage = 1058
+		KnightHatAddonWaitTimer Storage = 1059
+
+	Mage Addon Quest
+		MageBeltAddon Storage = 1060
+		MageTiaraAddon Storage = 1061
+		MageWandAddon Storage = 1062
+		MageWandAddonWaitTimer Storage = 1063
+
+	Nobleman Addon Quest
+		NoblemanFirstAddon Storage = 1070
+		NoblemanSecondAddon Storage = 1071
+
+	Norseman Addon Quest
+		NorsemanAddon Storage = 1072
+
+	Pirate Addon Quest
+		PirateSabreAddon Storage = 1073
+		PirateHatAddon Storage = 1074
+
+	Warrior Addon Quest
+		WarriorShoulderAddon Storage = 1075
+		WarriorShoulderTimer Storage = 1076
+		WarriorSwordAddon Storage = 1077
+
+	Wizard Addon Quest
+		WizardAddon Storage = 1078
+		
+The Ultimate Challenges
+	Questlog Storage = 1050
+	Svarground Arena Quest:
+		arena Storage = 1008
+		arenaPit Storage = 1009
+		arenaEnter Aid = 30006
+		arenaPits Aid = 30007
+		arenaExit Aid = 30008
+		arenaTrohpy Tiles Uid = 31075-31077
+		rewardDoor Uids = 31078-31080
+		chestReward Aids = 30009-30011
+		rewardStorages = 1010-1012
+		trophyStorages = 1013-1015
+		questLog Storages = 1016-1018
+
+Desert Dungeon Quest Uid = 31229
+
+Dreamer Challenge Quest
+	carrotEntrance Uids = 31232-31233
+	fireBug teleport Uid = 31234
+	deathRing Uids = 31235-31236
+	Riddle Tiles Aids = 30049-30050
+	Riddle Teleport Uid = 31237
+	wallLevers Uid = 31238-31241
+	wallsTeleport Uid = 31242
+	Book Quest Uid = 31243
+	ticTacs Create Lever Uid = 31244
+	ticTac Create Teleport Lever Aid = 30051
+	crackTeleport Uid = 31245
+	stoneLever Uid = 31246
+	stoneTeleport Uid = 31247
+	tilesTeleport Uid = 31248-31253
+	clockTiles Aid = 31247
+	rewardChets Aid = 31248
+	towerTeleports Uids = 31254-31262
+	BrotherhoodOutfit Storage = 1064
+	NightmareOutfit Storage = 1065
+	BotherhoodDoor Storage = 1066
+	NightmareDoor Storage = 1067
+	knightWatchTowerDoor Storage = 1068
+	documentsLevers Uids = 31263-31268
+	StoneTiles Sacrfice Aid = 31250
+	Reward Storage = 1079
+
+Factions Questlog Storage = 1069
+
+Thais Lighthouse Quest
+	hiddenTrapDoor Lever Uid = 31269
+	createTeleport Lever Uid = 31270
+	tileShowHiddenStair Uid = 31271
+
+Thais Sorcerer Guild Enter Tiles Aid = 31249
+
+Friends and Traders Questlog Storage = 1080
+
+The Blessed Wooden Stake Quest
+	Blessed Stake Storage = 1081
+	TheBlessedStakeWaitTime Storage = 1082
+
+Training Monks System
+	Training Monk Room Enterance Teleport Aid = 31251
+	Training Monk Room Exit Teleport Aid = 31252
+	Teleport To Training Npc Aid = 31253
+
+	Training Time Cooldown Storage = 1084
+	Training Time Left Storage = 1085
+
+Citizen Teleports Uids = 31272-31282
+
+The Djinn War Quest
+	Factions Storage = 1086
+	Faction Greeting Storage = 1087
+	
+	Madrid Faction Storage = 1088
+	Efreet Faction Storage = 1089
+
+	Madrid Faction
+		Mission 1 Storage = 1090
+		Maryza Cookbook Storage = 2002
+		Mission 2 Storage = 1091
+		Rata'Mari Storage = 1092
+		Mission 3 Storage = 1093
+		Door To Efreet Territory Storage = 1094
+		Marid Faction Door To Lamp Storage = 2003
+
+	Orc King Greeting Storage = 1095
+	Recieved Lamp Storage = 1096
+
+	Efreet Faction
+		Mission 1 Storage = 1097
+		Mission 2 Storage = 1098
+		Mission 3 Storage = 1099
+		Door To Madrid Territory Storage = 2000
+		Efreet Faction Door To Lamp Storage = 2001
+
+	Tear of Daraman Aid = 31254
+	exchangeLamp Uids = 31283-31284
+
+Xodet Give Away Rod/Wand Storage = 2004
+
+Postman Quest
+	Mission 1 Storage = 2005
+	Mission 2 Storage = 2006
+	Mission 3 Storage = 2007
+	Mission 4 Storage = 2008
+	Mission 5 Storage = 2009
+	Mission 6 Storage = 2010
+	Mission 7 Storage = 2011
+	Measurements Storages = 2018-2023
+	Mission 8 Storage = 2012
+	Mission 9 Storage = 2013
+	Mission 10 Storage = 2014
+	Rank Storage = 2015
+	Door Storage = 2016
+
+	Mission 2 Mailbox uid = 31285
+	Waldo Posthorn Quest Uid = 31286
+	Letterbag Quest Uid = 31287
+	Deliver Letterbag Mailbox Uid = 31288
+	Present Box Quest Uid = 31289
+
+Markwin Greeting Storage = 2017
+
+Ape City Quest
+	Questline Storage = 2024
+	Started Quest Storage = 2025
+	Door Storage = 2026
+	Whipsermoss Storage = 31051
+	Lizard Parchment (Door/Chest) Storage = 2027/31052
+	Parchment Decyphering Storage = 2028
+	Parchment Decyphering Tile Uid = 31290
+	Fibula Door Storage = 2029
+	Casks Storage = 2030
+	Casket Destroy Aid = 31255
+	Casks Door Storage = 2031
+	Foot Print Quest Aid = 31256
+	The Deepest Catacombs Lever Aid/Uid = 31257/31291
+	Snake Destroyer Storage = 2032
+	The Deepest Catacombs teleport 1/2 Uid = 31292/31293
+
+Shaman Outfit Storage = 2033
+Shaman Addons Storage = 2034
+
+DragonFetish Storage = 2035
+
+-- Task System
+Task Length Storage = 2036
+Task Type Storage = 2037
+Task Storage = 2038
+Task Reserved Storages = 2039 - 2083
+Task Exhaust Storage = 2084

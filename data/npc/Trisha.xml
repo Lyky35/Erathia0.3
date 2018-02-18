@@ -1,0 +1,4 @@
+<npc name="Trisha" script="Trisha.lua" floorchange="0" walkinterval="2000" >
+	<health now="100" max="100"/>
+	<look type="139" head="94" body="67" legs="38" feet="95"/>
+</npc>

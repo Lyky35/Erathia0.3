@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+	<quest name="The Ape City" startstorageid="2025" startstoragevalue="1">
+		<mission name="Hairycles' Missions" storageid="2024" startvalue="1" endvalue="18">
+			<missionstate id="1" description="Find whisper moss in the dworc settlement south of Port Hope and bring it back to Hairycles."/>
+			<missionstate id="2" description="You have completed the first mission. Hairycles was happy about the whisper moss you gave to him. He might have another mission for you."/>
+			<missionstate id="3" description="Hairycles asked you to bring him cough syrup from a human settlement. A healer might know more about this medicine."/>
+			<missionstate id="4" description="You have completed the second mission. Hairycles was happy about the cough syrup you gave to him. He might have another mission for you."/>
+			<missionstate id="5" description="Hairycles asked you to bring him a magical scroll from the lizard settlement Chor."/>
+			<missionstate id="6" description="You have completed the third mission. Hairycles appreciated that you brought the scroll to him and will try to read it. Maybe he has another mission for you later."/>
+			<missionstate id="7" description="Since Hairycles was not able to read the scroll you brought him, he asked you dig for a tomb in the desert to the east. Proceed in this tomb until you find an obelisk between red stones and read it."/>
+			<missionstate id="8" description="You have completed the fourth mission. Hairycles read your mind and can now translate the lizard scroll. He might have another mission for you."/>
+			<missionstate id="9" description="Hairycles wants to create a life charm for the ape people. He needs a hydra egg since it has strong regenerating powers."/>
+			<missionstate id="10" description="You have completed the fifth mission. Hairycles attempts to create a might charm for the protection of the ape people. He might have another mission for you later."/>
+			<missionstate id="11" description="Hairycles need a witches' cap mushroom which is supposed to be hidden in a dungeon deep under Fibula."/>
+			<missionstate id="12" description="You have completed the sixth mission. You brought the witches' cap mushroom back to Hairycles. He might have another mission for you."/>
+			<missionstate id="13" description="Hairycles is worried about an ape cult which drinks some strange fluid that the lizards left behind. Go to the old lizard temple under Banuta and destroy three of the casks there with a crowbar."/>
+			<missionstate id="14" description="You have completed the seventh mission. You found the old lizard ruins under Banuta and destroyed three of the casks with snake blood. Hairycles might have another mission for you."/>
+			<missionstate id="15" description="The apes now need a symbol of their faith. Speak with the blind prophet in a cave to the northeast and go to the Forbidden Land. Find a hair of the giant, holy ape Bong and bring it back."/>
+			<missionstate id="16" description="You completed the eighth mission. Hairycles gladly accepted the hair of the ape god which you brought him. He told you to have one final mission for you."/>
+			<missionstate id="17" description="Go into the deepest catacombs under Banuta and destroy the monument of the snake god with the hammer that Hairycles gave to you."/>
+			<missionstate id="18" description="You successfully destroyed the monument of the snake god. As reward, you can buy sacred statues from Hairycles. If you haven't done so yet, you should also ask him for a shaman outfit."/>
+		</mission>
+	</quest>
+	<quest name="The Postman Missions" startstorageid="2005" startstoragevalue="1">
+		<mission name="Mission 1 - Check Postal Routes" storageid="2005" startvalue="1" endvalue="6">
+			<missionstate id="1" description="Kevin wants you to travel with Captain Bluebear to Carlin."/>
+			<missionstate id="2" description="Kevin wants you to travel with Uzon in Femor Hills to Edron."/>
+			<missionstate id="3" description="Kevin wants you to travel with Captain Seahorse to Venore."/>
+			<missionstate id="4" description="Kevin wants you to travel with Brodrosch to Cormaya"/>
+			<missionstate id="5" description="You have checked the Postal Routes, report back to Kevin!"/>
+			<missionstate id="6" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Mission 2 - Fix Mailbox" storageid="2006" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kevin wants you to fix one of their Mailboxes located on Folda with a crowbar."/>
+			<missionstate id="2" description="You have fixed the mailbox, report back to Kevin!"/>
+			<missionstate id="3" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Mission 3 - Bill Delivery" storageid="2007" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kevin wants you to deliver a bill to the stage magician David Brassacres. He's hiding from his creditors somewhere in Venore."/>
+			<missionstate id="2" description="You have delivered the bill to the stage magician David Brassacres, report back to Kevin!"/>
+			<missionstate id="3" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Mission 4 - Aggressive Dogs" storageid="2008" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Kevin has asked you to deliver 20 Bones to him."/>
+			<missionstate id="2" description="You have delivered 20 Bones to Kevin."/>
+		</mission>
+		<mission name="Mission 5 - Present Delivery" storageid="2009" startvalue="1" endvalue="4">
+			<missionstate id="1" description="Kevin has asked you to retrieve the present behind the door on the lower right side of his room and deliver it to Dermot in Fibula."/>
+			<missionstate id="2" description="Deliver the present to Dermot in Fibula."/>
+			<missionstate id="3" description="You have delivered the present to Dermot, report back to Kevin!"/>
+			<missionstate id="4" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Mission 6 - New Uniforms" storageid="2010" startvalue="1" endvalue="13">
+			<missionstate id="1" description="Kevin has asked you to travel to Venore and negotiate with Hugo for new uniforms."/>
+			<missionstate id="2" description="Hugo said that his dog ate the last dress pattern they used and he has no clue where Kevin Postner got it from, go ask Kevin."/>
+			<missionstate id="3" description="Kevin wants you to ask the great Technomancer Talphion in Kazordoon for the technical details."/>
+			<missionstate id="4" description="Talphion will send a copy to Kevin, report back to Kevin."/>
+			<missionstate id="5" description="Kevin wants you tk ask Queen Eloise of Carlin for the perfect colours."/>
+			<missionstate id="6" description="Queen Eloise said she will send some color samples via mail to Kevin, report back to Kevin."/>
+			<missionstate id="7" description="Kevin has asked you to go to Noodles and find out what he dislikes the most: mouldy cheese, a piece of fur or a banana skin."/>
+			<missionstate id="8" description="Noodles seems to like banana skin, check if he likes dirty fur."/>
+			<missionstate id="9" description="Noodles seems to like dirty fur, check if he likes mouldy cheese."/>
+			<missionstate id="10" description="Noodles dislikes mouldy cheese! Report back to Kevin."/>
+			<missionstate id="11" description="Kevin wants you to tell Hugo that they order those uniforms."/>
+			<missionstate id="12" description="Hugo has agreed to make the uniforms, report back to Kevin!"/>
+			<missionstate id="13" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Mission 7 - Measurements" storageid="2011" startvalue="1" endvalue="8">
+			<missionstate id="1" description="Kevin wants you to bring him the measurements of Ben, Lokur, Dove, Liane, Chrystal and Olrik."/>
+			<missionstate id="2" description="You have received the measurements from 1 of 6 postofficers."/>
+			<missionstate id="3" description="You have received the measurements from 2 of 6 postofficers."/>
+			<missionstate id="4" description="You have received the measurements from 3 of 6 postofficers."/>
+			<missionstate id="5" description="You have received the measurements from 4 of 6 postofficers."/>
+			<missionstate id="6" description="You have received the measurements from 5 of 6 postofficers."/>
+			<missionstate id="7" description="You have received all measurements, report back to Kevin!"/>
+			<missionstate id="8" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Mission 8 - Missing Courier" storageid="2012" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kevin wants you to find the missing courier Waldo or at least his posthorn."/>
+			<missionstate id="2" description="You have found Waldos posthorn."/>
+			<missionstate id="3" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Mission 9 - Dear Santa" storageid="2013" startvalue="1" endvalue="4">
+			<missionstate id="1" description="Kevin wants you to deliver som letters to Santa Claus on Vega."/>
+			<missionstate id="2" description="You have retrieved the letters, deliver them to Santa Claus on Vega."/>
+			<missionstate id="3" description="You have delivered the letters to Santa Claus on Vega."/>
+			<missionstate id="4" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Mission 10 - Mintwallin" storageid="2014" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kevin wants you to deliver a letter  to Markwin, king of Mintwallin from his mother."/>
+			<missionstate id="2" description="You have delivered the letter to Markwin."/>
+			<missionstate id="3" description="You have reported back that you have completed the mission."/>
+		</mission>
+		<mission name="Postman Rank" storageid="2015" startvalue="1" endvalue="5">
+			<missionstate id="1" description="Assistant Postman"/>
+			<missionstate id="2" description="Postman"/>
+			<missionstate id="3" description="Grand Postman"/>
+			<missionstate id="4" description="Grand Postman for Special Operations"/>
+			<missionstate id="5" description="Arch Postman"/>
+		</mission>
+	</quest>
+	<quest name="The Queen of the Banshees" startstorageid="1000" startstoragevalue="1">
+		<mission name="The Hidden Seal" storageid="1000" startvalue="1" endvalue="1" description="You broke the first seal."/>
+		<mission name="The Seal of Logic" storageid="1001" startvalue="1" endvalue="1" description="You broke the sixth seal."/>
+		<mission name="The Seal of True Path" storageid="1002" startvalue="1" endvalue="1" description="You broke the fifth seal."/>
+		<mission name="The Seal of Sacrifice" storageid="1003" startvalue="1" endvalue="1" description="You broke the fourth seal."/>
+		<mission name="The Seal of Demonrage" storageid="1004" startvalue="1" endvalue="1" description="You broke the third seal."/>
+		<mission name="The Plague Seal" storageid="1005" startvalue="1" endvalue="1" description="You broke the second seal."/>
+		<mission name="All Seals" storageid="1007" startvalue="1" endvalue="1" description="You broke all the seals."/>
+	</quest>
+	<quest name="The Ultimate Challenges" startstorageid="1050" startstoragevalue="1">
+		<mission name="Barbarian Arena - Greenhorn Mode" storageid="1016" startvalue="1" endvalue="2">
+	    		<missionstate id="1" description="You have to defeat all enemies in this mode."/>
+	    		<missionstate id="2" description="You have defeated all enemies in this mode."/>
+		</mission>
+	    		<mission name="Barbarian Arena - Scrapper Mode" storageid="1017" startvalue="1" endvalue="2">
+	    		<missionstate id="1" description="You have to defeat all enemies in this mode."/>
+	    		<missionstate id="2" description="You have defeated all enemies in this mode."/>
+		</mission>
+	    		<mission name="Barbarian Arena - Warlord Mode" storageid="1018" startvalue="1" endvalue="2">
+	    		<missionstate id="1" description="You have to defeat all enemies in this mode."/>
+	    		<missionstate id="2" description="You have defeated all enemies in this mode."/>
+		</mission>
+	</quest>
+	<quest name="The Pits of Inferno" startstorageid="283201" startstoragevalue="0">
+		<mission name="Acces to shortcuts" storageid="283202" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Unlocked shortcut and now do not have to move all 15 of leverage."/>
+			<missionstate id="2" description="Unlocked shortcut and now do not have to move all the 15 lever and you can use the teleport in the necromancer's house."/>
+		</mission>
+		<mission name="Thrones: Verminor" storageid="10001" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have already absorbed some of Veminor's spirit."/>
+		</mission>
+		<mission name="Thrones: Infernatil" storageid="10002" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have already absorbed some of Infernatil's spirit."/>
+		</mission>
+		<mission name="Thrones: Tafariel" storageid="10003" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have already absorbed some of Tafariel's spirit."/>
+		</mission>
+		<mission name="Thrones: Apocalypse" storageid="10004" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have already absorbed some of Apocalypse's spirit."/>
+		</mission>
+		<mission name="Thrones: Pumin" storageid="10005" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have already absorbed some of Pumin's spirit."/>
+		</mission>
+		<mission name="Thrones: Ashfalor" storageid="10006" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have already absorbed some of Ashfalor's spirit."/>
+		</mission>
+		<mission name="Thrones: Bazir" storageid="10007" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have already absorbed some of Bazir's spirit."/>
+		</mission>
+	</quest>
+	<quest name="The Ancient Tombs" startstorageid="1032" startstoragevalue="1">
+		<mission name="Omruc's Treasure" storageid="31210" startvalue="1" endvalue="1" description="You defeated Omruc and received a helmet adornment"/>
+		<mission name="Thalas' Treasure" storageid="31211" startvalue="1" endvalue="1" description="You defeated Thalas and received a Gem Holder"/>
+		<mission name="Diphtrah's Treasure" storageid="31212" startvalue="1" endvalue="1" description="You defeated Dipthrah and received a Damaged Helmet"/>
+		<mission name="Mahrdis' Treasure" storageid="31213" startvalue="1" endvalue="1" description="You defeated Mahrdis and received a Helmet Ornament"/>
+		<mission name="Vashresamun's Treasure" storageid="31214" startvalue="1" endvalue="1" description="You solved the musical riddles of Vashresamun's Tomb and received a left horn."/>
+		<mission name="Morguthis' Treasure" storageid="31215" startvalue="1" endvalue="1" description="You defeated Morguthis and received a Right Horn"/>
+		<mission name="Rahemos' Treasure" storageid="31216" startvalue="1" endvalue="1" description="You defeated Rahemos and received a Helmet Piece"/>
+	</quest>
+	<quest name="Outfit and Addon Quests" startstorageid="1033" startstoragevalue="1">
+		<mission name="Barbarian Outfit Quest" storageid="1037" startvalue="1" endvalue="17">
+			<missionstate id="1" description="Bron told you that his brother Ajax in Northport needs to learn that violence is not always the answer. He told you to make his brother angry, then show him that all he needed to do was say 'please' to fix the situation."/>
+			<missionstate id="2" description="You will need to leave Ajax alone for an hour, then return to him."/>
+			<missionstate id="3" description="Ajax told you that he has thought about it, and that violence is not always good. Return to Bron now, and tell him that Ajax said fist not always good"/>
+			<missionstate id="4" description="Bron mentioned that he has someone in his house that he doesn't like, and he wants you to get advice from Ajax about how to handle the situation. Go back to Ajax and ask him about Gelagos"/>
+			<missionstate id="5" description="Ajax told you his brother needs Fighting Spirit, and that you should get some from a Djinn and give it to him."/>
+			<missionstate id="6" description="You brought Bron the Fighting Spirit. He acted a little strange."/>
+			<missionstate id="7" description="In order to make a shirt as a present for Ajax, Bron wants you to bring him 50 Pieces of Red Cloth and 50 Pieces of Green Cloth."/>
+			<missionstate id="8" description="Bron wants you to bring him 10 Spider Silk Yarn."/>
+			<missionstate id="9" description="Bron wants you to bring him the Warrior's Sweat."/>
+			<missionstate id="10" description="You brought him all required items! accept it!"/>
+			<missionstate id="11" description="You got the Barbarian Wig Addon! Bring now the present from Bron to Ajax!"/>
+			<missionstate id="12" description="Bring Ajax in Northport 100 Iron Ore."/>
+			<missionstate id="13" description="Bring Ajax 1 Huge Chunk of Crude Iron."/>
+			<missionstate id="14" description="Bring Ajax 50 Perfect Behemoth Fang"/>
+			<missionstate id="15" description="Bring Ajax 50 Lizard Leather"/>
+			<missionstate id="16" description="Come later in 2 hours and ask Ajax for the axe."/>
+			<missionstate id="17" description="You got the Axe Addon!"/>
+		</mission>
+		<mission name="Beggar Outfit: The Newest Fashion" storageid="1039" startvalue="1" endvalue="6">
+			<missionstate id="1" description="Your current task is to bring Hugo 20 pieces of brown cloth, like the worn and ragged ghoul clothing."/>
+			<missionstate id="2" description="Your current task is to bring 50 pieces of minotaur leather to Hugo. If you don't know how to get leather, you should ask Kalvin."/>
+			<missionstate id="3" description="Your current task is to bring 10 bat wings to Hugo."/>
+			<missionstate id="4" description="Your current task is to bring 30 heaven blossoms to Hugo. Elves are said to cultivate these flowers."/>
+			<missionstate id="5" description="You brought all items required for the &quot;poor man's look&quot; to Hugo. He told you to come back to him after a whole day has passed, then the outfit should be finished."/>
+			<missionstate id="6" description="You got the outfit!"/>
+		</mission>
+		<mission name="Citizen Outfit Quest (Backpack)" storageid="1043" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Bring Lubo in northeast of Thais 100 minotaur leather to get the Backpack"/>
+			<missionstate id="2" description="Lubo need a while to finish this backpack for you. Ask him later for the backpack."/>
+			<missionstate id="3" description="You got the Outfit!"/>
+		</mission>
+		<mission name="Citizen Outfit Quest (Feather Hat)" storageid="1044" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Bring Hanna in Thais 100 chicken feathers, 50 honeycombs and a legion helmet to get the hat"/>
+			<missionstate id="2" description="You got the Outfit!"/>
+		</mission>
+		<mission name="Druid Outfit Quest" storageid="1049" startvalue="1" endvalue="10">
+			<missionstate id="1" description="Ceiron sends you to collect a sample of the blooming Griffinclaw."/>
+			<missionstate id="2" description="Ask Ceiron for task."/>
+			<missionstate id="3" description="take Ceirons waterskin and try to fill it with water from this special trickle. In the mountains between Ankrahmun and Tiquanda are two hydra lairs. It is important that you take the water directly from the trickle, not from the pond"/>
+			<missionstate id="4" description="Ask Ceiron for task."/>
+			<missionstate id="5" description="Bring Ceiron 100 ounces of demon dust."/>
+			<missionstate id="6" description="Ask Ceiron for task."/>
+			<missionstate id="7" description="The last mission is to find and retrieve Ceiron's Wolf Tooth Chain lost inside the Orc Fortress."/>
+			<missionstate id="8" description="Ask Ceiron for Faolan."/>
+			<missionstate id="9" description="Head over to Cormaya, find A Majestic Warwolf's Cave and ask her about an addon."/>
+			<missionstate id="10" description="You got the Outfit!"/>
+		</mission>
+		<mission name="Hunter Outfit Quest" storageid="1052" startvalue="1" endvalue="5">
+			<missionstate id="1" description="Elane sends you to Liberty Bay to bring her the Crossbow from the Cult."/>
+			<missionstate id="2" description="Bring Elane 100 pieces of lizard leather and 100 pieces of red dragon leather."/>
+			<missionstate id="3" description="Bring Elane 5 enchanted chicken wings."/>
+			<missionstate id="4" description="Bring Elane one piece of royal steel, draconian steel and hell steel each."/>
+			<missionstate id="5" description="You got the Outfit!"/>
+		</mission>
+		<mission name="Knight Outfit Quest" storageid="12060" startvalue="1" endvalue="6">
+			<missionstate id="1" description="First you must collect 100 Behemoth Fangs by looting or Skinning Behemoth's. Bring them to Gregor in Thais."/>
+			<missionstate id="2" description="Gregor send you to retrieve the helmet of Ramsay the Reckless found in deeper Banuta"/>
+			<missionstate id="3" description="Bring Gregor a Flask of Warrior's Sweat."/>
+			<missionstate id="4" description="Bring Gregor one piece of royal steel."/>
+			<missionstate id="5" description="Gregor send you to Sam to adorn your helmet."/>
+			<missionstate id="6" description="Sam needed some time to finish it."/>
+			<missionstate id="7" description="You got the Outfit!"/>
+		</mission>
+		<mission name="Mage &amp; Summoner Outfit Quest (Fluid Belt)" storageid="1060" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Now you can get a lottery ticket at Sandra for 100 empty vials."/>
+			<missionstate id="2" description="You got the Outfit! Now you can get for a lottery prize 50000 gold!"/>
+		</mission>
+		<mission name="Mage &amp; Summoner Outfit Quest (Tiara &amp; Cloak)" storageid="1061" startvalue="1" endvalue="11">
+			<missionstate id="1" description="Bring Myra in port hope 70 bat wings"/>
+			<missionstate id="2" description="Bring Myra in port hope 20 pieces of red cloth"/>
+			<missionstate id="3" description="Bring Myra in port hope 40 pieces of ape fur"/>
+			<missionstate id="4" description="Bring Myra in port hope 35 holy orchids"/>
+			<missionstate id="5" description="Bring Myra in port hope 10 spools of spider silk yarn"/>
+			<missionstate id="6" description="Bring Myra in port hope 60 lizard scales"/>
+			<missionstate id="7" description="Bring Myra in port hope 40 red dragon scales"/>
+			<missionstate id="8" description="Bring Myra in port hope 15 ounces of magic sulphur"/>
+			<missionstate id="9" description="Bring Myra in port hope 30 ounces of vampire dust"/>
+			<missionstate id="10" description="Go to the academy in Edron and tell Zoltan that Myra sent you!"/>
+			<missionstate id="11" description="You got the Outfit!"/>
+		</mission>
+		<mission name="Mage &amp; Summoner Outfit Quest (Wand)" storageid="1062" startvalue="1" endvalue="7">
+			<missionstate id="1" description="You found Angelina in a Prison. She told you a secret: Lynda in Thais can create a blessed wand. Greet her from Angelina, maybe she will aid you."/>
+			<missionstate id="2" description="Lynda send you to bring her a sample of all five wands and five rods (Snakebite, Moonlight, Necrotic, Terra, Hailstorm, Vortex, Dragonbreath, Decay, Cosmic Energy and Inferno)"/>
+			<missionstate id="3" description="Bring Lynda 10 ounces of magic sulphur"/>
+			<missionstate id="4" description="Bring Lynda the Necromancer's soul stone"/>
+			<missionstate id="5" description="Bring Lynda 20 ankhs now to start the ritual."/>
+			<missionstate id="6" description="Lynda need now time to focus on the ritual."/>
+			<missionstate id="7" description="You got the Outfit!"/>
+		</mission>
+		<mission name="Norseman Outfit Quest" storageid="1072" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have collected the 5 shards and recived the first addon for your Nordic outfit."/>
+			<missionstate id="2" description="You have collected the 10 shards and recived the second addon for your Nordic outfit."/>
+		</mission>
+		<mission name="Pirate Outfit Quest (Sabre)" storageid="1073" startvalue="1" endvalue="5">
+			<missionstate id="1" description="Bring Duncan 100 Eye Patches from pirates!"/>
+			<missionstate id="2" description="Bring Duncan 100 peg legs from pirates!"/>
+			<missionstate id="3" description="Bring Duncan 100 pirate hooks from pirates!"/>
+			<missionstate id="4" description="Go to Morgan and tell him this codeword: 'firebird' to get the outfit addon!"/>
+			<missionstate id="5" description="You got the Outfit Addon!"/>
+		</mission>
+		<mission name="Warrior Addon: Shoulder Spike" storageid="1075" startvalue="1" endvalue="7">
+			<missionstate id="1" description="Your current task is to bring 100 hardened bones to Trisha in Carlin. They can sometimes be extracted from creatures that consist only of - you guessed it, bones. You need an obsidian knife though."/>
+			<missionstate id="2" description="Your current task is to bring 100 turtle shells to Trisha in Carlin. Turtles can be found on some idyllic islands which have recently been discovered."/>
+			<missionstate id="3" description="Your current task is to show that you have fighting spirit. Maybe someone grants you a wish...?"/>
+			<missionstate id="4" description="Your current task is to obtain a dragon claw. You cannot get this special claw from any common dragons in Tibia. It requires a special one, a lord among the lords."/>
+			<missionstate id="5" description="You have delivered all items requried for the shoulder spike addon. Go talk to Cornelia and tell her Trisha sent you. She will be glad to create the should spikes."/>
+			<missionstate id="6" description="Cornelia is currently creating the should spikes for you. Be patient and don't forget to check on it later!"/>
+			<missionstate id="7" description="You have obtained the shoulder spike addon."/>
+		</mission>
+		<mission name="Wizard Outfits Quest" storageid="1078" startvalue="1" endvalue="7">
+			<missionstate id="1" description="Bring Lugri the Medusa shield!"/>
+			<missionstate id="2" description="Bring Lugri the Dragon Scale Mail!"/>
+			<missionstate id="3" description="Bring Lugri the Crown Legs!"/>
+			<missionstate id="4" description="Bring Lugri the Ring of the Sky!"/>
+			<missionstate id="5" description="You got the first Outfit Addon!"/>
+			<missionstate id="6" description="Bring The Queen Of The Banshees 50 Holy Orchids and she will reward you with the second addon."/>
+			<missionstate id="7" description="You got the second Outfit Addon!"/>
+		</mission>
+	</quest>
+	<quest name="Factions" startstorageid="1069" startstoragevalue="1">
+		<mission name="Brotherhood of Bones Rank" storageid="1064" startvalue="1" endvalue="3">
+			<missionstate id="1" description="You have joined the Brotherhood of Bones. Gather demonic essences and bring it to the Bone Master to advance in your rank. You may use the teleporters on the second floor of the Knightwatch Tower."/>
+			<missionstate id="2" description="You have advanced in rank to an Initiate. You may use the teleporters on the third floor of the Knightwatch Tower."/>
+			<missionstate id="3" description="You have advanced in rank to an Dreamer."/>
+			<missionstate id="4" description="You have advanced in rank to an Lord Protector. You may use the teleporters on the fourth floor of the Knightwatch Tower."/>
+		</mission>
+		<mission name="Nightmare Knights Rank" storageid="1065" startvalue="1" endvalue="3">
+			<missionstate id="1" description="You have joined the Nightmare Knights. Gather demonic essences and bring it to the Dream Master to advance in your rank. You may use the teleporters on the second floor of the Knightwatch Tower."/>
+			<missionstate id="2" description="You have advanced in rank to an Hyaena. You may use the teleporters on the third floor of the Knightwatch Tower."/>
+			<missionstate id="3" description="You have advanced in rank to an Death Dealer."/>
+			<missionstate id="4" description="You have advanced in rank to an Dread Lord. You may use the teleporters on the fourth floor of the Knightwatch Tower."/>
+		</mission>
+	</quest>
+	<quest name="Friends and Traders" startstorageid="1080" startstoragevalue="1">
+		<mission name="The Blessed Stake" storageid="1081" startvalue="1" endvalue="12">
+			<missionstate id="1" description="You need a stake first. Maybe Gamon can help you, the leg of a chair or something could just do. Try asking him for a stake, and if you have one, bring it back to Quentin in Thais."/>
+			<missionstate id="2" description="You bought a stake from Gamon, bring it back to Quentin in Thais"/>
+			<missionstate id="3" description="Now, bring your stake to Tibra in the Carlin church for the next line of the prayer."/>
+			<missionstate id="4" description="Now, bring your stake to Maealil in the elven settlement for the next line of the prayer."/>
+			<missionstate id="5" description="Now, bring your stake to Yberius in the Venore temple for the next line of the prayer."/>
+			<missionstate id="6" description="Now, bring your stake to Isimov in the dwarven settlement for the next line of the prayer."/>
+			<missionstate id="7" description="Now, bring your stake to Amanda in Edron for the next line of the prayer."/>
+			<missionstate id="8" description="Now, bring your stake to Kasmir in Darashia for the next line of the prayer."/>
+			<missionstate id="9" description="Now, bring your stake to Rahkem in Ankrahmun for the next line of the prayer."/>
+			<missionstate id="10" description="Now, bring your stake to Brewster in Port Hope for the next line of the prayer."/>
+			<missionstate id="11" description="Now, bring your stake to Tyrias in Liberty Bay for the next line of the prayer."/>
+			<missionstate id="12" description="You received all blessings for the stake, now you can obtain weekly blessed wooden stake from Chondur in north of Sabrehaven."/>
+		</mission>
+	</quest>
+	<quest name="Factions" startstorageid="1086" startstoragevalue="1">
+		<mission name="The Marid and the Efreet - Djinn Greeting" storageid="1087" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Melchior told you the word &quot;Djanni'hah&quot; which can be used to talk to Djinns. Be aware that once you become an ally of one Djinn race, you cannot switch sides anymore."/>
+			<missionstate id="2" description=""/>
+		</mission>
+		<mission name="The Marid and the Efreet - Marid Faction" storageid="1088" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have joined the Marid. These friendly, blue Djinns are honest and fair allies. You have pledged eternal loyalty to King Gabel and may enter Asha'daramai freely. Djanni'hah!"/>
+			<missionstate id="2" description=""/>
+		</mission>
+		<mission name="The Efreet and the Efreet - Efreet Faction" storageid="1089" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have joined the Efreet. These evil, green Djinns are always up to mischievous pranks. You have pledged eternal loyalty to King Malor and may enter Mal'ouquah freely. Djanni'hah!"/>
+			<missionstate id="2" description=""/>
+		</mission>
+	</quest>
+	<quest name="The Djinn War - Efreet Faction" startstorageid="1089" startstoragevalue="1">
+		<mission name="Efreet Mission 1: The Supply Thief" storageid="1097" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Travel to Thais and keep your eyes open for something that might give you a clue on the supply thief."/>
+			<missionstate id="2" description="You have found the potential supply thief - Partos in Thais seemed very suspicious. Baa'leal might be interested in this matter."/>
+			<missionstate id="3" description="You have reported the case to Baa'leal. He seemed very satisfied and told you that Alesar might have another mission for you."/>
+		</mission>
+		<mission name="Efreet Mission 2: The Tear of Daraman" storageid="1098" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Sneak into Ashta'daramai and steal a &quot;Tear of Daraman&quot;. For more information about these gems visit the Efreet library."/>
+			<missionstate id="2" description="You have successfully managed to steal a Tear of Daraman from Ashta'daramai. Bring it to Alesar."/>
+			<missionstate id="3" description="You have delivered Daraman's Tear. Alesar seemed very satisfied and told you that Malor himself might have another mission for you."/>
+		</mission>
+		<mission name="Efreet Mission 3: The Sleeping Lamp" storageid="1099" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Malor asked you to find Fa'hradin's sleeping lamp in the orc fortress at Ulderek's Rock. Then, sneak into Ashta'daramai and exchange Gabel's sleeping lamp with Fa'hradin's lamp."/>
+			<missionstate id="2" description="You successfully exchanged the lamps. Malor will be happy to hear about this."/>
+			<missionstate id="3" description="The Efreet are very satisfied with your help. King Malor allowed you to trade with Yaman and Alesar."/>
+		</mission>
+	</quest>
+	<quest name="The Djinn War - Marid Faction" startstorageid="1088" startstoragevalue="1">
+		<mission name="Marid Mission 1: The Dwarven Kitchen" storageid="1090" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Bring a cookbook of the dwarven kitchen to Bo'ques."/>
+			<missionstate id="2" description="You have delivered the cookbook. Bo'ques seemed very satisfied and told you that Fa'hradin might have another mission for you."/>
+		</mission>
+		<mission name="Marid Mission 2: The Spyreport" storageid="1091" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Fa'hradin asked you to sneak into the Efreet fortress Mal'ouqhah and find their undercover spy. The codeword is PIEDPIPER."/>
+			<missionstate id="2" description="You have delivered the spyreport. Fa'hradin seemed impressed and told you that Gabel himself might have another mission for you."/>
+		</mission>
+		<mission name="Rata'Mari and the Cheese" storageid="1092" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have promised Rata'Mari cheese. Once you deliver some to him, he will hand over his spyreport."/>
+			<missionstate id="2" description="You got Rata'Mari's spyreport. He seems to be quite happy with the cheese you brought him."/>
+		</mission>
+		<mission name="Marid Mission 3: The Sleeping Lamp" storageid="1093" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Gabel asked you to find Fa'hradin's sleeping lamp in the orc fortress at Ulderek's Rock. Then, sneak into Mal'ouqhah and exchange Malor's sleeping lamp with Fa'hradin's lamp."/>
+			<missionstate id="2" description="You successfully exchanged the lamps. Gabel will be happy to hear about this."/>
+			<missionstate id="3" description="The Marid deeply appreciate your help. King Gabel allowed you to trade with Haroun and Nah'bob."/>
+		</mission>
+	</quest>
+</quests>

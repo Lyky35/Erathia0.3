@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Dove" script="Dove.lua" walkinterval="2000" floorchange="0">
+  	<health now="100" max="100" />
+  	<look type="136" head="59" body="86" legs="106" feet="115" addons="0" />
+	<parameters>
+    		<parameter key="message_greet" value="Be greeted, noble |PLAYERNAME| and welcome to the post office." />
+    		<parameter key="message_farewell" value="Come back soon, noble |PLAYERNAME|." />
+    		<parameter key="module_shop" value="1" />
+    		<parameter key="shop_buyable" value="parcel,2595,15;letter,2597,8;label,2599,1;" />
+  	</parameters>
+</npc>

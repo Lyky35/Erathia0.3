@@ -1,0 +1,4 @@
+<npc name="Maximus" script="Maximus.lua" floorchange="0" walkinterval="2000" >
+	<health now="100" max="100"/>
+	<look type="267" head="0" body="114" legs="114" feet="0" addons="2"/>
+</npc>

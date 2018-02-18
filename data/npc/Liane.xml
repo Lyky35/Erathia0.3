@@ -1,0 +1,4 @@
+<npc name="Liane" script="Liane.lua" floorchange="0" walkinterval="3000" >
+	<health now="100" max="100"/>
+	<look type="136" head="77" body="60" legs="79" feet="114"/>
+</npc>

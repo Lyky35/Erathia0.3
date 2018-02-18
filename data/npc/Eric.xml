@@ -1,0 +1,11 @@
+<npc name="Eric" script="Eric.lua" floorchange="0" walkinterval="0" speed="0">
+	<health now="100" max="100"/>
+	<look type="143" head="20" body="58" legs="23" feet="21"/>
+	<parameters>
+		<parameter key="message_greet" value="Hey, |PLAYERNAME|, how are you?"/>
+		<parameter key="message_placedinqueue" value="wait please, I'll be with you in just a second!"/>
+		<parameter key="message_walkaway" value="Have a nice day! oh and please tell people about my service, a few more customers wouldn't hurt me."/>
+		<parameter key="message_farewell" value="Have a nice day! oh and please tell people about my service, a few more customers wouldn't hurt me."/>
+		<parameter key="message_idletimeout" value="Have a nice day! oh and please tell people about my service, a few more customers wouldn't hurt me."/>
+	</parameters>
+</npc>

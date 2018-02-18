@@ -1,0 +1,10 @@
+<npc name="Azham" script="Azham.lua" floorchange="0" walkinterval="3000" >
+	<health now="100" max="100"/>
+	<look type="130" head="18" body="113" legs="75" feet="113"/>
+	<parameters>
+<parameter key="message_placedinqueue" value="The time comes for everyone, |PLAYERNAME|."/>
+<parameter key="message_walkaway" value="See you again ... sooner or later, more or less alive."/>
+<parameter key="message_farewell" value="See you again ... sooner or later, more or less alive."/>
+<parameter key="message_idletimeout" value="See you again ... sooner or later, more or less alive."/>
+	</parameters>
+</npc>

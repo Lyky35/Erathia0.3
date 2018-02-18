@@ -1,0 +1,7 @@
+<npc name="A Logger" script="A Logger.lua" floorchange="0" walkinterval="3000" >
+	<health now="100" max="100"/>
+	<look type="130" head="96" body="63" legs="71" feet="97"/>
+	<parameters>
+<parameter key="talkradius" value="10000"/>
+	</parameters>
+</npc>
