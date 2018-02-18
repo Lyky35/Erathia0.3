@@ -10,13 +10,16 @@ function onThink()		npcHandler:onThink()		end
 local voices = { {text = 'Passages to Thais, Darashia, Edron, Venore, Ankrahmun and Liberty Bay.'} }
 npcHandler:addModule(VoiceModule:new(voices))
 
+
 -- Travel
-local function addTravelKeyword(keyword, cost, destination)
+local function addTravelKeyword(keyword, cost, destination, action)
 	local travelKeyword = keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = 'Do you seek a passage to ' .. keyword:titleCase() .. ' for |TRAVELCOST|?', cost = cost, discount = 'postman'})
-		travelKeyword:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = true, cost = cost, discount = 'postman', destination = destination})
+		travelKeyword:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = false, cost = cost, discount = 'postman', destination = destination}, nil, action)
 		travelKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'We would like to serve you some time.', reset = true})
-	keywordHandler:addKeyword({"bring me to "..keyword}, StdModule.travel, {npcHandler = npcHandler, premium = true, cost = cost, discount = 'postman', destination = destination, onlyFocus = false}, nil, action)
+
+	keywordHandler:addKeyword({"bring me to "..keyword}, StdModule.travel, {npcHandler = npcHandler, premium = false, cost = cost, discount = 'postman', destination = destination, onlyFocus = false}, nil, action)
 end
+
 
 addTravelKeyword('edron', 150, Position(33173, 31764, 6))
 addTravelKeyword('venore', 160, Position(32954, 32022, 6))
@@ -49,3 +52,5 @@ keywordHandler:addKeyword({'dworcs'}, StdModule.say, {npcHandler = npcHandler, o
 npcHandler:setMessage(MESSAGE_GREET, "Ahoy. Where can I sail you today?")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Bye.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Bye.")
+
+npcHandler:addModule(FocusModule:new())

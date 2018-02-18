@@ -98,9 +98,39 @@ local function creatureSayCallback(cid, type, msg)
 	return true
 end
 
-npcHandler:setMessage(MESSAGE_GREET, "Welcome to my adventurer shop, |PLAYERNAME|! What do you need? Ask me for a {trade} to look at my wares.")
+local shopModule = ShopModule:new()
+npcHandler:addModule(shopModule)
+shopModule:addSellableItem({'vial', 'potion', 'flask'}, 					Cfemptypotion, 5)
+
+shopModule:addBuyableItem({'torch'}, 					Cftorch, 2)
+shopModule:addBuyableItem({'candelabrum'}, 					Cfcandelabrum, 8)
+shopModule:addBuyableItem({'candlestick'}, 					Cfcandlestick, 2)
+shopModule:addBuyableItem({'oil'}, 					2006, 20, 11, 'vial of oil')
+shopModule:addBuyableItem({'coal basin'}, 					Cfcoalbasin, 25)
+shopModule:addBuyableItem({'bag'}, 					Cfredbag, 5)
+shopModule:addBuyableItem({'backpack'}, 					Cfredbackpack, 20)
+shopModule:addBuyableItem({'present'}, 					Cfpresent, 10)
+shopModule:addBuyableItem({'scroll'}, 					Cfscroll, 5)
+shopModule:addBuyableItem({'document'}, 					Cfdocument, 12)
+shopModule:addBuyableItem({'parchment'}, 					Cfparchment, 8)
+shopModule:addBuyableItem({'brown book'}, 					Cfbrownbook, 15)
+shopModule:addBuyableItem({'black book'}, 					Cfblackbook, 15)
+shopModule:addBuyableItem({'small book'}, 					Cfsmallbook, 15)
+shopModule:addBuyableItem({'watch'}, 					Cfwatch, 20)
+shopModule:addBuyableItem({'football'}, 					Cffootball, 111)
+
+shopModule:addBuyableItem({'water pipe'}, 					Cfwaterpipe, 40)
+shopModule:addBuyableItem({'birdcage'}, 					Cfbirdcage, 50)
+shopModule:addBuyableItem({'globe'}, 					Cfglobe, 50)
+shopModule:addBuyableItem({'pendulum clock'}, 					Cfpendulumclock, 75)
+shopModule:addBuyableItem({'table lamp'}, 					Cftablelamp, 35)
+shopModule:addBuyableItem({'cuckoo clock'}, 					Cfcuckooclock, 40)
+
+
+npcHandler:setMessage(MESSAGE_GREET, "Welcome to my adventurer shop, |PLAYERNAME|! What do you need? Ask me for offer to look at my wares.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye.")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
+

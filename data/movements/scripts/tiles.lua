@@ -1,5 +1,5 @@
-local increasing = {[416] = 417, [426] = 425, [446] = 447, [3216] = 3217, [3202] = 3215, [11062] = 11063}
-local decreasing = {[417] = 416, [425] = 426, [447] = 446, [3217] = 3216, [3215] = 3202, [11063] = 11062}
+local increasing = {[416] = 417, [426] = 425, [446] = 447, [3216] = 3217, [3202] = 3215}
+local decreasing = {[417] = 416, [425] = 426, [447] = 446, [3217] = 3216, [3215] = 3202}
 
 function onStepIn(creature, item, position, fromPosition)
 	if not increasing[item.itemid] then
@@ -23,11 +23,11 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	if Tile(position):hasFlag(TILESTATE_PROTECTIONZONE) then
-		local lookPos = player:getPosition()
-		lookPos:getNextPosition(player:getDirection())
-		local depotItem = Tile(lookPos):getItemByType(ITEM_TYPE_DEPOT)
+		local lookPosition = player:getPosition()
+		lookPosition:getNextPosition(player:getDirection())
+		local depotItem = Tile(lookPosition):getItemByType(ITEM_TYPE_DEPOT)
 		if depotItem ~= nil then
-			local depotItems = player:getDepotLocker(getDepotId(depotItem:getUniqueId()), true):getItemHoldingCount()
+			local depotItems = player:getDepotChest(getDepotId(depotItem:getUniqueId()), true):getItemHoldingCount()
 			player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Your depot contains " .. depotItems .. " item" .. (depotItems > 1 and "s." or "."))
 			return true
 		end

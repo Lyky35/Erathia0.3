@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Deathslicer" nameDescription="a deathslicer" race="undead" experience="0" speed="200" manacost="0">
-	<health now="1000" max="1000"/>
+<monster name="Deathslicer" nameDescription="a deathslicer" race="undead" experience="320" speed="190" manacost="0">
+	<health now="2000" max="2000"/>
 	<look type="102" corpse="2253"/>
-	<targetchange interval="5000" chance="8"/>
+<targetchange interval="1000" chance="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -17,7 +17,7 @@
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-500"/>
+		<attack name="melee" interval="2000" min="0" max="-300"/>
 		<attack name="energy" interval="2000" chance="25" radius="2" target="0" min="-200" max="-400">
 			<attribute key="areaEffect" value="yellowspark"/>
 		</attack>

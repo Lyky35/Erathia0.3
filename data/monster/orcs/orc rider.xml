@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Orc Rider" nameDescription="an orc rider" race="blood" experience="110" speed="210" manacost="490">
+<monster name="orc rider" nameDescription="an orc rider" race="blood" experience="110" speed="260" manacost="490">
 	<health now="180" max="180"/>
-	<look type="4" corpse="6010"/>
-	<targetchange interval="4000" chance="10"/>
+	<look type="4" corpse="2972"/>
+	<targetchange interval="1000" chance="5"/>
+	<targetstrategies nearest="70" health="30" damage="0" random="0"/>
 	<flags>
-		<flag summonable="0"/>
 		<flag attackable="1"/>
 		<flag hostile="1"/>
-		<flag illusionable="0"/>
+		<flag summonable="0"/>
 		<flag convinceable="1"/>
+		<flag illusionable="0"/>
 		<flag pushable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="1"/>
-		<flag staticattack="90"/>
+		<flag staticattack="80"/>
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-130"/>
+		<attack name="melee" skill="48" attack="41"/>
 	</attacks>
-	<defenses armor="15" defense="15">
-		<defense name="speed" interval="2000" chance="15" speedchange="230" duration="5000">
-			<attribute key="areaEffect" value="redshimmer"/>
-		</defense>
+	<defenses armor="9" defense="20">
+		<defense name="haste_orcrider" chance="7"/>
 	</defenses>
-	
-	<voices interval="5000" chance="10">
+	<elements>
+	</elements>
+	<immunities>
+	</immunities>
+	<voices interval="1000" chance="5">
 		<voice sentence="Grrrrrrr"/>
 		<voice sentence="Orc arga Huummmak!"/>
 	</voices>
 	<loot>
-		<item id="2148" countmax="81" chance="47000"/>	<!-- gold coin -->
-		<item id="2666" countmax="3" chance="24000"/>	<!-- meat -->
-		<item id="2129" chance="10000"/>				<!-- wolf tooth chain -->
-		<item id="12435" chance="10000"/>				<!-- orc leather -->
-		<item id="11235" chance="9510"/>				<!-- warwolf fur -->
-		<item id="2428" chance="7000"/>					<!-- orcish axe -->
-		<item id="11113" chance="2000"/>				<!-- orc tooth -->
-		<item id="2425" chance="1100"/>					<!-- obsidian lance -->
-		<item id="2513" chance="1000"/>					<!-- battle shield -->
-		<item id="2050" chance="1000"/>					<!-- torch-->
-		<item id="2483" chance="570"/>					<!-- scale armor -->
+		<item id="2666" chance="30000" countmax="3"/><!-- 3 30% meat -->
+		<item id="2148" chance="50000" countmax="10"/><!-- 10 50% gold coin -->
+		<item id="2148" chance="100" countmax="80"/><!-- 80 0.1% gold coin -->
+		<item id="2129" chance="10000"/><!-- 10% wolf tooth chain -->
+		<item id="1988" chance="30000" dropempty="true"/><!-- 30% backpack -->
+		<item id="2482" chance="15000"/><!-- 15% studded helmet -->
+		<item id="2483" chance="600"/><!-- 0.6% scale armor -->
+		<item id="1987" chance="100000"><!-- bag -->
+			
+				<item id="2050" chance="8000"/><!-- 8% torch -->
+				<item id="2428" chance="15000"/><!-- 15% orcish axe -->
+				<item id="2425" chance="1000"/><!-- 1% obsidian lance -->
+				<item id="2513" chance="1000"/><!-- 1% battle shield -->
+			
+		</item>
 	</loot>
 </monster>

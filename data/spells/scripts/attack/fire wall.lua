@@ -7,6 +7,6 @@ combat:setParameter(COMBAT_PARAM_CREATEITEM, ITEM_FIREFIELD_PVP_FULL)
 local area = createCombatArea(AREA_WALLFIELD, AREADIAGONAL_WALLFIELD)
 combat:setArea( area)
 
-function onCastSpell(creature, var)
-	return combat:execute(creature, var)
+function onCastSpell(creature, variant)
+	return combat:execute(creature, variant)
 end

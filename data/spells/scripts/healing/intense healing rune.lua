@@ -1,3 +1,5 @@
+	local base = 70
+	local variation = 30
 local combat = Combat()
 combat:setParameter(COMBAT_PARAM_TARGETCASTERORTOPMOST, 1)
 combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_HEALING)
@@ -6,8 +8,8 @@ combat:setParameter(COMBAT_PARAM_AGGRESSIVE, 0)
 combat:setParameter(COMBAT_PARAM_DISPEL, CONDITION_PARALYZE)
 
 function onGetFormulaValues(cid, level, maglevel)
-	min = ((level / 5) + (maglevel * 3.2) + 20)
-	max = ((level / 5) + (maglevel * 5.4) + 40)
+	local min = math.max((base - variation), ((3 * maglevel + 2 * level) * (base - variation) / 100))
+	local max = math.max((base + variation), ((3 * maglevel + 2 * level) * (base + variation) / 100))
 	return min, max
 end
 

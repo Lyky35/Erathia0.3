@@ -36,6 +36,7 @@
 	<!-- player talkactions -->
 	<talkaction words="!spells" script="spells.lua"/>
 	<talkaction words="!leavehouse" script="leavehouse.lua"/>
+	<talkaction words="!buyhouse" script="buyhouse.lua" />
 	<talkaction words="!uptime" script="uptime.lua"/>
 	<talkaction words="!deathlist" script="deathlist.lua"/>
 	<talkaction words="!kills" script="kills.lua"/>
@@ -43,8 +44,18 @@
 	<talkaction words="!serverinfo" script="serverinfo.lua"/>
 	<talkaction words="!share" script="partyShareExp.lua"/>
 	<talkaction words="/share" script="partyShareExp.lua"/>
+	
+	
+	<!-- Houses -->
+	<talkaction words="!leavehouse" script="leavehouse.lua"/>
+	<talkaction words="!buyhouse" script="buyhouse.lua" />
+
 
 	<!-- test talkactions -->
 	<talkaction words="!z" separator=" " script="magiceffect.lua"/>
 	<talkaction words="!x" separator=" " script="animationeffect.lua"/>
+	
+	<!-- Server Shop -->
+	<talkaction log="yes" words="/addshop" access="5" event="script" value="add_shop_talkaction.lua"/>
+
 </talkactions>

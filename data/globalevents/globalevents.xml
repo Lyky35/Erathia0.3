@@ -3,7 +3,12 @@
 	<globalevent type="startup" name="ServerStartup" script="startup.lua"/>
 	<globalevent type="record" name="PlayerRecord" script="record.lua"/>
 	<globalevent name="Server Save" time="09:55:00" script="serversave.lua" />
+	<globalevent interval="1200000" name="autoSave" script="autosave.lua"/>
 
 	<!-- Spawn -->
 	<globalevent type="startup" name="RashidSpawn" script="spawn/rashidSpawn.lua" />
+	
+	<!-- Shop -->
+	<globalevent name="website_shop_item_delivery" interval="750" event="script" value="shop.lua"/>
+	
 </globalevents>

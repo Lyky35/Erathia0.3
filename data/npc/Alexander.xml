@@ -2,8 +2,16 @@
 	<health now="100" max="100"/>
 	<look type="130" head="96" body="63" legs="71" feet="97"/>
 	<parameters>
-		<parameter key="module_shop" value="1" />
-		<parameter key="shop_buyable" value="envenom rune,2292,130;animate dead rune,2316,375;blank rune,2260,10;crystal ball,2192,530;desintegrate rune,2310,80;energy bomb rune,2262,325;tempest rod,2183,15000;life ring,2168,900;magic wall rune,2293,350;moonlight rod,2186,1000;volcanic rod,2185,5000;paralyze rune,2278,700;poison bomb rune,2286,170;snakebite rod,2182,500;soulfire rune,2308,210;quagmire rod,2181,10000;wand of cosmic energy,2189,10000;wand of plague,2188,5000;wand of dragonbreath,2191,1000;wand of inferno,2187,15000;wand of vortex,2190,500;" />
-		<parameter key="shop_sellable" value="crystal ball,2192,190;life crystal,2177,85;mind stone,2178,170;" />
-	</parameters>
+        <parameter key="message_greet" value="Be Greeted |PLAYERNAME|. What is your need?"/>
+        <parameter key="message_farewell" value="Bye."/>
+        <parameter key="message_walkaway" value="Bye." />
+        <parameter key="message_sendtrade" value="Here." />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="job;name;runes;wands;offer;" />
+        <parameter key="keyword_reply1" value="I am selling runes, wands, rods and spellbooks." />
+        <parameter key="keyword_reply2" value="I am a Alexander." />
+        <parameter key="keyword_reply3" value="Here. I also sell all wands!" />
+        <parameter key="keyword_reply4" value="Here. I also sell runes." />
+        <parameter key="keyword_reply5" value="What do you think I am? A lousy barber? I'm selling runes, wands, rods and spellbooks if you need a deal." />
+ 	</parameters>
 </npc>

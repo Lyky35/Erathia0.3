@@ -8,5 +8,7 @@
 <parameter key="message_walkaway" value="I hope to see you back soon."/>
 <parameter key="message_farewell" value="I hope to see you back soon."/>
 <parameter key="message_idletimeout" value="I hope to see you back soon."/>
+    		<parameter key="module_shop" value="1" />
+    		<parameter key="shop_buyable" value="parcel,2595,15;letter,2597,8;label,2599,1;" />
 	</parameters>
 </npc>

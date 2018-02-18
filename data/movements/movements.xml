@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
 	
+	<!-- Ornamented Shield Quest -->
+	<movevent event="StepIn" actionid="34000" script="OrnamentShieldQuest/tile.lua"/>
+	<movevent event="StepOut" actionid="34000" script="OrnamentShieldQuest/tile.lua"/>
+	
 	<!-- The Ape City Quest -->
 	<movevent event="StepIn" uniqueid="31290" script="theApeCityQuest/parchmentDecyphering.lua"/>
 	<movevent event="StepIn" uniqueid="31292" script="theApeCityQuest/theDeepestCatacombsTeleport1.lua" />

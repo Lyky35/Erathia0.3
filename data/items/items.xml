@@ -2310,7 +2310,7 @@
 		<attribute key="weight" value="1950" />
 		<attribute key="weaponType" value="wand" />
 		<attribute key="shootType" value="energy" />
-		<attribute key="range" value="3" />
+		<attribute key="range" value="2" />
 	</item>
 	<item id="2187" article="a" name="wand of inferno">
 		<attribute key="description" value="It unleashes the very fires of hell." />
@@ -2362,6 +2362,21 @@
 		<attribute key="speed" value="40" />
 		<attribute key="showattributes" value="1" />
 	</item>
+	
+	<item id="7487" name="boots of skywalkers">
+		<attribute key="weight" value="750" />
+		<attribute key="slotType" value="feet" />
+		<attribute key="speed" value="65" />
+		<attribute key="showattributes" value="1" />
+	</item>
+	
+	<item id="7489" name="magical boots">
+		<attribute key="weight" value="750" />
+		<attribute key="slotType" value="feet" />
+		<attribute key="speed" value="25" />
+		<attribute key="showattributes" value="1" />
+	</item>		
+	
 	<item id="2196" article="a" name="broken amulet">
 		<attribute key="weight" value="420" />
 		<attribute key="slotType" value="necklace" />
@@ -3279,6 +3294,7 @@
 		<attribute key="defense" value="1" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="charges" value="1" />
+		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="2397" article="a" name="longsword">
 		<attribute key="weight" value="4200" />
@@ -3351,6 +3367,7 @@
 		<attribute key="attack" value="36" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="extradef" value="1" />
+		<attribute key="elementEnergy" value="9" />
 	</item>
 	<item id="2408" article="a" name="warlord sword">
 		<attribute key="description" value="Strong powers flow in this magic sword." />
@@ -3734,6 +3751,15 @@
 		<attribute key="armor" value="10" />
 		<attribute key="slotType" value="body" />
 	</item>
+	
+	<item id="7485" article="a" name="steel armor">
+		<attribute key="weight" value="18000" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="body" />
+	</item>
+
+	
+
 	<item id="2464" article="a" name="chain armor">
 		<attribute key="weight" value="10000" />
 		<attribute key="armor" value="6" />
@@ -3881,7 +3907,7 @@
 		<attribute key="weight" value="11400" />
 		<attribute key="armor" value="15" />
 		<attribute key="slotType" value="body" />
-		<attribute key="absorbPercentFire" value="15" />
+		<attribute key="absorbPercentFire" value="8" />
 		<attribute key="showattributes" value="1" />
 	</item>
 	
@@ -3901,8 +3927,27 @@
 		<attribute key="slotType" value="head" />
 		<attribute key="absorbPercentPhysical" value="10" />
 		<attribute key="showattributes" value="1" />
-		
 	</item>
+	
+		<item id="7483" article="a" name="Black Dragon Armor">
+		<attribute key="weight" value="18000" />
+		<attribute key="armor" value="16" />
+		<attribute key="slotType" value="body" />
+		<attribute key="absorbPercentPhysical" value="4" />
+		<attribute key="showattributes" value="1" />
+	</item>
+	
+	<item id="7484" article="a" name="Skull Knight Armor">
+		<attribute key="weight" value="1000" />
+		<attribute key="armor" value="12" />
+		<attribute key="slotType" value="body" />
+		<attribute key="absorbPercentPhysical" value="2" />
+		<attribute key="showattributes" value="1" />
+	</item>
+	
+	
+	
+		
 	<item id="2494" article="a" name="demon armor">
 		<attribute key="weight" value="8000" />
 		<attribute key="armor" value="16" />
@@ -4475,6 +4520,13 @@
 		<attribute key="armor" value="3" />
 		<attribute key="slotType" value="feet" />
 	</item>
+	
+	<item id="7488" name="dark steel boots">
+		<attribute key="weight" value="2900" />
+		<attribute key="armor" value="3" />
+		<attribute key="slotType" value="feet" />
+	</item>
+	
 	<item id="2646" name="golden boots">
 		<attribute key="weight" value="3100" />
 		<attribute key="armor" value="4" />
@@ -4485,7 +4537,14 @@
 		<attribute key="armor" value="7" />
 		<attribute key="slotType" value="legs" />
 	</item>
-	<item id="2648" name="chain legs">
+	
+	<item id="7486" name="steel legs">
+		<attribute key="weight" value="15000" />
+		<attribute key="armor" value="8" />
+		<attribute key="slotType" value="legs" />
+	</item>
+	
+		<item id="2648" name="chain legs">
 		<attribute key="weight" value="3500" />
 		<attribute key="armor" value="3" />
 		<attribute key="slotType" value="legs" />
@@ -4567,6 +4626,13 @@
 		<attribute key="armor" value="1" />
 		<attribute key="slotType" value="head" />
 	</item>
+	
+	<item id="7480" article="a" name="druids hat">
+		<attribute key="weight" value="750" />
+		<attribute key="armor" value="1" />
+		<attribute key="slotType" value="head" />
+	</item>
+	
 	<item id="2663" article="a" name="mystic turban">
 		<attribute key="description" value="Something is strange about this turban." />
 		<attribute key="weight" value="850" />
@@ -9142,6 +9208,20 @@
 		<attribute key="armor" value="9" />
 		<attribute key="slotType" value="head" />
 	</item>
+		<item id="7478" article="a" name="demon-plate helmet">
+		<attribute key="weight" value="4200" />
+		<attribute key="armor" value="9" />
+		<attribute key="slotType" value="head" />
+	</item>
+
+		<item id="7479" article="a" name="dark steel helmet">
+		<attribute key="weight" value="4200" />
+		<attribute key="armor" value="7" />
+		<attribute key="slotType" value="head" />
+	</item>
+	
+	
+	
 	<item id="5742" name="" />
 	<item fromid="5743" toid="5744" name="wooden floor" />
 	<item id="5745" article="a" name="closed door">
@@ -9244,6 +9324,29 @@
 		<attribute key="hitChance" value="2" />
 		<attribute key="attack" value="2" />
 	</item>
+	
+	<item id="7481" article="an" name="Holy Pistol of Bans">
+		<attribute key="description" value="It is an ancient weapon lost by GameMaster." />
+		<attribute key="weight" value="700" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="ammoType" value="bolt" />
+		<attribute key="range" value="4" />
+		<attribute key="hitChance" value="10" />
+		<attribute key="attack" value="25" />
+	</item>
+	
+	<item id="7481" article="an" name="Dark Pistol of Warns">
+		<attribute key="description" value="It is an ancient weapon left by Community Manager." />
+		<attribute key="weight" value="700" />
+		<attribute key="weaponType" value="distance" />
+		<attribute key="ammoType" value="bolt" />
+		<attribute key="range" value="4" />
+		<attribute key="hitChance" value="6" />
+		<attribute key="attack" value="30" />
+	</item>
+
+
+	
 	<item id="5804" article="a" name="nose ring">
 		<attribute key="description" value="It was the favourite trinket of the famous Horned Fox." />
 		<attribute key="weight" value="500" />

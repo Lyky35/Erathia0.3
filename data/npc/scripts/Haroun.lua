@@ -1,85 +1,57 @@
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
-
-function onCreatureAppear(cid) npcHandler:onCreatureAppear(cid) end
-function onCreatureDisappear(cid) npcHandler:onCreatureDisappear(cid) end
-function onCreatureSay(cid, type, msg) npcHandler:onCreatureSay(cid, type, msg) end
-function onThink() npcHandler:onThink() end
-
-keywordHandler:addKeyword({'weapon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I'm afraid I do not trade with weapons or armour. Nah'bob only deals with magical equipment."})
-keywordHandler:addKeyword({'armor'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I'm afraid I do not trade with weapons or armour. Nah'bob only deals with magical equipment."})
-keywordHandler:addKeyword({'legs'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I'm afraid I do not trade with weapons or armour. Nah'bob only deals with magical equipment."})
-keywordHandler:addKeyword({'wares'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I only deal with magical equipment. Our range of goods include amulets, rings, wands and some special items."})
-keywordHandler:addKeyword({'offer'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I only deal with magical equipment. Our range of goods include amulets, rings, wands and some special items."})
-keywordHandler:addKeyword({'good'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I only deal with magical equipment. Our range of goods include amulets, rings, wands and some special items."})
-keywordHandler:addKeyword({'equipment'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I only deal with magical equipment. Our range of goods include amulets, rings, wands and some special items."})
-keywordHandler:addKeyword({'magical'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I only deal with magical equipment. Our range of goods include amulets, rings, wands and some special items."})
-keywordHandler:addKeyword({'sell'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I only deal with magical equipment. Our range of goods include amulets, rings, wands and some special items."})
-keywordHandler:addKeyword({'have'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I only deal with magical equipment. Our range of goods include amulets, rings, wands and some special items."})
-keywordHandler:addKeyword({'amulet'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I'm selling and buying bronze amulets, stone skin amulets, elven amulets and garlic necklaces."})
-keywordHandler:addKeyword({'ring'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I'm selling and buying stealth rings, power rings, sword rings, axe rings, and club rings."})
-keywordHandler:addKeyword({'wand'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I'm buying wands of vortex, wands of dragonbreath, wands of plague, wands of cosmic energy and wands of inferno as well as magic light wands."})
-keywordHandler:addKeyword({'special'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I'm selling and buying magic light wands. I'm currently also looking for mind stones, life crystals and orbs."})
-
-local trade = {
-	{ NeedItem = 2195, Ncount = 1, GiveItem = 5891, Gcount = 1}, -- Enchanted Chicken Wing
-	{ NeedItem = 2475, Ncount = 4, GiveItem = 5885, Gcount = 1}, -- Flask of Warrior's Sweat
-	{ NeedItem = 2498, Ncount = 2, GiveItem = 5884, Gcount = 1}, -- Spirit Container
-	{ NeedItem = 2392, Ncount = 3, GiveItem = 5904, Gcount = 1}  -- Magic Sulphur
-}
-
-local function greetCallback(cid, message)
-	if Player(cid):getStorageValue(1094) ~= 1 then
-		npcHandler:say('I\'m sorry, human. But you need Gabel\'s permission to trade with me.', cid)
-		return false
-	end
-
-	return true
-end
-
-local function creatureSayCallback(cid, type, msg)
-	if not npcHandler:isFocused(cid) then
-		return false
-	end
-
-	local player = Player(cid)
-	if isInArray({"enchanted chicken wing", "boots of haste"}, msg) then
-		npcHandler:say('Do you want to trade Boots of haste for Enchanted Chicken Wing?', cid)
-		npcHandler.topic[cid] = 1
-	elseif isInArray({"warrior sweat", "warrior helmet"}, msg) then
-		npcHandler:say('Do you want to trade 4 Warrior Helmet for Warrior Sweat?', cid)
-		npcHandler.topic[cid] = 2
-	elseif isInArray({"fighting spirit", "royal helmet"}, msg) then
-		npcHandler:say('Do you want to trade 2 Royal Helmet for Fighting Spirit', cid)
-		npcHandler.topic[cid] = 3
-	elseif isInArray({"magic sulphur", "fire sword"}, msg) then
-		npcHandler:say('Do you want to trade 3 Fire Sword for Magic Sulphur', cid)
-		npcHandler.topic[cid] = 4
-	elseif isInArray({"job", "items"}, msg) then
-		npcHandler:say('I trade Enchanted Chicken Wing for Boots of Haste, Warrior Sweat for 4 Warrior Helmets, Fighting Spirit for 2 Royal Helmet Magic Sulphur for 3 Fire Swords', cid)
-		npcHandler.topic[cid] = 0
-	elseif msgcontains(msg,'yes') and npcHandler.topic[cid] <= 4 and npcHandler.topic[cid] >= 1 then
-		if player:getItemCount(trade[npcHandler.topic[cid]].NeedItem) >= trade[npcHandler.topic[cid]].Ncount then
-			player:removeItem(trade[npcHandler.topic[cid]].NeedItem, trade[npcHandler.topic[cid]].Ncount)
-			player:addItem(trade[npcHandler.topic[cid]].GiveItem, trade[npcHandler.topic[cid]].Gcount)
-			return npcHandler:say('Here you are.', cid)
-		else
-			npcHandler:say('Sorry but you don\'t have the item.', cid)
-		end
-	elseif msgcontains(msg,'no') and (npcHandler.topic[cid] >= 1 and npcHandler.topic[cid] <= 5) then
-		npcHandler:say('Ok then.', cid)
-		npcHandler.topic[cid] = 0
-		npcHandler:releaseFocus(cid)
-		npcHandler:resetNpc(cid)
-	end
-	return true
-end
-
-npcHandler:setMessage(MESSAGE_GREET, "Be greeted, human |PLAYERNAME|. How can a humble djinn be of service?")
-npcHandler:setMessage(MESSAGE_FAREWELL, "Farewell! May the serene light of the enlightened one rest shine on your travels.")
-npcHandler:setMessage(MESSAGE_WALKAWAY, "Farewell, human.")
-
-npcHandler:setCallback(CALLBACK_GREET, greetCallback)
-npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
+ 
+-- OTServ event handling functions start
+function onCreatureSay(cid, type, msg)                          npcHandler:onCreatureSay(cid, type, msg) end
+function onThingMove(creature, thing, oldpos, oldstackpos)              npcHandler:onThingMove(creature, thing, oldpos, oldstackpos) end
+function onCreatureAppear(creature)                             npcHandler:onCreatureAppear(creature) end
+function onCreatureDisappear(id)                            npcHandler:onCreatureDisappear(id) end
+function onCreatureTurn(creature)                           npcHandler:onCreatureTurn(creature) end
+function onCreatureChangeOutfit(creature)                       npcHandler:onCreatureChangeOutfit(creature) end
+function onThink()                                  npcHandler:onThink() end
+-- OTServ event handling functions end
+ 
+local shopModule = ShopModule:new()
+npcHandler:addModule(shopModule)
+ 
+-- ITEMS HE BUYS! --
+-- Rings: --
+shopModule:addSellableItem({'sell sword ring'}, 2207, 100, 'Sword Ring')
+shopModule:addSellableItem({'sell club ring'}, 2209, 100, 'Club Ring')
+shopModule:addSellableItem({'sell axe ring'}, 2208, 100, 'Axe Ring')
+shopModule:addSellableItem({'sell power ring'}, 2166, 50, 'Power Ring')
+shopModule:addSellableItem({'sell stealth ring'}, 2165, 200, 'Stealth Ring')
+-- Amulets: --
+shopModule:addSellableItem({'sell stone skin amulet'}, 2197, 500, 'Stone Skin Amulet')
+shopModule:addSellableItem({'sell elven amulet'}, 2198, 100, 'Elven Amulet')
+shopModule:addSellableItem({'sell bronze amulet'}, 2172, 50, 'Bronze Amulet')
+shopModule:addSellableItem({'sell garlic necklace'}, 2199, 50, 'Garlic Necklace')
+-- Wands: --
+shopModule:addSellableItem({'magic light wand', 'magic lightwand'}, 2162, 35, 'Magic Lightwand')
+shopModule:addSellableItem({'wand of vortex'}, 2190, 100, 'Wand of Vortex')
+shopModule:addSellableItem({'wand of dragonbreath'}, 2191, 200, 'Wand of Dragonbreath')
+shopModule:addSellableItem({'wand of plague'}, 2188, 1000, 'Wand of Plague')
+shopModule:addSellableItem({'wand of cosmic energy'}, 2189, 2000, 'Wand of Cosmic Energy')
+shopModule:addSellableItem({'wand of inferno'}, 2187, 3000, 'Wand of Inferno')
+-- Special Items: --
+shopModule:addSellableItem({'orb'}, 2176, 750, 'Orb')
+shopModule:addSellableItem({'mind stone'}, 2178, 100, 'Mind Stone')
+shopModule:addSellableItem({'life crystal'}, 2177, 50, 'Life Crystal')
+ 
+-- ITEMS HE SELLS! --
+shopModule:addBuyableItem({'buy sword ring'}, 2207, 500, 'Sword Ring')
+shopModule:addBuyableItem({'buy club ring'}, 2209, 500, 'Club Ring')
+shopModule:addBuyableItem({'buy axe ring'}, 2208, 500, 'Axe Ring')
+shopModule:addBuyableItem({'buy power ring'}, 2166, 100, 'Power Ring')
+shopModule:addBuyableItem({'buy stealth ring'}, 2165, 5000, 'Stealth Ring')
+-- Amulets: --
+shopModule:addBuyableItem({'buy stone skin amulet'},    2197, 5000,     10, 5, 'Stone Skin Amulet')
+shopModule:addBuyableItem({'buy elven amulet'},     2198, 500,  50, 30, 'Elven Amulet')
+shopModule:addBuyableItem({'buy bronze amulet'},    2172, 100,  200, 200,    'Bronze Amulet')
+shopModule:addBuyableItem({'buy garlic necklace'},  2199, 100,  150, 200,    'Garlic Necklace')
+ 
+ 
+ 
+-- Makes sure the npc reacts when you say hi, bye etc.
 npcHandler:addModule(FocusModule:new())

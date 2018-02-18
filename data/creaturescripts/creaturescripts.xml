@@ -19,4 +19,5 @@
 
 	<!-- Task -->
 	<event type="kill" name="TaskKill" script="task/taskKill.lua"/>
+	 <event type="kill" name="KillingInTheNameOf" event="script" value="killinginthenameof.lua"/>
 </creaturescripts>

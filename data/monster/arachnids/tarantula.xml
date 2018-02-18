@@ -1,40 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Tarantula" nameDescription="a tarantula" race="venom" experience="120" speed="210" manacost="485">
+<monster name="tarantula" nameDescription="a tarantula" race="venom" experience="120" speed="214" manacost="485">
 	<health now="225" max="225"/>
-	<look type="219" corpse="6060"/>
-	<targetchange interval="4000" chance="10"/>
+	<look type="219" corpse="4320"/>
+	<targetchange interval="1000" chance="5"/>
+	<targetstrategies nearest="70" health="0" damage="30" random="0"/>
 	<flags>
-		<flag summonable="1"/>
 		<flag attackable="1"/>
 		<flag hostile="1"/>
-		<flag illusionable="1"/>
+		<flag summonable="1"/>
 		<flag convinceable="1"/>
+		<flag illusionable="1"/>
 		<flag pushable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="0"/>
 		<flag targetdistance="1"/>
-		<flag staticattack="90"/>
+		<flag staticattack="80"/>
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="30" attack="45" poison="40"/>
+		<attack name="melee" skill="40" attack="38" poison="30"/>
+		<attack name="poisonfield" chance="20" range="1">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
 	</attacks>
-	<defenses armor="10" defense="10">
-		<defense name="speed" interval="2000" chance="15" speedchange="220" duration="5000">
-			<attribute key="areaEffect" value="redshimmer"/>
-		</defense>
+	<defenses armor="20" defense="20">
+		<defense name="haste_tarantula" chance="13"/>
 	</defenses>
-	
+	<elements>
+		<element earthPercent="100"/>
+	</elements>
 	<immunities>
-		<immunity earth="1"/>
-		<immunity outfit="1"/>
-		<immunity drunk="1"/>
 	</immunities>
+	<voices interval="1000" chance="5">
+	</voices>
 	<loot>
-		<item id="2148" countmax="40" chance="79000"/><!-- gold coin -->
-		<item id="2478" chance="3050"/><!-- brass legs -->
-		<item id="2510" chance="2000"/><!-- plate shield -->
-		<item id="2457" chance="990"/><!-- steel helmet -->
-		<item id="2169" chance="120"/><!-- time ring -->
+		<item id="2148" chance="70000" countmax="10"/><!-- 10 70% gold coin -->
+		<item id="2148" chance="30000" countmax="30"/><!-- 30 30% gold coin -->
+		<item id="2457" chance="1000"/><!-- 1% steel helmet -->
+		<item id="2478" chance="3000"/><!-- 3% brass legs -->
+		<item id="1987" chance="100000"><!-- bag -->
+			
+				<item id="5879" chance="1140"/><!-- spider silk -->
+				<item id="2510" chance="2000"/><!-- 2% plate shield -->
+				<item id="2169" chance="100"/><!-- 0.1% time ring -->
+			
+		</item>
 	</loot>
 </monster>

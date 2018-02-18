@@ -25,13 +25,13 @@ keywordHandler:addKeyword({'elves'}, StdModule.say, {npcHandler = npcHandler, on
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
-shopModule:addBuyableItem({'arrow'}, 					Cfarrow, 3)
-shopModule:addBuyableItem({'power bolt'}, 					Cfpowerbolt, 7)
-shopModule:addBuyableItem({'bow'}, 					Cfbow, 400)
-shopModule:addSellableItem({'bow'}, 					Cfbow, 100)
-shopModule:addBuyableItem({'bolt'}, 					Cfbolt, 4)
-shopModule:addBuyableItem({'crossbow'}, 					Cfcrossbow, 500)
-shopModule:addSellableItem({'crossbow'}, 					Cfcrossbow, 500)
-shopModule:addBuyableItem({'spear'}, 					Cfspear, 9)
+
+shopModule:addBuyableItem({'arrow'},		Cfarrow,	2)
+shopModule:addBuyableItem({'power bolt'},	Cfpowerbolt,	7)
+shopModule:addBuyableItem({'crossbow'},		Cfcrossbow,	500)
+shopModule:addBuyableItem({'bow'}, 		Cfbow,		400)
+shopModule:addBuyableItem({'bolt'}, 		Cfbolt,		3)
+shopModule:addBuyableItem({'spear'}, 		Cfspear,	9)
+shopModule:addSellableItem({'spear'}, 		Cfspear,	3)
 
 npcHandler:addModule(FocusModule:new())

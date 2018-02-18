@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Pig" nameDescription="a pig" race="blood" experience="0" speed="130" manacost="255">
+<monster name="Pig" nameDescription="a pig" race="blood" experience="0" speed="114" manacost="255">
 	<health now="25" max="25"/>
 	<look type="60" corpse="6000"/>
 	<targetchange interval="4000" chance="0"/>
@@ -21,7 +21,6 @@
 		<voice sentence="Oink"/>
 	</voices>
 	<loot>
-		<item id="2666" countmax="4" chance="64000"/>	<!-- meat -->
-		<item id="10610" chance="950"/>					<!-- pig foot -->
+		<item id="2666" chance="65000" countmax="4"/><!-- 4 65% meat -->
 	</loot>
 </monster>

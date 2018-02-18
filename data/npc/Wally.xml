@@ -8,7 +8,8 @@
 <parameter key="message_walkaway" value="How rude!"/>
 <parameter key="message_farewell" value="It was a pleasure to help you."/>
 <parameter key="message_idletimeout" value="It was a pleasure to help you."/>
-
+    		<parameter key="module_shop" value="1" />
+    		<parameter key="shop_buyable" value="parcel,2595,15;letter,2597,8;label,2599,1;" />
 <parameter key="message_decline" value="Ok."/>
 	</parameters>
 </npc>

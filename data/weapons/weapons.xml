@@ -54,4 +54,8 @@
 	<distance id="7367" breakchance="1" />	<!-- Enchanted Spear -->
 	<distance id="7368" breakchance="33"/>	<!-- Assassin Star -->
 	<distance id="7378" breakchance="3" />	<!-- Royal Spear -->
+	
+	
+	    <melee id="2396" breakchance="100"/>
+
 </weapons>

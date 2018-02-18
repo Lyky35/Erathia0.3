@@ -12,5 +12,7 @@
 <parameter key="message_decline" value="Maybe next time."/>
 <parameter key="message_nothaveitem" value="Sorry, you do not have that many."/>
 <parameter key="message_needmoremoney" value="Come back, when you have enough money."/>
+    		<parameter key="module_shop" value="1" />
+    		<parameter key="shop_buyable" value="parcel,2595,15;letter,2597,8;label,2599,1;" />
 	</parameters>
 </npc>

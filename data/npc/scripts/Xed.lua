@@ -31,13 +31,14 @@ keywordHandler:addKeyword({'kaz'}, StdModule.say, {npcHandler = npcHandler, only
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
-shopModule:addBuyableItem({'arrow'}, 					Cfarrow, 3)
-shopModule:addBuyableItem({'power bolt'}, 					Cfpowerbolt, 7)
-shopModule:addBuyableItem({'bow'}, 					Cfbow, 400)
-shopModule:addSellableItem({'bow'}, 					Cfbow, 100)
-shopModule:addBuyableItem({'bolt'}, 					Cfbolt, 4)
-shopModule:addBuyableItem({'crossbow'}, 					Cfcrossbow, 500)
-shopModule:addSellableItem({'crossbow'}, 					Cfcrossbow, 500)
-shopModule:addBuyableItem({'spear'}, 					Cfspear, 9)
+shopModule:addBuyableItem({'arrow','arrows'}, 2544, 3, 'arrows')
+shopModule:addBuyableItem({'power bolt','power bolts'}, 2547, 100, 'power bolts')
+shopModule:addBuyableItem({'crossbow', 'xbow'}, 2455, 500, 'crossbow')
+shopModule:addSellableItem({'crossbow', 'xbow'}, 2455, 500, 'crossbow')
+shopModule:addBuyableItem({'bow'}, 2456, 400, 'bow')
+shopModule:addSellableItem({'bow'}, 2456, 100, 'bow')
+shopModule:addBuyableItem({'bolt', 'bolts'}, 2543, 4, 'bolts')
+shopModule:addBuyableItem({'spear', 'spears'}, 2389, 9, 'spears')
 
 npcHandler:addModule(FocusModule:new())
+

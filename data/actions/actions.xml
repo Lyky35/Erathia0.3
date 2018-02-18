@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
+
+	<!-- Triangle Tower Lever -->
+	<action actionid="32500" script="triangletower/lever.lua"/>
+	
 	<!-- Quests -->
 	<action actionid="2000" script="quests/system.lua"/>
 	<action fromaid="30009" toaid="30011" script="quests/system.lua"/>

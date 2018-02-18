@@ -1,3 +1,5 @@
+	local base = 200
+	local variation = 40
 local combat = Combat()
 combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_HEALING)
 combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_MAGIC_BLUE)
@@ -8,8 +10,8 @@ local area = createCombatArea(AREA_CIRCLE3X3)
 combat:setArea( area)
 
 function onGetFormulaValues(cid, level, maglevel)
-	min = ((level / 5) + (maglevel * 4.6) + 100)
-	max = ((level / 5) + (maglevel * 9.6) + 125)
+	local min = math.max((base - variation), ((3 * maglevel + 2 * level) * (base - variation) / 100))
+	local max = math.max((base + variation), ((3 * maglevel + 2 * level) * (base + variation) / 100))
 	return min, max
 end
 
