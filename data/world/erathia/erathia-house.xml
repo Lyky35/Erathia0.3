@@ -234,5 +234,87 @@
 	<house name="Botham IV i" houseid="238" entryx="33180" entryy="32864" entryz="7" rent="2400" townid="9" size="24" />
 	<house name="Chameken II" houseid="239" entryx="33120" entryy="32861" entryz="7" rent="1600" townid="9" size="15" />
 	<house name="Chameken I" houseid="240" entryx="33098" entryy="32857" entryz="7" rent="1600" townid="9" size="13" />
-
+	<house name="Charsirakh I a" houseid="243" entryx="33075" entryy="32816" entryz="6" rent="700" townid="9" size="5" />
+	<house name="Charsirakh I b" houseid="244" entryx="33073" entryy="32819" entryz="7" rent="3700" townid="9" size="32" />
+	<house name="Charsirakh II" houseid="245" entryx="33071" entryy="32830" entryz="7" rent="2600" townid="9" size="21" />
+	<house name="Charsirakh III" houseid="246" entryx="33071" entryy="32843" entryz="7" rent="1700" townid="9" size="14" />
+	<house name="Esuph I" houseid="247" entryx="33220" entryy="32800" entryz="7" rent="1700" townid="9" size="15" />
+	<house name="Esuph II a" houseid="248" entryx="33226" entryy="32813" entryz="6" rent="700" townid="9" size="5" />
+	<house name="Esuph II b" houseid="249" entryx="33223" entryy="32816" entryz="7" rent="3700" townid="9" size="26" />
+	<house name="Esuph III a" houseid="250" entryx="33240" entryy="32820" entryz="6" rent="700" townid="9" size="5" />
+	<house name="Esuph III b" houseid="251" entryx="33234" entryy="32819" entryz="7" rent="3100" townid="9" size="24" />
+	<house name="Esuph IV a" houseid="252" entryx="33234" entryy="32832" entryz="6" rent="700" townid="9" size="8" />
+	<house name="Esuph IV b" houseid="253" entryx="33230" entryy="32832" entryz="7" rent="1000" townid="9" size="8" />
+	<house name="Esuph IV c" houseid="254" entryx="33238" entryy="32832" entryz="7" rent="1000" townid="9" size="8" />
+	<house name="Esuph IV d" houseid="255" entryx="33236" entryy="32838" entryz="7" rent="2000" townid="9" size="17" />
+	<house name="Murkhol I b" houseid="256" entryx="33085" entryy="32841" entryz="7" rent="1100" townid="9" size="9" />
+	<house name="Mothrem I" houseid="257" entryx="33115" entryy="32781" entryz="7" rent="2600" townid="9" size="22" />
+	<house name="Murkhol I a" houseid="258" entryx="33084" entryy="32839" entryz="7" rent="1100" townid="9" size="9" />
+	<house name="Murkhol I c" houseid="259" entryx="33082" entryy="32841" entryz="7" rent="1100" townid="9" size="9" />
+	<house name="Murkhol I d" houseid="260" entryx="33084" entryy="32842" entryz="7" rent="1100" townid="9" size="9" />
+	<house name="Oskahl I a" houseid="261" entryx="33077" entryy="32864" entryz="5" rent="3700" townid="9" size="32" />
+	<house name="Oskahl I b" houseid="262" entryx="33077" entryy="32864" entryz="5" rent="3700" townid="9" size="0" />
+	<house name="Oskahl I c" houseid="263" entryx="33071" entryy="32858" entryz="6" rent="2100" townid="9" size="18" />
+	<house name="Oskahl I d" houseid="264" entryx="33082" entryy="32858" entryz="6" rent="1700" townid="9" size="15" />
+	<house name="Oskahl I e" houseid="265" entryx="33071" entryy="32863" entryz="6" rent="2600" townid="9" size="22" />
+	<house name="Oskahl I f" houseid="266" entryx="33082" entryy="32863" entryz="6" rent="2100" townid="9" size="18" />
+	<house name="Oskahl I g" houseid="267" entryx="33077" entryy="32857" entryz="7" rent="3900" townid="9" size="31" />
+	<house name="Oskahl I h" houseid="268" entryx="33075" entryy="32860" entryz="7" rent="2600" townid="9" size="21" />
+	<house name="Oskahl I i" houseid="269" entryx="33079" entryy="32860" entryz="7" rent="2100" townid="9" size="18" />
+	<house name="Oskahl I j" houseid="270" entryx="33075" entryy="32865" entryz="7" rent="2100" townid="9" size="18" />
+	<house name="Oskahl I k" houseid="271" entryx="33079" entryy="32865" entryz="7" rent="1700" townid="9" size="14" />
+	<house name="Othehothep I a" houseid="272" entryx="33089" entryy="32804" entryz="5" rent="700" townid="9" size="5" />
+	<house name="Othehothep I b" houseid="273" entryx="33088" entryy="32798" entryz="6" rent="3700" townid="9" size="27" />
+	<house name="Othehothep I c" houseid="274" entryx="33094" entryy="32799" entryz="7" rent="3800" townid="9" size="32" />
+	<house name="Othehothep I d" houseid="275" entryx="33089" entryy="32807" entryz="7" rent="4300" townid="9" size="33" />
+	<house name="Othehothep II a" houseid="276" entryx="33110" entryy="32797" entryz="5" rent="700" townid="9" size="8" />
+	<house name="Othehothep II b" houseid="277" entryx="33108" entryy="32801" entryz="6" rent="4300" townid="9" size="35" />
+	<house name="Othehothep II c" houseid="278" entryx="33102" entryy="32794" entryz="7" rent="2100" townid="9" size="18" />
+	<house name="Othehothep II d" houseid="279" entryx="33114" entryy="32794" entryz="7" rent="2100" townid="9" size="18" />
+	<house name="Othehothep II e" houseid="280" entryx="33105" entryy="32803" entryz="7" rent="3100" townid="9" size="26" />
+	<house name="Othehothep II f" houseid="281" entryx="33111" entryy="32803" entryz="7" rent="3100" townid="9" size="26" />
+	<house name="Othehothep III a" houseid="282" entryx="33130" entryy="32793" entryz="5" rent="700" townid="9" size="5" />
+	<house name="Othehothep III b" houseid="283" entryx="33124" entryy="32794" entryz="6" rent="3100" townid="9" size="25" />
+	<house name="Othehothep III c" houseid="284" entryx="33122" entryy="32790" entryz="7" rent="2100" townid="9" size="17" />
+	<house name="Othehothep III d" houseid="285" entryx="33131" entryy="32787" entryz="7" rent="2600" townid="9" size="25" />
+	<house name="Othehothep III e" houseid="286" entryx="33126" entryy="32798" entryz="7" rent="2100" townid="9" size="18" />
+	<house name="Othehothep III f" houseid="287" entryx="33131" entryy="32798" entryz="7" rent="1700" townid="9" size="14" />
+	<house name="Rathal I a" houseid="288" entryx="33187" entryy="32786" entryz="6" rent="2600" townid="9" size="21" />
+	<house name="Rathal I b" houseid="289" entryx="33182" entryy="32787" entryz="7" rent="1700" townid="9" size="15" />
+	<house name="Rathal I c" houseid="290" entryx="33192" entryy="32787" entryz="7" rent="1700" townid="9" size="15" />
+	<house name="Rathal I d" houseid="291" entryx="33185" entryy="32794" entryz="7" rent="1700" townid="9" size="13" />
+	<house name="Rathal I e" houseid="292" entryx="33190" entryy="32794" entryz="7" rent="1700" townid="9" size="12" />
+	<house name="Rathal II a" houseid="293" entryx="33209" entryy="32793" entryz="6" rent="2600" townid="9" size="23" />
+	<house name="Rathal II b" houseid="294" entryx="33201" entryy="32790" entryz="7" rent="1700" townid="9" size="14" />
+	<house name="Rathal II c" houseid="295" entryx="33211" entryy="32790" entryz="7" rent="1700" townid="9" size="15" />
+	<house name="Rathal II d" houseid="296" entryx="33207" entryy="32797" entryz="7" rent="3400" townid="9" size="28" />
+	<house name="Thanah I a" houseid="297" entryx="33109" entryy="32821" entryz="5" rent="1700" townid="9" size="14" />
+	<house name="Thanah I b" houseid="298" entryx="33113" entryy="32821" entryz="6" rent="5600" townid="9" size="49" />
+	<house name="Thanah I c" houseid="299" entryx="33109" entryy="32812" entryz="7" rent="6100" townid="9" size="50" />
+	<house name="Thanah I d" houseid="300" entryx="33109" entryy="32825" entryz="7" rent="5200" townid="9" size="43" />
+	<house name="Thanah II a" houseid="301" entryx="33106" entryy="32840" entryz="5" rent="1700" townid="9" size="14" />
+	<house name="Thanah II b" houseid="302" entryx="33102" entryy="32837" entryz="6" rent="900" townid="9" size="7" />
+	<house name="Thanah II c" houseid="303" entryx="33105" entryy="32837" entryz="6" rent="900" townid="9" size="7" />
+	<house name="Thanah II d" houseid="305" entryx="33102" entryy="32843" entryz="6" rent="700" townid="9" size="5" />
+	<house name="Thanah II e" houseid="306" entryx="33105" entryy="32843" entryz="6" rent="700" townid="9" size="5" />
+	<house name="Thanah II f" houseid="307" entryx="33105" entryy="32839" entryz="7" rent="5300" townid="9" size="42" />
+	<house name="Thanah II g" houseid="308" entryx="33103" entryy="32841" entryz="7" rent="3100" townid="9" size="26" />
+	<house name="Thanah II h" houseid="309" entryx="33106" entryy="32841" entryz="7" rent="2600" townid="9" size="21" />
+	<house name="Unklath I a" houseid="311" entryx="33152" entryy="32792" entryz="5" rent="2600" townid="9" size="21" />
+	<house name="Unklath I b" houseid="312" entryx="33150" entryy="32786" entryz="6" rent="3400" townid="9" size="29" />
+	<house name="Unklath I c" houseid="313" entryx="33144" entryy="32794" entryz="6" rent="3400" townid="9" size="28" />
+	<house name="Unklath I d" houseid="314" entryx="33142" entryy="32787" entryz="7" rent="3700" townid="9" size="30" />
+	<house name="Unklath I e" houseid="315" entryx="33156" entryy="32788" entryz="7" rent="3700" townid="9" size="33" />
+	<house name="Unklath I f" houseid="316" entryx="33146" entryy="32798" entryz="7" rent="3700" townid="9" size="32" />
+	<house name="Unklath I g" houseid="317" entryx="33153" entryy="32798" entryz="7" rent="3700" townid="9" size="34" />
+	<house name="Unklath II a" houseid="318" entryx="33170" entryy="32790" entryz="6" rent="2600" townid="9" size="23" />
+	<house name="Unklath II b" houseid="319" entryx="33165" entryy="32791" entryz="7" rent="1700" townid="9" size="14" />
+	<house name="Unklath II c" houseid="320" entryx="33175" entryy="32791" entryz="7" rent="1700" townid="9" size="15" />
+	<house name="Unklath II d" houseid="321" entryx="33170" entryy="32798" entryz="7" rent="3700" townid="9" size="32" />
+	<house name="Uthemath I a" houseid="322" entryx="33188" entryy="32811" entryz="5" rent="1000" townid="9" size="8" />
+	<house name="Uthemath I b" houseid="323" entryx="33184" entryy="32811" entryz="6" rent="2000" townid="9" size="17" />
+	<house name="Uthemath I c" houseid="324" entryx="33192" entryy="32811" entryz="6" rent="2000" townid="9" size="14" />
+	<house name="Uthemath I d" houseid="325" entryx="33182" entryy="32806" entryz="7" rent="2100" townid="9" size="18" />
+	<house name="Uthemath I e" houseid="326" entryx="33194" entryy="32806" entryz="7" rent="2100" townid="9" size="17" />
+	<house name="Uthemath I f" houseid="327" entryx="33189" entryy="32815" entryz="7" rent="5100" townid="9" size="49" />
 </houses>
