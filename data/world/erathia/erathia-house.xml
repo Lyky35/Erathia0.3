@@ -234,4 +234,5 @@
 	<house name="Botham IV i" houseid="238" entryx="33180" entryy="32864" entryz="7" rent="2400" townid="9" size="24" />
 	<house name="Chameken II" houseid="239" entryx="33120" entryy="32861" entryz="7" rent="1600" townid="9" size="15" />
 	<house name="Chameken I" houseid="240" entryx="33098" entryy="32857" entryz="7" rent="1600" townid="9" size="13" />
+
 </houses>
