@@ -2249,8 +2249,9 @@
 		<attribute key="weight" value="420" />
 		<attribute key="slotType" value="necklace" />
 		<attribute key="decayTo" value="2196" />
-		<attribute key="duration" value="86400" />
+		<attribute key="duration" value="604800" />
 		<attribute key="showduration" value="1" />
+		<attribute key="charges" value="1" />
 	</item>
 	<item id="2174" article="a" name="strange symbol">
 		<attribute key="slotType" value="ammo" />

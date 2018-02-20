@@ -21,9 +21,9 @@ local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
 
-shopModule:addBuyableItem({'amulet of loss', 'aol'}, 					Cfamuletofloss, 50000)
+shopModule:addBuyableItem({'amulet of loss', 'aol'}, 					Cfamuletofloss, 100000)
 shopModule:addBuyableItem({'protection amulet'}, 					Cfprotectionamulet, 700, 250)
-shopModule:addBuyableItem({'broken amulet', 'amulet of life'}, 					Cfbrokenamulet, 50000)
+shopModule:addSellableItem({'broken amulet', 'amulet of life'}, 					Cfbrokenamulet, 25000)
 
 local travelNode = keywordHandler:addKeyword({'cormaya'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Should I teleport you back to Pemaret?'})
 travelNode:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = true, level = 0, cost = 0, destination = {x=33288, y=31956, z=7} })
