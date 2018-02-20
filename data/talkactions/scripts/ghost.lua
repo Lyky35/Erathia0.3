@@ -3,10 +3,6 @@ function onSay(player, words, param)
 		return true
 	end
 
-	if player:getAccountType() < ACCOUNT_TYPE_GOD then
-		return false
-	end
-
 	local position = player:getPosition()
 	local isGhost = not player:isInGhostMode()
 	player:setGhostMode(isGhost)
