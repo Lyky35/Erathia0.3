@@ -253,16 +253,15 @@
 	<house name="Murkhol I c" houseid="259" entryx="33082" entryy="32841" entryz="7" rent="1100" townid="9" size="9" />
 	<house name="Murkhol I d" houseid="260" entryx="33084" entryy="32842" entryz="7" rent="1100" townid="9" size="9" />
 	<house name="Oskahl I a" houseid="261" entryx="33077" entryy="32864" entryz="5" rent="3700" townid="9" size="32" />
-	<house name="Oskahl I b" houseid="262" entryx="33077" entryy="32864" entryz="5" rent="3700" townid="9" size="0" />
-	<house name="Oskahl I c" houseid="263" entryx="33071" entryy="32858" entryz="6" rent="2100" townid="9" size="18" />
-	<house name="Oskahl I d" houseid="264" entryx="33082" entryy="32858" entryz="6" rent="1700" townid="9" size="15" />
-	<house name="Oskahl I e" houseid="265" entryx="33071" entryy="32863" entryz="6" rent="2600" townid="9" size="22" />
-	<house name="Oskahl I f" houseid="266" entryx="33082" entryy="32863" entryz="6" rent="2100" townid="9" size="18" />
-	<house name="Oskahl I g" houseid="267" entryx="33077" entryy="32857" entryz="7" rent="3900" townid="9" size="31" />
-	<house name="Oskahl I h" houseid="268" entryx="33075" entryy="32860" entryz="7" rent="2600" townid="9" size="21" />
-	<house name="Oskahl I i" houseid="269" entryx="33079" entryy="32860" entryz="7" rent="2100" townid="9" size="18" />
-	<house name="Oskahl I j" houseid="270" entryx="33075" entryy="32865" entryz="7" rent="2100" townid="9" size="18" />
-	<house name="Oskahl I k" houseid="271" entryx="33079" entryy="32865" entryz="7" rent="1700" townid="9" size="14" />
+	<house name="Oskahl I b" houseid="263" entryx="33071" entryy="32858" entryz="6" rent="2100" townid="9" size="18" />
+	<house name="Oskahl I c" houseid="264" entryx="33082" entryy="32858" entryz="6" rent="1700" townid="9" size="15" />
+	<house name="Oskahl I d" houseid="265" entryx="33071" entryy="32863" entryz="6" rent="2600" townid="9" size="22" />
+	<house name="Oskahl I e" houseid="266" entryx="33082" entryy="32863" entryz="6" rent="2100" townid="9" size="18" />
+	<house name="Oskahl I f" houseid="267" entryx="33077" entryy="32857" entryz="7" rent="3900" townid="9" size="31" />
+	<house name="Oskahl I g" houseid="268" entryx="33075" entryy="32860" entryz="7" rent="2600" townid="9" size="21" />
+	<house name="Oskahl I h" houseid="269" entryx="33079" entryy="32860" entryz="7" rent="2100" townid="9" size="18" />
+	<house name="Oskahl I i" houseid="270" entryx="33075" entryy="32865" entryz="7" rent="2100" townid="9" size="18" />
+	<house name="Oskahl I j" houseid="271" entryx="33079" entryy="32865" entryz="7" rent="1700" townid="9" size="14" />
 	<house name="Othehothep I a" houseid="272" entryx="33089" entryy="32804" entryz="5" rent="700" townid="9" size="5" />
 	<house name="Othehothep I b" houseid="273" entryx="33088" entryy="32798" entryz="6" rent="3700" townid="9" size="27" />
 	<house name="Othehothep I c" houseid="274" entryx="33094" entryy="32799" entryz="7" rent="3800" townid="9" size="32" />
