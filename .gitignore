@@ -170,3 +170,5 @@ pip-log.txt
 .*.swp
 .*.swo
 
+libmysql.dll
+data/npc/scripts/Frodo.lua.bak
