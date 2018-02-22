@@ -6,3 +6,6 @@ dofile('data/lib/customFunctions.lua')
 
 -- Compatibility library for our old Lua API
 dofile('data/lib/compat/compat.lua')
+
+-- Miscellaneous library - WIP
+-- dofile('data/lib/miscellaneous/miscellaneous.lua')
