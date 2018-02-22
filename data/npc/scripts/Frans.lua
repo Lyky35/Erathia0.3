@@ -32,6 +32,7 @@ shopModule:addBuyableItemContainer({'bp uh', 'backpack of uhs', 'backpack of ult
 shopModule:addBuyableItemContainer({'bp sd', 'backpack of sudden death runes', 'backpack of sudden death'}, 2003, 2268, 6500, 1, 'backpack of sudden death runes')
 shopModule:addBuyableItemContainer({'bp gfb', 'backpack of great fireball runes', 'backpack of great fireball'}, 2000, 2304, 3600, 2, 'backpack of great fireball runes')
 shopModule:addBuyableItemContainer({'bp explo', 'backpack of explosion runes', 'backpack of explosion'}, 2000, 2304, 5000, 2, 'backpack of great fireball runes')
+shopModule:addBuyableItemContainer({'bp hmm', 'backpack of heavy magic missile runes', 'backpack of heavy magic missile'}, 2000, 2304, 5000, 2, 'backpack of heavy magic missile runes')
 
 shopModule:addBuyableItem({'wand of vortex', 'vortex'}, 2190, 500, 'wand of vortex')
 shopModule:addBuyableItem({'wand of dragonbreath', 'dragonbreath'}, 2191, 1000, 'wand of dragonbreath')
@@ -50,11 +51,11 @@ shopModule:addBuyableItem({'ultimate healing', 'ultimate healing rune'}, 2273, 1
 shopModule:addBuyableItem({'fire bomb', 'fire bomb rune'}, 2305, 235, 2, 'fire bomb rune')
 shopModule:addBuyableItem({'wild growth', 'wild growth rune'}, 2269, 170, 1, 'wild growth')
 shopModule:addBuyableItem({'destroy field', 'destroy field rune'}, 2261, 45, 2, 'destroy field rune')
-shopModule:addBuyableItem({'heavy magic missile', 'heavy magic missile rune'}, 2311, 125, 5, 'heavy magic missile rune')
-shopModule:addBuyableItem({'light magic missile', 'light magic missile rune'}, 2287, 35, 5, 'light magic missile rune')
+shopModule:addBuyableItem({'heavy magic missile', 'heavy magic missile rune'}, 2311, 25, 5, 'heavy magic missile rune')
+shopModule:addBuyableItem({'light magic missile', 'light magic missile rune'}, 2287, 7, 5, 'light magic missile rune')
 
-shopModule:addBuyableItem({'great fireball', 'great fireball rune'}, 2304, 180, 2, 'great fireball rune')
-shopModule:addBuyableItem({'explosion', 'explosion rune'}, 2313, 250, 3, 'explosion rune')
+shopModule:addBuyableItem({'great fireball', 'great fireball rune'}, 2304, 90, 2, 'great fireball rune')
+shopModule:addBuyableItem({'explosion', 'explosion rune'}, 2313, 85, 3, 'explosion rune')
 shopModule:addBuyableItem({'sudden death', 'sudden death rune'}, 2268, 325, 'sudden death rune')
 shopModule:addBuyableItem({'animate dead', 'animate dead rune'}, 2316, 375, 'animate dead rune')
 
