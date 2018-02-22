@@ -8,4 +8,4 @@ dofile('data/lib/customFunctions.lua')
 dofile('data/lib/compat/compat.lua')
 
 -- Miscellaneous library - WIP
--- dofile('data/lib/miscellaneous/miscellaneous.lua')
+dofile('data/lib/miscellaneous/miscellaneous.lua')
