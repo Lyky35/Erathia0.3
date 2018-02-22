@@ -10,11 +10,11 @@ function onThink() npcHandler:onThink() end
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
+shopModule:addBuyableItemContainer({'bp mana'}, 2000, 2006, 2000, 7, 'backpack of manafluids')
 shopModule:addBuyableItem({'life'}, 					2006, 60, 10, 'life fluid')
 shopModule:addBuyableItem({'mana'}, 					2006, 100, 7, 'mana fluid')
-shopModule:addBuyableItem({'spellbook'}, 					Cfspellbook, 150)
+shopModule:addSellableItem({'vial'}, 					2006, 5, 'vial')
 
-shopModule:addBuyableItem({'blank rune'}, 					Cfblankrune, 10)
 
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I am a trader. I sell potions brewed by the foremost alchemists of the land."})
 keywordHandler:addKeyword({'name'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "I am the mourned Mehkesh."})
