@@ -2296,7 +2296,7 @@
 		<attribute key="weight" value="2100" />
 		<attribute key="weaponType" value="wand" />
 		<attribute key="shootType" value="energy" />
-		<attribute key="range" value="1" />
+		<attribute key="range" value="3" />
 	</item>
 	<item id="2184" article="a" name="crystal wand">
 		<attribute key="weight" value="2800" />
