@@ -9185,6 +9185,7 @@
 	</spawn>
 	<spawn centerx="32369" centery="32212" centerz="7" radius="1">
 		<npc name="Aruda" x="0" y="-1" z="7" spawntime="60" />
+		<monster name="dog" x="-1" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32643" centery="32212" centerz="7" radius="1">
 		<npc name="H.L." x="0" y="0" z="7" spawntime="60" />
@@ -37506,6 +37507,8 @@
 	</spawn>
 	<spawn centerx="32354" centery="32147" centerz="11" radius="1">
 		<monster name="rotworm" x="0" y="0" z="11" spawntime="60" />
+		<monster name="rotworm" x="-1" y="1" z="11" spawntime="60" />
+		<monster name="rotworm" x="1" y="1" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="32662" centery="32149" centerz="11" radius="2">
 		<monster name="minotaur archer" x="0" y="0" z="11" spawntime="60" />
@@ -37516,7 +37519,11 @@
 		<monster name="minotaur archer" x="-1" y="1" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="32354" centery="32151" centerz="11" radius="5">
+		<monster name="rotworm" x="0" y="-1" z="11" spawntime="60" />
 		<monster name="rotworm" x="0" y="0" z="11" spawntime="60" />
+		<monster name="rotworm" x="-5" y="1" z="11" spawntime="60" />
+		<monster name="rotworm" x="-3" y="3" z="11" spawntime="60" />
+		<monster name="rotworm" x="3" y="3" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="32378" centery="32151" centerz="11" radius="1">
 		<monster name="rotworm" x="0" y="-1" z="11" spawntime="60" />
@@ -37527,6 +37534,7 @@
 		<monster name="orc berserker" x="1" y="1" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="32360" centery="32153" centerz="11" radius="1">
+		<monster name="rotworm" x="0" y="-1" z="11" spawntime="60" />
 		<monster name="rotworm" x="0" y="0" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="32383" centery="32153" centerz="11" radius="1">
@@ -37545,8 +37553,10 @@
 	</spawn>
 	<spawn centerx="32349" centery="32158" centerz="11" radius="5">
 		<monster name="rotworm" x="0" y="0" z="11" spawntime="60" />
+		<monster name="rotworm" x="2" y="2" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="32357" centery="32159" centerz="11" radius="1">
+		<monster name="rotworm" x="1" y="-1" z="11" spawntime="60" />
 		<monster name="rotworm" x="0" y="0" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="32405" centery="32160" centerz="11" radius="2">
@@ -46263,7 +46273,7 @@
 		<monster name="cyclops" x="4" y="-3" z="14" spawntime="60" />
 		<monster name="cyclops" x="0" y="-1" z="14" spawntime="60" />
 		<monster name="cyclops" x="0" y="1" z="14" spawntime="60" />
-		<monster name="cyclops" x="3" y="2" z="14" spawntime="60" />
+		<monster name="cyclops" x="3" y="1" z="14" spawntime="60" />
 	</spawn>
 	<spawn centerx="32441" centery="32105" centerz="14" radius="2">
 		<monster name="minotaur archer" x="0" y="1" z="14" spawntime="60" />
