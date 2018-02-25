@@ -291,7 +291,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	elseif npcHandler.topic[cid] == 7 then
 		if msgcontains(msg, 'yes') then
-			if not player:removeItem(5956, 1) then
+			if not player:removeItem(4842, 1) then
 				if player:getStorageValue(31052) == 1 then
 					npcHandler:say('That\'s bad news. If you lost it, only way to get other is to kill holy serpents. But you can\'t go there so you must ask adventurers who can.', cid)
 				else
