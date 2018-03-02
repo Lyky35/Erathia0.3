@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,6 +19,8 @@
 
 #include "otpch.h"
 
+#include <lua.hpp>
+
 #include "configmanager.h"
 #include "game.h"
 
@@ -29,10 +31,64 @@
 
 extern Game g_game;
 
-ConfigManager::ConfigManager()
-	: integer(), boolean()
+namespace {
+
+std::string getGlobalString(lua_State* L, const char* identifier, const char* defaultValue)
 {
-	loaded = false;
+	lua_getglobal(L, identifier);
+	if (!lua_isstring(L, -1)) {
+		return defaultValue;
+	}
+
+	size_t len = lua_strlen(L, -1);
+	std::string ret(lua_tostring(L, -1), len);
+	lua_pop(L, 1);
+	return ret;
+}
+
+int32_t getGlobalNumber(lua_State* L, const char* identifier, const int32_t defaultValue = 0)
+{
+	lua_getglobal(L, identifier);
+	if (!lua_isnumber(L, -1)) {
+		return defaultValue;
+	}
+
+	int32_t val = lua_tonumber(L, -1);
+	lua_pop(L, 1);
+	return val;
+}
+
+bool getGlobalBoolean(lua_State* L, const char* identifier, const bool defaultValue)
+{
+	lua_getglobal(L, identifier);
+	if (!lua_isboolean(L, -1)) {
+		if (!lua_isstring(L, -1)) {
+			return defaultValue;
+		}
+
+		size_t len = lua_strlen(L, -1);
+		std::string ret(lua_tostring(L, -1), len);
+		lua_pop(L, 1);
+		return booleanString(ret);
+	}
+
+	int val = lua_toboolean(L, -1);
+	lua_pop(L, 1);
+	return val != 0;
+}
+
+float getGlobalFloat(lua_State* L, const char* identifier, const float defaultValue = 0.0)
+{
+	lua_getglobal(L, identifier);
+	if (!lua_isnumber(L, -1)) {
+		return defaultValue;
+	}
+
+	float val = lua_tonumber(L, -1);
+	lua_pop(L, 1);
+	return val;
+}
+
 }
 
 bool ConfigManager::load()
@@ -44,7 +100,7 @@ bool ConfigManager::load()
 
 	luaL_openlibs(L);
 
-	if (luaL_dofile(L, "config.lua")) {
+	if (luaL_dofile(L, configFileLua.c_str())) {
 		std::cout << "[Error - ConfigManager::load] " << lua_tostring(L, -1) << std::endl;
 		lua_close(L);
 		return false;
@@ -64,12 +120,15 @@ bool ConfigManager::load()
 		string[MYSQL_PASS] = getGlobalString(L, "mysqlPass", "");
 		string[MYSQL_DB] = getGlobalString(L, "mysqlDatabase", "forgottenserver");
 		string[MYSQL_SOCK] = getGlobalString(L, "mysqlSock", "");
+		string[VERSION_STR] = getGlobalString(L, "clientVersionStr", "");
 
 		integer[SQL_PORT] = getGlobalNumber(L, "mysqlPort", 3306);
 		integer[GAME_PORT] = getGlobalNumber(L, "gameProtocolPort", 7172);
 		integer[LOGIN_PORT] = getGlobalNumber(L, "loginProtocolPort", 7171);
 		integer[STATUS_PORT] = getGlobalNumber(L, "statusProtocolPort", 7171);
 
+		integer[VERSION_MIN] = getGlobalNumber(L, "clientVersionMin", CLIENT_VERSION_MIN);
+		integer[VERSION_MAX] = getGlobalNumber(L, "clientVersionMax", CLIENT_VERSION_MAX);
 	}
 
 	boolean[ALLOW_CHANGEOUTFIT] = getGlobalBoolean(L, "allowChangeOutfit", true);
@@ -85,6 +144,11 @@ bool ConfigManager::load()
 	boolean[WARN_UNSAFE_SCRIPTS] = getGlobalBoolean(L, "warnUnsafeScripts", true);
 	boolean[CONVERT_UNSAFE_SCRIPTS] = getGlobalBoolean(L, "convertUnsafeScripts", true);
 	boolean[CLASSIC_EQUIPMENT_SLOTS] = getGlobalBoolean(L, "classicEquipmentSlots", false);
+	boolean[CLASSIC_ATTACK_SPEED] = getGlobalBoolean(L, "classicAttackSpeed", false);
+	boolean[ALLOW_BLOCK_SPAWN] = getGlobalBoolean(L, "allowBlockSpawn", true);
+	boolean[REMOVE_WEAPON_AMMO] = getGlobalBoolean(L, "removeWeaponAmmunition", true);
+	boolean[REMOVE_WEAPON_CHARGES] = getGlobalBoolean(L, "removeWeaponCharges", true);
+	boolean[AUTO_STACK_ITEMS] = getGlobalBoolean(L, "autoStackItems", false);
 
 	string[DEFAULT_PRIORITY] = getGlobalString(L, "defaultPriority", "high");
 	string[SERVER_NAME] = getGlobalString(L, "serverName", "");
@@ -106,6 +170,7 @@ bool ConfigManager::load()
 	integer[RATE_SPAWN] = getGlobalNumber(L, "rateSpawn", 1);
 	integer[HOUSE_PRICE] = getGlobalNumber(L, "housePriceEachSQM", 1000);
 	integer[KILLS_TO_RED] = getGlobalNumber(L, "killsToRedSkull", 3);
+	integer[KILLS_TO_BLACK] = getGlobalNumber(L, "killsToBlackSkull", 6);
 	integer[ACTIONS_DELAY_INTERVAL] = getGlobalNumber(L, "timeBetweenActions", 200);
 	integer[EX_ACTIONS_DELAY_INTERVAL] = getGlobalNumber(L, "timeBetweenExActions", 1000);
 	integer[MAX_MESSAGEBUFFER] = getGlobalNumber(L, "maxMessageBuffer", 4);
@@ -118,6 +183,10 @@ bool ConfigManager::load()
 	integer[STAIRHOP_DELAY] = getGlobalNumber(L, "stairJumpExhaustion", 2000);
 	integer[EXP_FROM_PLAYERS_LEVEL_RANGE] = getGlobalNumber(L, "expFromPlayersLevelRange", 75);
 	integer[MAX_PACKETS_PER_SECOND] = getGlobalNumber(L, "maxPacketsPerSecond", 25);
+
+	floating[RATE_MONSTER_HEALTH] = getGlobalFloat(L, "rateMonsterHealth", 1.0);
+	floating[RATE_MONSTER_ATTACK] = getGlobalFloat(L, "rateMonsterAttack", 1.0);
+	floating[RATE_MONSTER_DEFENSE] = getGlobalFloat(L, "rateMonsterDefense", 1.0);
 
 	loaded = true;
 	lua_close(L);
@@ -133,73 +202,40 @@ bool ConfigManager::reload()
 	return result;
 }
 
-const std::string& ConfigManager::getString(string_config_t _what) const
+static std::string dummy;
+
+const std::string& ConfigManager::getString(string_config_t what) const
 {
-	if (_what >= LAST_STRING_CONFIG) {
-		std::cout << "[Warning - ConfigManager::getString] Accessing invalid index: " << _what << std::endl;
-		return string[DUMMY_STR];
+	if (what >= LAST_STRING_CONFIG) {
+		std::cout << "[Warning - ConfigManager::getString] Accessing invalid index: " << what << std::endl;
+		return dummy;
 	}
-	return string[_what];
+	return string[what];
 }
 
-int32_t ConfigManager::getNumber(integer_config_t _what) const
+int32_t ConfigManager::getNumber(integer_config_t what) const
 {
-	if (_what >= LAST_INTEGER_CONFIG) {
-		std::cout << "[Warning - ConfigManager::getNumber] Accessing invalid index: " << _what << std::endl;
+	if (what >= LAST_INTEGER_CONFIG) {
+		std::cout << "[Warning - ConfigManager::getNumber] Accessing invalid index: " << what << std::endl;
 		return 0;
 	}
-	return integer[_what];
+	return integer[what];
 }
 
-bool ConfigManager::getBoolean(boolean_config_t _what) const
+bool ConfigManager::getBoolean(boolean_config_t what) const
 {
-	if (_what >= LAST_BOOLEAN_CONFIG) {
-		std::cout << "[Warning - ConfigManager::getBoolean] Accessing invalid index: " << _what << std::endl;
+	if (what >= LAST_BOOLEAN_CONFIG) {
+		std::cout << "[Warning - ConfigManager::getBoolean] Accessing invalid index: " << what << std::endl;
 		return false;
 	}
-	return boolean[_what];
+	return boolean[what];
 }
 
-std::string ConfigManager::getGlobalString(lua_State* L, const char* identifier, const char* _default)
+float ConfigManager::getFloat(floating_config_t what) const
 {
-	lua_getglobal(L, identifier);
-	if (!lua_isstring(L, -1)) {
-		return _default;
+	if (what >= LAST_FLOATING_CONFIG) {
+		std::cout << "[Warning - ConfigManager::getFLoat] Accessing invalid index: " << what << std::endl;
+		return 0;
 	}
-
-	size_t len = lua_strlen(L, -1);
-	std::string ret(lua_tostring(L, -1), len);
-	lua_pop(L, 1);
-	return ret;
-}
-
-int32_t ConfigManager::getGlobalNumber(lua_State* L, const char* identifier, const int32_t _default)
-{
-	lua_getglobal(L, identifier);
-	if (!lua_isnumber(L, -1)) {
-		return _default;
-	}
-
-	int32_t val = lua_tonumber(L, -1);
-	lua_pop(L, 1);
-	return val;
-}
-
-bool ConfigManager::getGlobalBoolean(lua_State* L, const char* identifier, const bool _default)
-{
-	lua_getglobal(L, identifier);
-	if (!lua_isboolean(L, -1)) {
-		if (!lua_isstring(L, -1)) {
-			return _default;
-		}
-
-		size_t len = lua_strlen(L, -1);
-		std::string ret(lua_tostring(L, -1), len);
-		lua_pop(L, 1);
-		return booleanString(ret);
-	}
-
-	int val = lua_toboolean(L, -1);
-	lua_pop(L, 1);
-	return val != 0;
+	return floating[what];
 }

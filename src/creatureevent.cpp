@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -91,7 +91,7 @@ bool CreatureEvents::registerEvent(Event* event, const pugi::xml_node&)
 
 CreatureEvent* CreatureEvents::getEventByName(const std::string& name, bool forceLoaded /*= true*/)
 {
-	CreatureEventList::iterator it = creatureEvents.find(name);
+	auto it = creatureEvents.find(name);
 	if (it != creatureEvents.end()) {
 		if (!forceLoaded || it->second->isLoaded()) {
 			return it->second;
@@ -141,12 +141,8 @@ bool CreatureEvents::playerAdvance(Player* player, skills_t skill, uint32_t oldL
 
 /////////////////////////////////////
 
-CreatureEvent::CreatureEvent(LuaScriptInterface* _interface) :
-	Event(_interface)
-{
-	type = CREATURE_EVENT_NONE;
-	loaded = false;
-}
+CreatureEvent::CreatureEvent(LuaScriptInterface* interface) :
+	Event(interface), type(CREATURE_EVENT_NONE), loaded(false) {}
 
 bool CreatureEvent::configureEvent(const pugi::xml_node& node)
 {

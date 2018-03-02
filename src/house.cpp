@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,21 +30,7 @@
 extern ConfigManager g_config;
 extern Game g_game;
 
-House::House(uint32_t _houseid) :
-	transfer_container(ITEM_LOCKER)
-{
-	isLoaded = false;
-	owner = 0;
-	posEntry.x = 0;
-	posEntry.y = 0;
-	posEntry.z = 0;
-	paidUntil = 0;
-	id = _houseid;
-	rentWarnings = 0;
-	rent = 0;
-	townid = 0;
-	transferItem = nullptr;
-}
+House::House(uint32_t houseId) : id(houseId) {}
 
 void House::addTile(HouseTile* tile)
 {
@@ -55,11 +41,11 @@ void House::addTile(HouseTile* tile)
 void House::setOwner(uint32_t guid, bool updateDatabase/* = true*/, Player* player/* = nullptr*/)
 {
 	if (updateDatabase && owner != guid) {
-		Database* db = Database::getInstance();
+		Database& db = Database::getInstance();
 
 		std::ostringstream query;
 		query << "UPDATE `houses` SET `owner` = " << guid << ", `bid` = 0, `bid_end` = 0, `last_bid` = 0, `highest_bidder` = 0  WHERE `id` = " << id;
-		db->executeQuery(query.str());
+		db.executeQuery(query.str());
 	}
 
 	if (isLoaded && owner == guid) {
@@ -214,7 +200,7 @@ void House::setAccessList(uint32_t listId, const std::string& textlist)
 
 bool House::transferToDepot() const
 {
-	if (townid == 0 || owner == 0) {
+	if (townId == 0 || owner == 0) {
 		return false;
 	}
 
@@ -235,7 +221,7 @@ bool House::transferToDepot() const
 
 bool House::transferToDepot(Player* player) const
 {
-	if (townid == 0 || owner == 0) {
+	if (townId == 0 || owner == 0) {
 		return false;
 	}
 
@@ -257,11 +243,8 @@ bool House::transferToDepot(Player* player) const
 		}
 	}
 
-	DepotLocker* depotLocker = player->getDepotLocker(townid);
-	if (depotLocker) {
-		for (Item* item : moveItemList) {
-			g_game.internalMoveItem(item->getParent(), depotLocker, INDEX_WHEREEVER, item, item->getItemCount(), nullptr, FLAG_NOLIMIT);
-		}
+	for (Item* item : moveItemList) {
+		g_game.internalMoveItem(item->getParent(), player->getInbox(), INDEX_WHEREEVER, item, item->getItemCount(), nullptr, FLAG_NOLIMIT);
 	}
 	return true;
 }
@@ -408,18 +391,18 @@ bool House::executeTransfer(HouseTransferItem* item, Player* newOwner)
 	return true;
 }
 
-void AccessList::parseList(const std::string& _list)
+void AccessList::parseList(const std::string& list)
 {
 	playerList.clear();
 	guildList.clear();
 	expressionList.clear();
 	regExList.clear();
-	list = _list;
-	if (_list.empty()) {
+	this->list = list;
+	if (list.empty()) {
 		return;
 	}
 
-	std::istringstream listStream(_list);
+	std::istringstream listStream(list);
 	std::string line;
 
 	while (getline(listStream, line)) {
@@ -521,47 +504,37 @@ bool AccessList::isInList(const Player* player)
 	return guild && guildList.find(guild->getId()) != guildList.end();
 }
 
-void AccessList::getList(std::string& _list) const
+void AccessList::getList(std::string& list) const
 {
-	_list = list;
+	list = this->list;
 }
 
-Door::Door(uint16_t _type)
-	: Item(_type)
-{
-	house = nullptr;
-	accessList = nullptr;
-}
-
-Door::~Door()
-{
-	delete accessList;
-}
+Door::Door(uint16_t type) :	Item(type) {}
 
 Attr_ReadValue Door::readAttr(AttrTypes_t attr, PropStream& propStream)
 {
 	if (attr == ATTR_HOUSEDOORID) {
-		uint8_t _doorId;
-		if (!propStream.read<uint8_t>(_doorId)) {
+		uint8_t doorId;
+		if (!propStream.read<uint8_t>(doorId)) {
 			return ATTR_READ_ERROR;
 		}
 
-		setDoorId(_doorId);
+		setDoorId(doorId);
 		return ATTR_READ_CONTINUE;
 	}
 	return Item::readAttr(attr, propStream);
 }
 
-void Door::setHouse(House* _house)
+void Door::setHouse(House* house)
 {
-	if (house != nullptr) {
+	if (this->house != nullptr) {
 		return;
 	}
 
-	house = _house;
+	this->house = house;
 
 	if (!accessList) {
-		accessList = new AccessList();
+		accessList.reset(new AccessList());
 	}
 }
 
@@ -581,7 +554,7 @@ bool Door::canUse(const Player* player)
 void Door::setAccessList(const std::string& textlist)
 {
 	if (!accessList) {
-		accessList = new AccessList();
+		accessList.reset(new AccessList());
 	}
 
 	accessList->parseList(textlist);
@@ -648,8 +621,8 @@ bool Houses::loadHousesXML(const std::string& filename)
 		);
 		if (entryPos.x == 0 && entryPos.y == 0 && entryPos.z == 0) {
 			std::cout << "[Warning - Houses::loadHousesXML] House entry not set"
-					    << " - Name: " << house->getName()
-					    << " - House id: " << houseId << std::endl;
+						<< " - Name: " << house->getName()
+						<< " - House id: " << houseId << std::endl;
 		}
 		house->setEntryPos(entryPos);
 
@@ -745,10 +718,7 @@ void Houses::payHouses(RentPeriod_t rentPeriod) const
 				std::ostringstream ss;
 				ss << "Warning! \nThe " << period << " rent of " << house->getRent() << " gold for your house \"" << house->getName() << "\" is payable. Have it within " << daysLeft << " days or you will lose this house.";
 				letter->setText(ss.str());
-				DepotLocker* depotLocker = player.getDepotLocker(town->getID());
-				if (depotLocker) {
-					g_game.internalAddItem(depotLocker, letter, INDEX_WHEREEVER, FLAG_NOLIMIT);
-				}
+				g_game.internalAddItem(player.getInbox(), letter, INDEX_WHEREEVER, FLAG_NOLIMIT);
 				house->setPayRentWarnings(house->getPayRentWarnings() + 1);
 			} else {
 				house->setOwner(0, true, &player);

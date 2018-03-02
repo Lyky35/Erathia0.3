@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,11 +25,6 @@
 #include "tools.h"
 
 extern LuaEnvironment g_luaEnvironment;
-
-BaseEvents::BaseEvents()
-{
-	loaded = false;
-}
 
 bool BaseEvents::loadFromXml()
 {
@@ -91,19 +86,7 @@ bool BaseEvents::reload()
 	return loadFromXml();
 }
 
-Event::Event(LuaScriptInterface* _interface)
-{
-	scriptInterface = _interface;
-	scriptId = 0;
-	scripted = false;
-}
-
-Event::Event(const Event* copy)
-{
-	scriptInterface = copy->scriptInterface;
-	scriptId = copy->scriptId;
-	scripted = copy->scripted;
-}
+Event::Event(LuaScriptInterface* interface) : scriptInterface(interface) {}
 
 bool Event::checkScript(const std::string& basePath, const std::string& scriptsName, const std::string& scriptFile) const
 {
@@ -157,21 +140,14 @@ bool Event::loadScript(const std::string& scriptFile)
 	return true;
 }
 
-CallBack::CallBack()
+bool CallBack::loadCallBack(LuaScriptInterface* interface, const std::string& name)
 {
-	scriptId = 0;
-	scriptInterface = nullptr;
-	loaded = false;
-}
-
-bool CallBack::loadCallBack(LuaScriptInterface* _interface, const std::string& name)
-{
-	if (!_interface) {
+	if (!interface) {
 		std::cout << "Failure: [CallBack::loadCallBack] scriptInterface == nullptr" << std::endl;
 		return false;
 	}
 
-	scriptInterface = _interface;
+	scriptInterface = interface;
 
 	int32_t id = scriptInterface->getEvent(name.c_str());
 	if (id == -1) {
@@ -179,7 +155,6 @@ bool CallBack::loadCallBack(LuaScriptInterface* _interface, const std::string& n
 		return false;
 	}
 
-	callbackName = name;
 	scriptId = id;
 	loaded = true;
 	return true;

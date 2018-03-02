@@ -4,8 +4,15 @@ worldType = "pvp"
 hotkeyAimbotEnabled = false
 protectionLevel = 5
 killsToRedSkull = 3
+
+killsToBlackSkull = 6
 pzLocked = 60000
+
 removeChargesFromRunes = true
+removeChargesFromPotions = true
+
+removeWeaponCharges = true
+
 timeToDecreaseFrags = 24 * 60 * 60 * 1000
 whiteSkullTime = 15 * 60 * 1000
 stairJumpExhaustion = 2000
@@ -26,7 +33,18 @@ allowClones = false
 serverName = "Erathia"
 statusTimeout = 5000
 replaceKickOnLogin = true
-maxPacketsPerSecond = 2500
+maxPacketsPerSecond = 64
+
+-- Version Manual
+
+clientVersionMin = 800
+
+clientVersionMax = 800
+
+clientVersionStr = "Erathia"
+
+
+
 
 -- Deaths
 -- NOTE: Leave deathLosePercent as -1 if you want to use the default
@@ -62,8 +80,11 @@ allowChangeOutfit = true
 freePremium = false
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 4
-emoteSpells = true
+emoteSpells = false
 classicEquipmentSlots = true
+allowWalkthrough = false
+classicAttackSpeed = true
+
 
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
@@ -73,9 +94,15 @@ rateLoot = 3
 rateMagic = 2
 rateSpawn = 1
 
+rateMonsterHealth = 1.0
+
+rateMonsterAttack = 1.0
+
+rateMonsterDefense = 1.0
+
 -- Monsters
 deSpawnRange = 2
-deSpawnRadius = 75
+deSpawnRadius = 50
 
 -- Stamina
 staminaSystem = true

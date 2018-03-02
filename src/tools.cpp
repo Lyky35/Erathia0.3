@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -73,7 +73,7 @@ void printXMLError(const std::string& where, const std::string& fileName, const 
 	std::cout << '^' << std::endl;
 }
 
-inline static uint32_t circularShift(int bits, uint32_t value)
+static uint32_t circularShift(int bits, uint32_t value)
 {
 	return (value << bits) | (value >> (32 - bits));
 }
@@ -214,23 +214,21 @@ void toLowerCaseString(std::string& source)
 	std::transform(source.begin(), source.end(), source.begin(), tolower);
 }
 
-std::string asLowerCaseString(const std::string& source)
+std::string asLowerCaseString(std::string source)
 {
-	std::string s = source;
-	toLowerCaseString(s);
-	return s;
+	toLowerCaseString(source);
+	return source;
 }
 
-std::string asUpperCaseString(const std::string& source)
+std::string asUpperCaseString(std::string source)
 {
-	std::string s = source;
-	std::transform(s.begin(), s.end(), s.begin(), toupper);
-	return s;
+	std::transform(source.begin(), source.end(), source.begin(), toupper);
+	return source;
 }
 
-StringVec explodeString(const std::string& inString, const std::string& separator, int32_t limit/* = -1*/)
+StringVector explodeString(const std::string& inString, const std::string& separator, int32_t limit/* = -1*/)
 {
-	StringVec returnVector;
+	StringVector returnVector;
 	std::string::size_type start = 0, end = 0;
 
 	while (--limit != -1 && (end = inString.find(separator, start)) != std::string::npos) {
@@ -242,9 +240,9 @@ StringVec explodeString(const std::string& inString, const std::string& separato
 	return returnVector;
 }
 
-IntegerVec vectorAtoi(const StringVec& stringVector)
+IntegerVector vectorAtoi(const StringVector& stringVector)
 {
-	IntegerVec returnVector;
+	IntegerVector returnVector;
 	for (const auto& string : stringVector) {
 		returnVector.push_back(std::stoi(string));
 	}
@@ -309,7 +307,7 @@ std::string convertIPToString(uint32_t ip)
 
 	int res = sprintf(buffer, "%u.%u.%u.%u", ip & 0xFF, (ip >> 8) & 0xFF, (ip >> 16) & 0xFF, (ip >> 24));
 	if (res < 0) {
-		return std::string();
+		return {};
 	}
 
 	return buffer;
@@ -319,30 +317,30 @@ std::string formatDate(time_t time)
 {
 	const tm* tms = localtime(&time);
 	if (!tms) {
-		return std::string();
+		return {};
 	}
 
 	char buffer[20];
 	int res = sprintf(buffer, "%02d/%02d/%04d %02d:%02d:%02d", tms->tm_mday, tms->tm_mon + 1, tms->tm_year + 1900, tms->tm_hour, tms->tm_min, tms->tm_sec);
 	if (res < 0) {
-		return std::string();
+		return {};
 	}
-	return std::string(buffer, 19);
+	return {buffer, 19};
 }
 
 std::string formatDateShort(time_t time)
 {
 	const tm* tms = localtime(&time);
 	if (!tms) {
-		return std::string();
+		return {};
 	}
 
 	char buffer[12];
 	size_t res = strftime(buffer, 12, "%d %b %Y", tms);
 	if (res == 0) {
-		return std::string();
+		return {};
 	}
-	return std::string(buffer, 11);
+	return {buffer, 11};
 }
 
 Direction getDirection(const std::string& string)
@@ -454,37 +452,14 @@ Direction getDirectionTo(const Position& from, const Position& to)
 	return dir;
 }
 
-struct MagicEffectNames {
-	const char* name;
-	MagicEffectClasses effect;
-};
+using MagicEffectNames = std::unordered_map<std::string, MagicEffectClasses>;
+using ShootTypeNames = std::unordered_map<std::string, ShootType_t>;
+using CombatTypeNames = std::unordered_map<CombatType_t, std::string, std::hash<int32_t>>;
+using AmmoTypeNames = std::unordered_map<std::string, Ammo_t>;
+using WeaponActionNames = std::unordered_map<std::string, WeaponAction_t>;
+using SkullNames = std::unordered_map<std::string, Skulls_t>;
 
-struct ShootTypeNames {
-	const char* name;
-	ShootType_t shoot;
-};
-
-struct CombatTypeNames {
-	const char* name;
-	CombatType_t combat;
-};
-
-struct AmmoTypeNames {
-	const char* name;
-	Ammo_t ammoType;
-};
-
-struct WeaponActionNames {
-	const char* name;
-	WeaponAction_t weaponAction;
-};
-
-struct SkullNames {
-	const char* name;
-	Skulls_t skull;
-};
-
-MagicEffectNames magicEffectNames[] = {
+MagicEffectNames magicEffectNames = {
 	{"redspark",		CONST_ME_DRAWBLOOD},
 	{"bluebubble",		CONST_ME_LOSEENERGY},
 	{"poff",		CONST_ME_POFF},
@@ -520,9 +495,43 @@ MagicEffectNames magicEffectNames[] = {
 	{"sleep",		CONST_ME_SLEEP},
 	{"watercreature",	CONST_ME_WATERCREATURE},
 	{"groundshaker",	CONST_ME_GROUNDSHAKER},
+	{"hearts",		CONST_ME_HEARTS},
+	{"fireattack",		CONST_ME_FIREATTACK},
+	{"energyarea",		CONST_ME_ENERGYAREA},
+	{"smallclouds",		CONST_ME_SMALLCLOUDS},
+	{"holydamage",		CONST_ME_HOLYDAMAGE},
+	{"bigclouds",		CONST_ME_BIGCLOUDS},
+	{"icearea",		CONST_ME_ICEAREA},
+	{"icetornado",		CONST_ME_ICETORNADO},
+	{"iceattack",		CONST_ME_ICEATTACK},
+	{"stones",		CONST_ME_STONES},
+	{"smallplants",		CONST_ME_SMALLPLANTS},
+	{"carniphila",		CONST_ME_CARNIPHILA},
+	{"purpleenergy",	CONST_ME_PURPLEENERGY},
+	{"yellowenergy",	CONST_ME_YELLOWENERGY},
+	{"holyarea",		CONST_ME_HOLYAREA},
+	{"bigplants",		CONST_ME_BIGPLANTS},
+	{"cake",		CONST_ME_CAKE},
+	{"giantice",		CONST_ME_GIANTICE},
+	{"watersplash",		CONST_ME_WATERSPLASH},
+	{"plantattack",		CONST_ME_PLANTATTACK},
+	{"tutorialarrow",	CONST_ME_TUTORIALARROW},
+	{"tutorialsquare",	CONST_ME_TUTORIALSQUARE},
+	{"mirrorhorizontal",	CONST_ME_MIRRORHORIZONTAL},
+	{"mirrorvertical",	CONST_ME_MIRRORVERTICAL},
+	{"skullhorizontal",	CONST_ME_SKULLHORIZONTAL},
+	{"skullvertical",	CONST_ME_SKULLVERTICAL},
+	{"assassin",		CONST_ME_ASSASSIN},
+	{"stepshorizontal",	CONST_ME_STEPSHORIZONTAL},
+	{"bloodysteps",		CONST_ME_BLOODYSTEPS},
+	{"stepsvertical",	CONST_ME_STEPSVERTICAL},
+	{"yalaharighost",	CONST_ME_YALAHARIGHOST},
+	{"bats",		CONST_ME_BATS},
+	{"smoke",		CONST_ME_SMOKE},
+	{"insects",		CONST_ME_INSECTS},
 };
 
-ShootTypeNames shootTypeNames[] = {
+ShootTypeNames shootTypeNames = {
 	{"spear",		CONST_ANI_SPEAR},
 	{"bolt",		CONST_ANI_BOLT},
 	{"arrow",		CONST_ANI_ARROW},
@@ -551,21 +560,38 @@ ShootTypeNames shootTypeNames[] = {
 	{"whirlwindaxe",	CONST_ANI_WHIRLWINDAXE},
 	{"whirlwindclub",	CONST_ANI_WHIRLWINDCLUB},
 	{"etherealspear",	CONST_ANI_ETHEREALSPEAR},
+	{"ice",			CONST_ANI_ICE},
+	{"earth",		CONST_ANI_EARTH},
+	{"holy",		CONST_ANI_HOLY},
+	{"suddendeath",		CONST_ANI_SUDDENDEATH},
+	{"flasharrow",		CONST_ANI_FLASHARROW},
+	{"flammingarrow",	CONST_ANI_FLAMMINGARROW},
+	{"shiverarrow",		CONST_ANI_SHIVERARROW},
+	{"energyball",		CONST_ANI_ENERGYBALL},
+	{"smallice",		CONST_ANI_SMALLICE},
+	{"smallholy",		CONST_ANI_SMALLHOLY},
+	{"smallearth",		CONST_ANI_SMALLEARTH},
+	{"eartharrow",		CONST_ANI_EARTHARROW},
+	{"explosion",		CONST_ANI_EXPLOSION},
+	{"cake",		CONST_ANI_CAKE},
 };
 
-CombatTypeNames combatTypeNames[] = {
-	{"physical",		COMBAT_PHYSICALDAMAGE},
-	{"energy",		COMBAT_ENERGYDAMAGE},
-	{"earth",		COMBAT_EARTHDAMAGE},
-	{"fire",		COMBAT_FIREDAMAGE},
-	{"undefined",		COMBAT_UNDEFINEDDAMAGE},
-	{"lifedrain",		COMBAT_LIFEDRAIN},
-	{"manadrain",		COMBAT_MANADRAIN},
-	{"healing",		COMBAT_HEALING},
-	{"drown",		COMBAT_DROWNDAMAGE},
+CombatTypeNames combatTypeNames = {
+	{COMBAT_PHYSICALDAMAGE, 	"physical"},
+	{COMBAT_ENERGYDAMAGE, 		"energy"},
+	{COMBAT_EARTHDAMAGE, 		"earth"},
+	{COMBAT_FIREDAMAGE, 		"fire"},
+	{COMBAT_UNDEFINEDDAMAGE, 	"undefined"},
+	{COMBAT_LIFEDRAIN, 		"lifedrain"},
+	{COMBAT_MANADRAIN, 		"manadrain"},
+	{COMBAT_HEALING, 		"healing"},
+	{COMBAT_DROWNDAMAGE, 		"drown"},
+	{COMBAT_ICEDAMAGE, 		"ice"},
+	{COMBAT_HOLYDAMAGE, 		"holy"},
+	{COMBAT_DEATHDAMAGE, 		"death"},
 };
 
-AmmoTypeNames ammoTypeNames[] = {
+AmmoTypeNames ammoTypeNames = {
 	{"spear",		AMMO_SPEAR},
 	{"bolt",		AMMO_BOLT},
 	{"arrow",		AMMO_ARROW},
@@ -591,86 +617,71 @@ AmmoTypeNames ammoTypeNames[] = {
 	{"eartharrow",		AMMO_ARROW},
 };
 
-WeaponActionNames weaponActionNames[] = {
+WeaponActionNames weaponActionNames = {
 	{"move",		WEAPONACTION_MOVE},
 	{"removecharge",	WEAPONACTION_REMOVECHARGE},
 	{"removecount",		WEAPONACTION_REMOVECOUNT},
 };
 
-SkullNames skullNames[] = {
+SkullNames skullNames = {
 	{"none",	SKULL_NONE},
 	{"yellow",	SKULL_YELLOW},
 	{"green",	SKULL_GREEN},
 	{"white",	SKULL_WHITE},
 	{"red",		SKULL_RED},
+	{"black",	SKULL_BLACK},
 };
 
 MagicEffectClasses getMagicEffect(const std::string& strValue)
 {
-	for (size_t i = 0; i < sizeof(magicEffectNames) / sizeof(MagicEffectNames); ++i) {
-		if (strcasecmp(strValue.c_str(), magicEffectNames[i].name) == 0) {
-			return magicEffectNames[i].effect;
-		}
+	auto magicEffect = magicEffectNames.find(strValue);
+	if (magicEffect != magicEffectNames.end()) {
+		return magicEffect->second;
 	}
 	return CONST_ME_NONE;
 }
 
 ShootType_t getShootType(const std::string& strValue)
 {
-	for (size_t i = 0, size = sizeof(shootTypeNames) / sizeof(ShootTypeNames); i < size; ++i) {
-		if (strcasecmp(strValue.c_str(), shootTypeNames[i].name) == 0) {
-			return shootTypeNames[i].shoot;
-		}
+	auto shootType = shootTypeNames.find(strValue);
+	if (shootType != shootTypeNames.end()) {
+		return shootType->second;
 	}
 	return CONST_ANI_NONE;
 }
 
-CombatType_t getCombatType(const std::string& strValue)
-{
-	for (size_t i = 0, size = sizeof(combatTypeNames) / sizeof(CombatTypeNames); i < size; ++i) {
-		if (strcasecmp(strValue.c_str(), combatTypeNames[i].name) == 0) {
-			return combatTypeNames[i].combat;
-		}
-	}
-	return COMBAT_NONE;
-}
-
 std::string getCombatName(CombatType_t combatType)
 {
-	for (size_t i = 0, size = sizeof(combatTypeNames) / sizeof(CombatTypeNames); i < size; ++i) {
-		if (combatTypeNames[i].combat == combatType) {
-			return combatTypeNames[i].name;
-		}
+	auto combatName = combatTypeNames.find(combatType);
+	if (combatName != combatTypeNames.end()) {
+		return combatName->second;
 	}
 	return "unknown";
 }
 
 Ammo_t getAmmoType(const std::string& strValue)
 {
-	for (size_t i = 0, size = sizeof(ammoTypeNames) / sizeof(AmmoTypeNames); i < size; ++i) {
-		if (strcasecmp(strValue.c_str(), ammoTypeNames[i].name) == 0) {
-			return ammoTypeNames[i].ammoType;
-		}
+	auto ammoType = ammoTypeNames.find(strValue);
+	if (ammoType != ammoTypeNames.end()) {
+		return ammoType->second;
 	}
 	return AMMO_NONE;
 }
 
 WeaponAction_t getWeaponAction(const std::string& strValue)
 {
-	for (size_t i = 0, size = sizeof(weaponActionNames) / sizeof(WeaponActionNames); i < size; ++i) {
-		if (strcasecmp(strValue.c_str(), weaponActionNames[i].name) == 0) {
-			return weaponActionNames[i].weaponAction;
-		}
+	auto weaponAction = weaponActionNames.find(strValue);
+	if (weaponAction != weaponActionNames.end()) {
+		return weaponAction->second;
 	}
 	return WEAPONACTION_NONE;
 }
 
 Skulls_t getSkullType(const std::string& strValue)
 {
-	for (size_t i = 0, size = sizeof(skullNames) / sizeof(SkullNames); i < size; ++i) {
-		if (strcasecmp(strValue.c_str(), skullNames[i].name) == 0) {
-			return skullNames[i].skull;
-		}
+	auto skullType = skullNames.find(strValue);
+	if (skullType != skullNames.end()) {
+		return skullType->second;
 	}
 	return SKULL_NONE;
 }
@@ -710,11 +721,37 @@ std::string getSkillName(uint8_t skillid)
 	}
 }
 
+uint32_t adlerChecksum(const uint8_t* data, size_t length)
+{
+	if (length > NETWORKMESSAGE_MAXSIZE) {
+		return 0;
+	}
+
+	const uint16_t adler = 65521;
+
+	uint32_t a = 1, b = 0;
+
+	while (length > 0) {
+		size_t tmp = length > 5552 ? 5552 : length;
+		length -= tmp;
+
+		do {
+			a += *data++;
+			b += a;
+		} while (--tmp);
+
+		a %= adler;
+		b %= adler;
+	}
+
+	return (b << 16) | a;
+}
+
 std::string ucfirst(std::string str)
 {
-	for (size_t i = 0; i < str.length(); ++i) {
-		if (str[i] != ' ') {
-			str[i] = toupper(str[i]);
+	for (char& i : str) {
+		if (i != ' ') {
+			i = toupper(i);
 			break;
 		}
 	}
@@ -782,6 +819,12 @@ size_t combatTypeToIndex(CombatType_t combatType)
 			return 7;
 		case COMBAT_DROWNDAMAGE:
 			return 8;
+		case COMBAT_ICEDAMAGE:
+			return 9;
+		case COMBAT_HOLYDAMAGE:
+			return 10;
+		case COMBAT_DEATHDAMAGE:
+			return 11;
 		default:
 			return 0;
 	}
@@ -880,6 +923,9 @@ std::string getFirstLine(const std::string& str)
 const char* getReturnMessage(ReturnValue value)
 {
 	switch (value) {
+		case RETURNVALUE_REWARDCHESTISEMPTY:
+			return "The chest is currently empty. You did not take part in any battles in the last seven days or already claimed your reward.";
+
 		case RETURNVALUE_DESTINATIONOUTOFREACH:
 			return "Destination is out of reach.";
 
@@ -1046,8 +1092,8 @@ const char* getReturnMessage(ReturnValue value)
 		case RETURNVALUE_YOUNEEDTOSPLITYOURSPEARS:
 			return "You need to split your spears first.";
 
-		case RETURNVALUE_NAMEISTOOAMBIGIOUS:
-			return "Name is too ambigious.";
+		case RETURNVALUE_NAMEISTOOAMBIGUOUS:
+			return "Player name is ambiguous.";
 
 		case RETURNVALUE_CANONLYUSEONESHIELD:
 			return "You may use only one shield.";
@@ -1058,7 +1104,54 @@ const char* getReturnMessage(ReturnValue value)
 		case RETURNVALUE_YOUARENOTTHEOWNER:
 			return "You are not the owner.";
 
+		case RETURNVALUE_NOSUCHRAIDEXISTS:
+			return "No such raid exists.";
+
+		case RETURNVALUE_ANOTHERRAIDISALREADYEXECUTING:
+			return "Another raid is already executing.";
+
+		case RETURNVALUE_TRADEPLAYERFARAWAY:
+			return "Trade player is too far away.";
+
+		case RETURNVALUE_YOUDONTOWNTHISHOUSE:
+			return "You don't own this house.";
+
+		case RETURNVALUE_TRADEPLAYERALREADYOWNSAHOUSE:
+			return "Trade player already owns a house.";
+
+		case RETURNVALUE_TRADEPLAYERHIGHESTBIDDER:
+			return "Trade player is currently the highest bidder of an auctioned house.";
+
+		case RETURNVALUE_YOUCANNOTTRADETHISHOUSE:
+			return "You can not trade this house.";
+
+		case RETURNVALUE_NOTENOUGHFISTLEVEL:
+			return "You do not have enough fist level";
+
+		case RETURNVALUE_NOTENOUGHCLUBLEVEL:
+			return "You do not have enough club level";
+
+		case RETURNVALUE_NOTENOUGHSWORDLEVEL:
+			return "You do not have enough sword level";
+
+		case RETURNVALUE_NOTENOUGHAXELEVEL:
+			return "You do not have enough axe level";
+
+		case RETURNVALUE_NOTENOUGHDISTANCELEVEL:
+			return "You do not have enough distance level";
+
+		case RETURNVALUE_NOTENOUGHSHIELDLEVEL:
+			return "You do not have enough shielding level";
+
+		case RETURNVALUE_NOTENOUGHFISHLEVEL:
+			return "You do not have enough fishing level";
+
 		default: // RETURNVALUE_NOTPOSSIBLE, etc
 			return "Sorry, not possible.";
 	}
+}
+
+int64_t OTSYS_TIME()
+{
+	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 }

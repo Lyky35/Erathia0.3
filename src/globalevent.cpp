@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,8 +31,6 @@ GlobalEvents::GlobalEvents() :
 	scriptInterface("GlobalEvent Interface")
 {
 	scriptInterface.initState();
-	thinkEventId = 0;
-	timerEventId = 0;
 }
 
 GlobalEvents::~GlobalEvents()
@@ -142,7 +140,7 @@ void GlobalEvents::timer()
 
 	if (nextScheduledTime != std::numeric_limits<int64_t>::max()) {
 		timerEventId = g_scheduler.addEvent(createSchedulerTask(std::max<int64_t>(1000, nextScheduledTime * 1000),
-							                std::bind(&GlobalEvents::timer, this)));
+											std::bind(&GlobalEvents::timer, this)));
 	}
 }
 
@@ -209,13 +207,7 @@ GlobalEventMap GlobalEvents::getEventMap(GlobalEvent_t type)
 	}
 }
 
-GlobalEvent::GlobalEvent(LuaScriptInterface* _interface):
-	Event(_interface)
-{
-	eventType = GLOBALEVENT_NONE;
-	nextExecution = 0;
-	interval = 0;
-}
+GlobalEvent::GlobalEvent(LuaScriptInterface* interface) : Event(interface) {}
 
 bool GlobalEvent::configureEvent(const pugi::xml_node& node)
 {

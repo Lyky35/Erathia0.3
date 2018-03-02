@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ enum GlobalEvent_t {
 };
 
 class GlobalEvent;
-typedef std::map<std::string, GlobalEvent*> GlobalEventMap;
+using GlobalEventMap = std::map<std::string, GlobalEvent*>;
 
 class GlobalEvents final : public BaseEvents
 {
@@ -69,13 +69,13 @@ class GlobalEvents final : public BaseEvents
 		LuaScriptInterface scriptInterface;
 
 		GlobalEventMap thinkMap, serverMap, timerMap;
-		int32_t thinkEventId, timerEventId;
+		int32_t thinkEventId = 0, timerEventId = 0;
 };
 
 class GlobalEvent final : public Event
 {
 	public:
-		explicit GlobalEvent(LuaScriptInterface* _interface);
+		explicit GlobalEvent(LuaScriptInterface* interface);
 
 		bool configureEvent(const pugi::xml_node& node) final;
 
@@ -85,7 +85,8 @@ class GlobalEvent final : public Event
 		GlobalEvent_t getEventType() const {
 			return eventType;
 		}
-		std::string getName() const {
+
+		const std::string& getName() const {
 			return name;
 		}
 
@@ -101,13 +102,13 @@ class GlobalEvent final : public Event
 		}
 
 	protected:
-		GlobalEvent_t eventType;
+		GlobalEvent_t eventType = GLOBALEVENT_NONE;
 
 		std::string getScriptEventName() const final;
 
 		std::string name;
-		int64_t nextExecution;
-		uint32_t interval;
+		int64_t nextExecution = 0;
+		uint32_t interval = 0;
 };
 
 #endif

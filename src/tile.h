@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,9 +34,9 @@ class MagicField;
 class QTreeLeafNode;
 class BedItem;
 
-typedef std::vector<Creature*> CreatureVector;
-typedef std::vector<Item*> ItemVector;
-typedef std::unordered_set<Creature*> SpectatorVec;
+using CreatureVector = std::vector<Creature*>;
+using ItemVector = std::vector<Item*>;
+using SpectatorHashSet = std::unordered_set<Creature*>;
 
 enum tileflags_t : uint32_t {
 	TILESTATE_NONE = 0,
@@ -144,15 +144,17 @@ class TileItemVector : private ItemVector
 		}
 
 	private:
-		uint16_t downItemCount {0};
+		uint16_t downItemCount = 0;
 };
 
 class Tile : public Cylinder
 {
 	public:
 		static Tile& nullptr_tile;
-		Tile(uint16_t x, uint16_t y, uint8_t z);
-		virtual ~Tile();
+		Tile(uint16_t x, uint16_t y, uint8_t z) : tilePos(x, y, z) {}
+		virtual ~Tile() {
+			delete ground;
+		};
 
 		// non-copyable
 		Tile(const Tile&) = delete;
@@ -205,13 +207,13 @@ class Tile : public Cylinder
 		bool hasProperty(ITEMPROPERTY prop) const;
 		bool hasProperty(const Item* exclude, ITEMPROPERTY prop) const;
 
-		inline bool hasFlag(uint32_t flag) const {
+		bool hasFlag(uint32_t flag) const {
 			return hasBitSet(flag, this->flags);
 		}
-		inline void setFlag(uint32_t flag) {
+		void setFlag(uint32_t flag) {
 			this->flags |= flag;
 		}
-		inline void resetFlag(uint32_t flag) {
+		void resetFlag(uint32_t flag) {
 			this->flags &= ~flag;
 		}
 
@@ -285,16 +287,16 @@ class Tile : public Cylinder
 	private:
 		void onAddTileItem(Item* item);
 		void onUpdateTileItem(Item* oldItem, const ItemType& oldType, Item* newItem, const ItemType& newType);
-		void onRemoveTileItem(const SpectatorVec& list, const std::vector<int32_t>& oldStackPosVector, Item* item);
-		void onUpdateTile(const SpectatorVec& list);
+		void onRemoveTileItem(const SpectatorHashSet& spectators, const std::vector<int32_t>& oldStackPosVector, Item* item);
+		void onUpdateTile(const SpectatorHashSet& spectators);
 
 		void setTileFlags(const Item* item);
 		void resetTileFlags(const Item* item);
 
 	protected:
-		Item* ground;
+		Item* ground = nullptr;
 		Position tilePos;
-		uint32_t flags;
+		uint32_t flags = 0;
 };
 
 // Used for walkable tiles, where there is high likeliness of
@@ -306,8 +308,12 @@ class DynamicTile : public Tile
 		CreatureVector creatures;
 
 	public:
-		DynamicTile(uint16_t x, uint16_t y, uint8_t z);
-		~DynamicTile();
+		DynamicTile(uint16_t x, uint16_t y, uint8_t z) : Tile(x, y, z) {}
+		~DynamicTile() {
+			for (Item* item : items) {
+				item->decrementReferenceCounter();
+			}
+		}
 
 		// non-copyable
 		DynamicTile(const DynamicTile&) = delete;
@@ -342,8 +348,14 @@ class StaticTile final : public Tile
 	std::unique_ptr<CreatureVector> creatures;
 
 	public:
-		StaticTile(uint16_t x, uint16_t y, uint8_t z);
-		~StaticTile();
+		StaticTile(uint16_t x, uint16_t y, uint8_t z) : Tile(x, y, z) {}
+		~StaticTile() {
+			if (items) {
+				for (Item* item : *items) {
+					item->decrementReferenceCounter();
+				}
+			}
+		}
 
 		// non-copyable
 		StaticTile(const StaticTile&) = delete;
@@ -375,45 +387,5 @@ class StaticTile final : public Tile
 			return creatures.get();
 		}
 };
-
-inline Tile::Tile(uint16_t x, uint16_t y, uint8_t z) :
-	ground(nullptr),
-	tilePos(x, y, z),
-	flags(0)
-{
-}
-
-inline Tile::~Tile()
-{
-	delete ground;
-}
-
-inline StaticTile::StaticTile(uint16_t x, uint16_t y, uint8_t z) :
-	Tile(x, y, z),
-	items(nullptr),
-	creatures(nullptr)
-{
-}
-
-inline StaticTile::~StaticTile()
-{
-	if (items) {
-		for (Item* item : *items) {
-			item->decrementReferenceCounter();
-		}
-	}
-}
-
-inline DynamicTile::DynamicTile(uint16_t x, uint16_t y, uint8_t z) :
-	Tile(x, y, z)
-{
-}
-
-inline DynamicTile::~DynamicTile()
-{
-	for (Item* item : items) {
-		item->decrementReferenceCounter();
-	}
-}
 
 #endif

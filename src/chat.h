@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,21 +26,16 @@
 class Party;
 class Player;
 
-typedef std::map<uint32_t, Player*> UsersMap;
-typedef std::map<uint32_t, const Player*> InvitedMap;
+using UsersMap = std::map<uint32_t, Player*>;
+using InvitedMap = std::map<uint32_t, const Player*>;
 
 class ChatChannel
 {
 	public:
 		ChatChannel() = default;
 		ChatChannel(uint16_t channelId, std::string channelName):
-			name(channelName),
-			canJoinEvent(-1),
-			onJoinEvent(-1),
-			onLeaveEvent(-1),
-			onSpeakEvent(-1),
-			id(channelId),
-			publicChannel(false) {}
+			name(std::move(channelName)),
+			id(channelId) {}
 
 		virtual ~ChatChannel() = default;
 
@@ -79,13 +74,13 @@ class ChatChannel
 
 		std::string name;
 
-		int32_t canJoinEvent;
-		int32_t onJoinEvent;
-		int32_t onLeaveEvent;
-		int32_t onSpeakEvent;
+		int32_t canJoinEvent = -1;
+		int32_t onJoinEvent = -1;
+		int32_t onLeaveEvent = -1;
+		int32_t onSpeakEvent = -1;
 
 		uint16_t id;
-		bool publicChannel;
+		bool publicChannel = false;
 
 	friend class Chat;
 };
@@ -93,7 +88,7 @@ class ChatChannel
 class PrivateChatChannel final : public ChatChannel
 {
 	public:
-		PrivateChatChannel(uint16_t channelId, std::string channelName) : ChatChannel(channelId, channelName), owner(0) {}
+		PrivateChatChannel(uint16_t channelId, std::string channelName) : ChatChannel(channelId, channelName) {}
 
 		uint32_t getOwner() const final {
 			return owner;
@@ -117,10 +112,10 @@ class PrivateChatChannel final : public ChatChannel
 
 	protected:
 		InvitedMap invites;
-		uint32_t owner;
+		uint32_t owner = 0;
 };
 
-typedef std::list<ChatChannel*> ChannelList;
+using ChannelList = std::list<ChatChannel*>;
 
 class Chat
 {

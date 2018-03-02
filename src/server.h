@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@
 #define FS_SERVER_H_984DA68ABF744127850F90CC710F281B
 
 #include "connection.h"
+#include "signals.h"
 #include <memory>
 
 class Protocol;
@@ -29,6 +30,7 @@ class ServiceBase
 {
 	public:
 		virtual bool is_single_socket() const = 0;
+		virtual bool is_checksummed() const = 0;
 		virtual uint8_t get_protocol_identifier() const = 0;
 		virtual const char* get_protocol_name() const = 0;
 
@@ -41,6 +43,9 @@ class Service final : public ServiceBase
 	public:
 		bool is_single_socket() const final {
 			return ProtocolType::server_sends_first;
+		}
+		bool is_checksummed() const final {
+			return ProtocolType::use_checksum;
 		}
 		uint8_t get_protocol_identifier() const final {
 			return ProtocolType::protocol_identifier;
@@ -57,7 +62,7 @@ class Service final : public ServiceBase
 class ServicePort : public std::enable_shared_from_this<ServicePort>
 {
 	public:
-		explicit ServicePort(boost::asio::io_service& io_service);
+		explicit ServicePort(boost::asio::io_service& io_service) : io_service(io_service) {}
 		~ServicePort();
 
 		// non-copyable
@@ -71,7 +76,7 @@ class ServicePort : public std::enable_shared_from_this<ServicePort>
 		std::string get_protocol_names() const;
 
 		bool add_service(const Service_ptr& new_svc);
-		Protocol_ptr make_protocol(NetworkMessage& msg, const Connection_ptr& connection) const;
+		Protocol_ptr make_protocol(bool checksummed, NetworkMessage& msg, const Connection_ptr& connection) const;
 
 		void onStopServer();
 		void onAccept(Connection_ptr connection, const boost::system::error_code& error);
@@ -83,14 +88,14 @@ class ServicePort : public std::enable_shared_from_this<ServicePort>
 		std::unique_ptr<boost::asio::ip::tcp::acceptor> acceptor;
 		std::vector<Service_ptr> services;
 
-		uint16_t serverPort;
-		bool pendingStart;
+		uint16_t serverPort = 0;
+		bool pendingStart = false;
 };
 
 class ServiceManager
 {
 	public:
-		ServiceManager();
+		ServiceManager() = default;
 		~ServiceManager();
 
 		// non-copyable
@@ -99,8 +104,6 @@ class ServiceManager
 
 		void run();
 		void stop();
-
-		bool okay();
 
 		template <typename ProtocolType>
 		bool add(uint16_t port);
@@ -115,8 +118,9 @@ class ServiceManager
 		std::unordered_map<uint16_t, ServicePort_ptr> acceptors;
 
 		boost::asio::io_service io_service;
-		boost::asio::deadline_timer death_timer;
-		bool running;
+		Signals signals{io_service};
+		boost::asio::deadline_timer death_timer { io_service };
+		bool running = false;
 };
 
 template <typename ProtocolType>
@@ -140,8 +144,8 @@ bool ServiceManager::add(uint16_t port)
 
 		if (service_port->is_single_socket() || ProtocolType::server_sends_first) {
 			std::cout << "ERROR: " << ProtocolType::protocol_name() <<
-			          " and " << service_port->get_protocol_names() <<
-			          " cannot use the same port " << port << '.' << std::endl;
+					  " and " << service_port->get_protocol_names() <<
+					  " cannot use the same port " << port << '.' << std::endl;
 			return false;
 		}
 	}

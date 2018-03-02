@@ -1,6 +1,6 @@
 /**
  * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2016  Mark Samman <mark.samman@gmail.com>
+ * Copyright (C) 2017  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,6 +19,13 @@
 
 #ifndef FS_ENUMS_H_003445999FEE4A67BCECBE918B0124CE
 #define FS_ENUMS_H_003445999FEE4A67BCECBE918B0124CE
+
+enum BugReportType_t : uint8_t {
+	BUG_CATEGORY_MAP = 0,
+	BUG_CATEGORY_TYPO = 1,
+	BUG_CATEGORY_TECHNICAL = 2,
+	BUG_CATEGORY_OTHER = 3
+};
 
 enum ThreadState {
 	THREAD_STATE_RUNNING,
@@ -64,8 +71,6 @@ enum CreatureType_t : uint8_t {
 	CREATURETYPE_PLAYER = 0,
 	CREATURETYPE_MONSTER = 1,
 	CREATURETYPE_NPC = 2,
-	CREATURETYPE_SUMMON_OWN = 3,
-	CREATURETYPE_SUMMON_OTHERS = 4,
 };
 
 enum OperatingSystem_t : uint8_t {
@@ -97,7 +102,7 @@ enum RaceType_t : uint8_t {
 	RACE_ENERGY,
 };
 
-enum CombatType_t {
+enum CombatType_t : uint16_t {
 	COMBAT_NONE = 0,
 
 	COMBAT_PHYSICALDAMAGE = 1 << 0,
@@ -109,8 +114,11 @@ enum CombatType_t {
 	COMBAT_MANADRAIN = 1 << 6,
 	COMBAT_HEALING = 1 << 7,
 	COMBAT_DROWNDAMAGE = 1 << 8,
+	COMBAT_ICEDAMAGE = 1 << 9,
+	COMBAT_HOLYDAMAGE = 1 << 10,
+	COMBAT_DEATHDAMAGE = 1 << 11,
 
-	COMBAT_COUNT = 9
+	COMBAT_COUNT = 12
 };
 
 enum CombatParam_t {
@@ -245,9 +253,12 @@ enum ConditionType_t {
 	CONDITION_CHANNELMUTEDTICKS = 1 << 17,
 	CONDITION_YELLTICKS = 1 << 18,
 	CONDITION_ATTRIBUTES = 1 << 19,
-	CONDITION_EXHAUST_COMBAT = 1 << 20, // unused
-	CONDITION_EXHAUST_HEAL = 1 << 21, // unused
-	CONDITION_PACIFIED = 1 << 22,
+	CONDITION_FREEZING = 1 << 20,
+	CONDITION_DAZZLED = 1 << 21,
+	CONDITION_CURSED = 1 << 22,
+	CONDITION_EXHAUST_COMBAT = 1 << 23, // unused
+	CONDITION_EXHAUST_HEAL = 1 << 24, // unused
+	CONDITION_PACIFIED = 1 << 25,
 };
 
 enum ConditionId_t : int8_t {
@@ -336,10 +347,25 @@ enum ReturnValue {
 	RETURNVALUE_YOUNEEDAMAGICITEMTOCASTSPELL,
 	RETURNVALUE_CANNOTCONJUREITEMHERE,
 	RETURNVALUE_YOUNEEDTOSPLITYOURSPEARS,
-	RETURNVALUE_NAMEISTOOAMBIGIOUS,
+	RETURNVALUE_NAMEISTOOAMBIGUOUS,
 	RETURNVALUE_CANONLYUSEONESHIELD,
 	RETURNVALUE_NOPARTYMEMBERSINRANGE,
 	RETURNVALUE_YOUARENOTTHEOWNER,
+	RETURNVALUE_NOSUCHRAIDEXISTS,
+	RETURNVALUE_ANOTHERRAIDISALREADYEXECUTING,
+	RETURNVALUE_TRADEPLAYERFARAWAY,
+	RETURNVALUE_YOUDONTOWNTHISHOUSE,
+	RETURNVALUE_TRADEPLAYERALREADYOWNSAHOUSE,
+	RETURNVALUE_TRADEPLAYERHIGHESTBIDDER,
+	RETURNVALUE_YOUCANNOTTRADETHISHOUSE,
+	RETURNVALUE_NOTENOUGHFISTLEVEL,
+	RETURNVALUE_NOTENOUGHCLUBLEVEL,
+	RETURNVALUE_NOTENOUGHSWORDLEVEL,
+	RETURNVALUE_NOTENOUGHAXELEVEL,
+	RETURNVALUE_NOTENOUGHDISTANCELEVEL,
+	RETURNVALUE_NOTENOUGHSHIELDLEVEL,
+	RETURNVALUE_NOTENOUGHFISHLEVEL,
+	RETURNVALUE_REWARDCHESTISEMPTY,
 };
 
 enum MapMark_t
@@ -367,40 +393,39 @@ enum MapMark_t
 };
 
 struct Outfit_t {
-	Outfit_t() {
-		reset();
-	}
-
-	void reset() {
-		lookType = 0;
-		lookTypeEx = 0;
-		lookHead = 0;
-		lookBody = 0;
-		lookLegs = 0;
-		lookFeet = 0;
-		lookAddons = 0;
-	}
-
-	uint16_t lookType;
-	uint16_t lookTypeEx;
-	uint8_t lookHead;
-	uint8_t lookBody;
-	uint8_t lookLegs;
-	uint8_t lookFeet;
-	uint8_t lookAddons;
+	uint16_t lookType = 0;
+	uint16_t lookTypeEx = 0;
+	uint16_t lookMount = 0;
+	uint8_t lookHead = 0;
+	uint8_t lookBody = 0;
+	uint8_t lookLegs = 0;
+	uint8_t lookFeet = 0;
+	uint8_t lookAddons = 0;
 };
 
 struct LightInfo {
-	uint8_t level;
-	uint8_t color;
-	LightInfo() {
-		level = 0;
-		color = 0;
+	uint8_t level = 0;
+	uint8_t color = 0;
+	constexpr LightInfo() = default;
+	constexpr LightInfo(uint8_t level, uint8_t color) : level(level), color(color) {}
+};
+
+struct ShopInfo {
+	uint16_t itemId;
+	int32_t subType;
+	uint32_t buyPrice;
+	uint32_t sellPrice;
+	std::string realName;
+
+	ShopInfo() {
+		itemId = 0;
+		subType = 1;
+		buyPrice = 0;
+		sellPrice = 0;
 	}
-	LightInfo(uint8_t _level, uint8_t _color) {
-		level = _level;
-		color = _color;
-	}
+
+	ShopInfo(uint16_t itemId, int32_t subType = 0, uint32_t buyPrice = 0, uint32_t sellPrice = 0, std::string realName = "")
+		: itemId(itemId), subType(subType), buyPrice(buyPrice), sellPrice(sellPrice), realName(std::move(realName)) {}
 };
 
 enum CombatOrigin
@@ -427,5 +452,7 @@ struct CombatDamage
 		primary.value = secondary.value = 0;
 	}
 };
+
+typedef std::list<ShopInfo> ShopInfoList;
 
 #endif
