@@ -23,6 +23,7 @@ shopModule:addBuyableItemContainer({'bp sd', 'backpack of sudden death runes', '
 shopModule:addBuyableItemContainer({'bp gfb', 'backpack of great fireball runes', 'backpack of great fireball'}, 2000, 2304, 3600, 2, 'backpack of great fireball runes')
 shopModule:addBuyableItemContainer({'bp explo', 'backpack of explosion runes', 'backpack of explosion'}, 2000, 2304, 5000, 2, 'backpack of great fireball runes')
 shopModule:addBuyableItemContainer({'bp hmm', 'backpack of heavy magic missile runes', 'backpack of heavy magic missile'}, 2000, 2304, 5000, 2, 'backpack of heavy magic missile runes')
+shopModule:addBuyableItemContainer({'bp mana'}, 2000, 2006, 2000, 7, 'backpack of manafluids')
 
 shopModule:addBuyableItem({'wand of vortex', 'vortex'}, 2190, 500, 'wand of vortex')
 shopModule:addBuyableItem({'wand of dragonbreath', 'dragonbreath'}, 2191, 1000, 'wand of dragonbreath')
@@ -63,6 +64,9 @@ shopModule:addBuyableItem({'paralyze'}, 2278, 700, 'paralyze rune')
 shopModule:addBuyableItem({'poison field'}, 2285, 21, 'poison field rune')
 shopModule:addBuyableItem({'poison wall'}, 2289, 52, 'poison wall rune')
 shopModule:addBuyableItem({'blank'}, 2260, 10, 'blank rune')
+
+shopModule:addBuyableItem({'life'}, 					2006, 60, 10, 'life fluid')
+shopModule:addBuyableItem({'mana'}, 					2006, 100, 7, 'mana fluid')
 
 local function creatureSayCallback(cid, type, msg)
 	if not npcHandler:isFocused(cid) then
