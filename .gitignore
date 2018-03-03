@@ -173,3 +173,5 @@ pip-log.txt
 libmysql.dll
 data/npc/scripts/Frodo.lua.bak
 data/creaturescripts/scripts/login.lua.bak
+*.bak
+*.bk1
