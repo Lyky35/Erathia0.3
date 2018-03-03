@@ -32,6 +32,8 @@
 	<talkaction words="/ghost" script="ghost.lua" />
 	<talkaction words="/clean" script="clean.lua" />
 	<talkaction words="/hide" script="hide.lua" />
+	<talkaction words="/reload" separator=" " script="reload.lua" />
+	<talkaction words="/raid" separator=" " script="force_raid.lua" />
 
 	<!-- player talkactions -->
 	<talkaction words="!spells" script="spells.lua"/>
@@ -57,5 +59,16 @@
 	
 	<!-- Server Shop -->
 	<talkaction log="yes" words="/addshop" access="5" event="script" value="add_shop_talkaction.lua"/>
+
+		<talkaction words="/save" script="save.lua" />
+		<talkaction words="/addons" separator=" " script="alladdons.lua" />
+		<talkaction words="/pos" separator=" " script="teleport_to_pos.lua" />
+		<talkaction words="/attr" separator=" " script="attributes.lua" />
+
+		<!-- Player -->
+
+		<talkaction words="!saveme" script="saveme.lua" />
+		<talkaction words="!commands" script="commands.lua" />
+		<talkaction words="!stamina" script="staminarefil.lua"/>
 
 </talkactions>

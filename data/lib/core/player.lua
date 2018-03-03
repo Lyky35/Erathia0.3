@@ -22,7 +22,7 @@ function Player.feed(self, food)
 end
 
 function Player.getClosestFreePosition(self, position, extended)
-	if self:getAccountType() >= ACCOUNT_TYPE_GOD then
+	if self:getGroup():getAccess() and self:getAccountType() >= ACCOUNT_TYPE_GOD then
 		return position
 	end
 	return Creature.getClosestFreePosition(self, position, extended)
@@ -88,6 +88,14 @@ function Player.addSkillTries(...)
 	APPLY_SKILL_MULTIPLIER = true
 	return ret
 end
+local addManaSpentFunc = Player.addManaSpent
+function Player.addManaSpent(...)
+	APPLY_SKILL_MULTIPLIER = false
+	local ret = addManaSpentFunc(...)
+	APPLY_SKILL_MULTIPLIER = true
+	return ret
+end
+
 
 function Player.isDruid(self)
 	return isInArray({2, 6}, self:getVocation():getId())

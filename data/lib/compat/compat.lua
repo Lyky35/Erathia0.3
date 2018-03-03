@@ -110,6 +110,21 @@ function pushThing(thing)
 	return t
 end
 
+createCombatObject = Combat
+setCombatArea = Combat.setArea
+setCombatCallback = Combat.setCallback
+setCombatCondition = Combat.setCondition
+setCombatFormula = Combat.setFormula
+setCombatParam = Combat.setParameter
+
+createConditionObject = Condition
+setConditionParam = Condition.setParameter
+setConditionFormula = Condition.setFormula
+addDamageCondition = Condition.addDamage
+addOutfitCondition = Condition.setOutfit
+
+function doCombat(cid, combat, var) return combat:execute(cid, var) end
+
 function isCreature(cid) return Creature(cid) ~= nil end
 function isPlayer(cid) return Player(cid) ~= nil end
 function isMonster(cid) return Monster(cid) ~= nil end
@@ -389,6 +404,7 @@ function doPlayerPopupFYI(cid, message) local p = Player(cid) return p ~= nil an
 function doSendTutorial(cid, tutorialId) local p = Player(cid) return p ~= nil and p:sendTutorial(tutorialId) or false end
 function doAddMapMark(cid, pos, type, description) local p = Player(cid) return p ~= nil and p:addMapMark(pos, type, description or "") or false end
 function doPlayerSendTextMessage(cid, type, text, ...) local p = Player(cid) return p ~= nil and p:sendTextMessage(type, text, ...) or false end
+function doSendAnimatedText(message, position, color) return Game.sendAnimatedText(message, position, color) end
 function doPlayerAddExp(cid, exp, useMult, ...)
 	local player = Player(cid)
 	if player == nil then
@@ -531,7 +547,7 @@ function doConvinceCreature(cid, target)
 		return false
 	end
 
-	targetCreature:setMaster(creature)
+	creature:addSummon(targetCreature)
 	return true
 end
 
@@ -742,7 +758,7 @@ function getTileInfo(position)
 	ret.nopz = ret.protection
 	ret.nologout = t:hasFlag(TILESTATE_NOLOGOUT)
 	ret.refresh = t:hasFlag(TILESTATE_REFRESH)
-	ret.house = t:hasFlag(TILESTATE_HOUSE)
+	ret.house = t:getHouse() ~= nil
 	ret.bed = t:hasFlag(TILESTATE_BED)
 	ret.depot = t:hasFlag(TILESTATE_DEPOT)
 
@@ -828,10 +844,14 @@ end
 
 function getThingPos(uid)
 	local thing
+	if type(uid) ~= "userdata" then
 	if uid >= 0x10000000 then
 		thing = Creature(uid)
 	else
 		thing = Item(uid)
+	end
+	else
+		thing = uid
 	end
 
 	if thing == nil then
@@ -856,6 +876,7 @@ function getThingfromPos(pos)
 	end
 
 	local thing
+	local stackpos = pos.stackpos or 0
 	if stackpos == STACKPOS_TOP_MOVEABLE_ITEM_OR_CREATURE then
 		thing = tile:getTopCreature()
 		if thing == nil then
@@ -869,7 +890,7 @@ function getThingfromPos(pos)
 	elseif stackpos == STACKPOS_TOP_CREATURE then
 		thing = tile:getTopCreature()
 	else
-		thing = tile:getThing(pos.stackpos)
+		thing = tile:getThing(stackpos)
 	end
 	return pushThing(thing)
 end
@@ -978,4 +999,67 @@ end
 function broadcastMessage(message, messageType)
 	Game.broadcastMessage(message, messageType)
 	print("> Broadcasted message: \"" .. message .. "\".")
+end
+
+function Guild.addMember(self, player)
+	return player:setGuild(guild)
+end
+function Guild.removeMember(self, player)
+	return player:getGuild() == self and player:setGuild(nil)
+end
+
+function getPlayerInstantSpellCount(cid) local p = Player(cid) return p ~= nil and p:getInstantSpellCount() end
+function getPlayerInstantSpellInfo(cid, spellId)
+	local player = Player(cid)
+	if not player then
+		return false
+	end
+
+	local spell = Spell(spellId)
+	if not spell or not player:canCast(spell) then
+		return false
+	end
+
+	return spell
+end
+
+function doSetItemOutfit(cid, item, time) local c = Creature(cid) return c ~= nil and c:setItemOutfit(item, time) end
+function doSetMonsterOutfit(cid, name, time) local c = Creature(cid) return c ~= nil and c:setMonsterOutfit(name, time) end
+function doSetCreatureOutfit(cid, outfit, time)
+	local creature = Creature(cid)
+	if not creature then
+		return false
+	end
+
+	local condition = Condition(CONDITION_OUTFIT)
+	condition:setOutfit({
+		lookTypeEx = itemType:getId()
+	})
+	condition:setTicks(time)
+	creature:addCondition(condition)
+
+	return true
+end
+
+function isInArray(array, value) return table.contains(array, value) end
+
+function doCreateItem(itemid, count, pos)
+	local tile = Tile(pos)
+	if not tile then
+		return false
+	end
+
+	local item = Game.createItem(itemid, count, pos)
+	if item then
+		return item:getUniqueId()
+	end
+	return false
+end
+
+function doCreateItemEx(itemid, count)
+	local item = Game.createItem(itemid, count)
+	if item then
+		return item:getUniqueId()
+	end
+	return false
 end

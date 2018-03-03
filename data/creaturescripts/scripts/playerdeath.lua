@@ -1,3 +1,4 @@
+local deathListEnabled = true
 local maxDeathRecords = 5
 local killsToBan = 6
 local killsBanLenght = 3
@@ -9,6 +10,9 @@ function onDeath(player, corpse, killer, mostDamageKiller, unjustified, mostDama
 	end
 
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are dead.")
+	if not deathListEnabled then
+		return
+	end
 
 	local byPlayer = 0
 	local killerName
@@ -22,7 +26,7 @@ function onDeath(player, corpse, killer, mostDamageKiller, unjustified, mostDama
 				byPlayer = 1
 			end
 		end
-		killerName = killer:getName()
+		killerName = killer:isMonster() and killer:getType():getNameDescription() or killer:getName()
 	else
 		killerName = "field item"
 	end
@@ -39,7 +43,7 @@ function onDeath(player, corpse, killer, mostDamageKiller, unjustified, mostDama
 				byPlayerMostDamage = 1
 			end
 		end
-		mostDamageName = mostDamageKiller:getName()
+		mostDamageName = mostDamageKiller:isMonster() and mostDamageKiller:getType():getNameDescription() or mostDamageKiller:getName()
 	else
 		mostDamageName = "field item"
 	end

@@ -1,6 +1,8 @@
 dofile('data/lib/lib.lua')
 
 STORAGEVALUE_PROMOTION = 40018
+PARTY_PROTECTION = 1 -- Set to 0 to disable.
+ADVANCED_SECURE_MODE = 0 -- Set to 0 to disable.
 
 ropeSpots = {384, 418, 8278, 8592, 13189, 14435, 14436, 15635, 19518}
 
@@ -33,6 +35,15 @@ function getFormattedWorldTime()
 	return hours .. ':' .. minutes
 end
 
+table.contains = function(array, value)
+	for _, targetColumn in pairs(array) do
+		if targetColumn == value then
+			return true
+		end
+	end
+	return false
+end
+
 string.split = function(str, sep)
 	local res = {}
 	for v in str:gmatch("([^" .. sep .. "]+)") do
@@ -57,4 +68,34 @@ function getBlessingsCost(level)
 	else
 		return (level - 20) * 200
 	end
+end
+
+if nextUseXpStamina == nil then
+	nextUseXpStamina = {}
+end
+
+--Boss entry
+if not bosssPlayers then
+	bosssPlayers = {
+		addPlayers = function (self, cid)
+			local player = Player(cid)
+			if not player then return false end
+			if not self.players then
+				self.players = {}
+			end
+			self.players[player:getId()] = 1
+		end,
+		removePlayer = function (self, cid)
+			local player = Player(cid)
+			if not player then  return false end
+			if not self.players then return false end
+			self.players[player:getId()] = nil
+		end,
+		getPlayersCount = function (self)
+			if not self.players then return 0 end
+			local c = 0
+			for _ in pairs(self.players) do  c = c + 1 end
+			return c
+		end
+	}
 end

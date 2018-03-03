@@ -5,6 +5,7 @@
 	<event type="login" name="FirstItems" script="firstitems.lua"/>
 	<event type="login" name="RegenerateStamina" script="regeneratestamina.lua"/>
 	<event type="logout" name="PlayerLogout" script="logout.lua"/>
+	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
 
 	<!-- Death -->
 	<event type="death" name="PlayerDeath" script="playerdeath.lua"/>
@@ -20,4 +21,8 @@
 	<!-- Task -->
 	<event type="kill" name="TaskKill" script="task/taskKill.lua"/>
 	 <event type="kill" name="KillingInTheNameOf" event="script" value="killinginthenameof.lua"/>
+<event type="advance" name="AdvanceSave" script="advance_save.lua" />
+<event type="death" name="BossDeath" script="boss.lua" />
+		<event type="healthchange" name="BossParticipation" script="boss.lua" />
+		<event type="think" name="BossThink" script="boss.lua" />
 </creaturescripts>

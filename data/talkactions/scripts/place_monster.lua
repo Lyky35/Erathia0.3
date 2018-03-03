@@ -6,6 +6,8 @@ function onSay(player, words, param)
 	if player:getAccountType() < ACCOUNT_TYPE_GOD then
 		return false
 	end
+	--create logcommand
+	logCommand(player, words, param)
 
 	local orig = player:getPosition()
 	local creatureId = doSummonCreature(param, orig)

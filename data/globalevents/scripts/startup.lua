@@ -1,6 +1,7 @@
 local globalStorages = {100, 102, 111, 112}
 
 function onStartup()
+	math.randomseed(os.mtime())	
 	print(string.format('>> Loaded %s npcs and spawned %s monsters.\n>> Loaded %s towns with %s houses in total.', Game.getNpcCount(), Game.getMonsterCount(), #Game.getTowns(), #Game.getHouses()))
 	for i = 1, #globalStorages do
 		Game.setStorageValue(globalStorages[i], 0)

@@ -6,6 +6,6 @@
 	<stage minlevel="21" maxlevel="50" multiplier="10"/>
 	<stage minlevel="51" maxlevel="80" multiplier="5"/>
 	<stage minlevel="81" maxlevel="119" multiplier="4"/>
-	<stage minlevel="120" maxlevel="149" multiplier="2"/>
-	<stage minlevel="150" multiplier="3"/>
+	<stage minlevel="120" maxlevel="159" multiplier="3"/>
+	<stage minlevel="160" multiplier="2"/>
 </stages>

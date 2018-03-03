@@ -31,10 +31,6 @@ function Creature.getPlayer(self)
 	return self:isPlayer() and self or nil
 end
 
-function Creature.getMonster(self)
-	return self:isMonster() and self or nil
-end
-
 function Creature.isItem(self)
 	return false
 end
@@ -53,4 +49,68 @@ end
 
 function Creature.isTile(self)
 	return false
+end
+
+function Creature:setMonsterOutfit(monster, time)
+	local monsterType = MonsterType(monster)
+	if not monsterType then
+		return false
+	end
+
+	if self:isPlayer() and not (getPlayerFlagValue(self, PlayerFlag_CanIllusionAll) or monsterType:isIllusionable()) then
+		return false
+	end
+
+	local condition = Condition(CONDITION_OUTFIT)
+	condition:setOutfit(monsterType:getOutfit())
+	condition:setTicks(time)
+	self:addCondition(condition)
+
+	return true
+end
+
+function Creature:setItemOutfit(item, time)
+	local itemType = ItemType(item)
+	if not itemType then
+		return false
+	end
+
+	local condition = Condition(CONDITION_OUTFIT)
+	condition:setOutfit({
+		lookTypeEx = itemType:getId()
+	})
+	condition:setTicks(time)
+	self:addCondition(condition)
+
+	return true
+end
+
+function Creature:addSummon(monster)
+	local summon = Monster(monster)
+	if not summon then
+		return false
+	end
+
+	summon:setTarget(nil)
+	summon:setFollowCreature(nil)
+	summon:setDropLoot(false)
+	summon:setSkillLoss(false)
+	summon:setMaster(self)
+
+	return true
+end
+
+function Creature:removeSummon(monster)
+	local summon = Monster(monster)
+	if not summon or summon:getMaster() ~= self then
+		return false
+	end
+
+	summon:setTarget(nil)
+	summon:setFollowCreature(nil)
+	summon:setDropLoot(true)
+	summon:setSkillLoss(true)
+	summon:setMaster(nil)
+
+	return true
 end
