@@ -5662,7 +5662,7 @@
 	<spawn centerx="33264" centery="31747" centerz="7" radius="5">
 		<monster name="rabbit" x="0" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32341" centery="31748" centerz="7" radius="5">
+	<spawn centerx="32341" centery="31748" centerz="7" radius="2">
 		<npc name="Bambi Bonecrusher" x="-1" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32827" centery="31748" centerz="7" radius="5">
@@ -5672,7 +5672,7 @@
 		<monster name="deer" x="1" y="0" z="7" spawntime="85" />
 		<monster name="deer" x="1" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32348" centery="31749" centerz="7" radius="5">
+	<spawn centerx="32348" centery="31749" centerz="7" radius="2">
 		<npc name="Trisha" x="0" y="-1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32970" centery="31749" centerz="7" radius="5">
@@ -5710,7 +5710,7 @@
 	<spawn centerx="32944" centery="31753" centerz="7" radius="5">
 		<monster name="orc berserker" x="4" y="5" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32314" centery="31754" centerz="7" radius="5">
+	<spawn centerx="32314" centery="31754" centerz="7" radius="2">
 		<npc name="Barbara" x="1" y="-2" z="7" spawntime="85" />
 		<npc name="Queen Eloise" x="0" y="0" z="7" spawntime="85" />
 		<npc name="Fenbala" x="1" y="2" z="7" spawntime="85" />
@@ -5808,11 +5808,11 @@
 	<spawn centerx="32853" centery="31763" centerz="7" radius="5">
 		<monster name="orc shaman" x="1" y="-1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32368" centery="31764" centerz="7" radius="5">
-		<npc name="Phillip" x="2" y="0" z="7" spawntime="85" />
-	</spawn>
 	<spawn centerx="33254" centery="31764" centerz="7" radius="7">
 		<npc name="Avar Tar" x="-3" y="-1" z="7" spawntime="85" />
+	</spawn>
+	<spawn centerx="32370" centery="31765" centerz="7" radius="1">
+		<npc name="Phillip" x="0" y="-1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="33280" centery="31765" centerz="7" radius="5">
 		<monster name="chicken" x="1" y="0" z="7" spawntime="85" />
@@ -5900,7 +5900,7 @@
 	<spawn centerx="32202" centery="31776" centerz="7" radius="6">
 		<monster name="poison spider" x="-2" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32383" centery="31777" centerz="7" radius="5">
+	<spawn centerx="32383" centery="31777" centerz="7" radius="2">
 		<npc name="Shauna" x="0" y="-1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32465" centery="31777" centerz="7" radius="6">
@@ -5922,9 +5922,6 @@
 	<spawn centerx="33190" centery="31778" centerz="7" radius="5">
 		<npc name="Falk" x="1" y="0" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32325" centery="31779" centerz="7" radius="5">
-		<npc name="Eva" x="1" y="1" z="7" spawntime="85" />
-	</spawn>
 	<spawn centerx="32453" centery="31779" centerz="7" radius="6">
 		<monster name="rabbit" x="1" y="2" z="7" spawntime="85" />
 	</spawn>
@@ -5940,6 +5937,9 @@
 		<monster name="orc berserker" x="1" y="-1" z="7" spawntime="85" />
 		<monster name="pig" x="-2" y="0" z="7" spawntime="85" />
 		<monster name="pig" x="2" y="1" z="7" spawntime="85" />
+	</spawn>
+	<spawn centerx="32326" centery="31780" centerz="7" radius="2">
+		<npc name="Eva" x="0" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32606" centery="31780" centerz="7" radius="5">
 		<monster name="rotworm" x="0" y="-1" z="7" spawntime="85" />
@@ -5957,7 +5957,7 @@
 		<monster name="orc spearman" x="1" y="-1" z="7" spawntime="85" />
 		<monster name="orc warrior" x="0" y="2" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32360" centery="31782" centerz="7" radius="5">
+	<spawn centerx="32360" centery="31782" centerz="7" radius="3">
 		<npc name="Alia" x="1" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32430" centery="31782" centerz="7" radius="6">
@@ -5967,11 +5967,7 @@
 	<spawn centerx="32474" centery="31782" centerz="7" radius="6">
 		<monster name="amazon" x="-2" y="-1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32295" centery="31783" centerz="7" radius="5">
-		<npc name="Perac" x="0" y="1" z="7" spawntime="85" />
-		<npc name="Legola" x="3" y="2" z="7" spawntime="85" />
-	</spawn>
-	<spawn centerx="32315" centery="31783" centerz="7" radius="6">
+	<spawn centerx="32315" centery="31783" centerz="7" radius="4">
 		<npc name="Tibra" x="0" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32600" centery="31783" centerz="7" radius="5">
@@ -5980,6 +5976,10 @@
 		<monster name="pig" x="3" y="4" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32855" centery="31783" centerz="7" radius="5" />
+	<spawn centerx="32296" centery="31784" centerz="7" radius="3">
+		<npc name="Perac" x="-1" y="0" z="7" spawntime="85" />
+		<npc name="Legola" x="2" y="1" z="7" spawntime="85" />
+	</spawn>
 	<spawn centerx="32778" centery="31784" centerz="7" radius="5">
 		<monster name="wolf" x="0" y="0" z="7" spawntime="85" />
 	</spawn>
@@ -5995,19 +5995,16 @@
 		<monster name="poison spider" x="1" y="0" z="7" spawntime="85" />
 		<monster name="poison spider" x="1" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32298" centery="31785" centerz="7" radius="5">
-		<npc name="Busty Bonecrusher" x="-5" y="4" z="7" spawntime="85" />
-	</spawn>
-	<spawn centerx="32332" centery="31785" centerz="7" radius="5">
+	<spawn centerx="32332" centery="31785" centerz="7" radius="1">
 		<npc name="Liane" x="1" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32391" centery="31785" centerz="7" radius="5">
+	<spawn centerx="32391" centery="31785" centerz="7" radius="2">
 		<npc name="Blossom Bonecrusher" x="0" y="-1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32940" centery="31785" centerz="7" radius="5">
 		<monster name="orc" x="0" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32381" centery="31786" centerz="7" radius="5">
+	<spawn centerx="32381" centery="31786" centerz="7" radius="2">
 		<npc name="Percybald" x="-1" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32861" centery="31786" centerz="7" radius="5" />
@@ -6038,7 +6035,9 @@
 	<spawn centerx="32900" centery="31789" centerz="7" radius="5">
 		<monster name="orc warrior" x="1" y="0" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32294" centery="31790" centerz="7" radius="5" />
+	<spawn centerx="32294" centery="31790" centerz="7" radius="2">
+		<npc name="Busty Bonecrusher" x="-1" y="-1" z="7" spawntime="85" />
+	</spawn>
 	<spawn centerx="32879" centery="31790" centerz="7" radius="6">
 		<monster name="orc berserker" x="1" y="-2" z="7" spawntime="85" />
 		<monster name="orc berserker" x="-2" y="-1" z="7" spawntime="85" />
@@ -6090,10 +6089,6 @@
 		<monster name="cave rat" x="3" y="0" z="7" spawntime="85" />
 		<monster name="cave rat" x="0" y="2" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32353" centery="31794" centerz="7" radius="4">
-		<npc name="Lector" x="1" y="0" z="7" spawntime="85" />
-		<monster name="pig" x="0" y="4" z="7" spawntime="85" />
-	</spawn>
 	<spawn centerx="32701" centery="31794" centerz="7" radius="5">
 		<monster name="rabbit" x="2" y="0" z="7" spawntime="85" />
 		<monster name="rabbit" x="-2" y="1" z="7" spawntime="85" />
@@ -6101,12 +6096,11 @@
 	<spawn centerx="32259" centery="31795" centerz="7" radius="6">
 		<monster name="rabbit" x="-1" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32325" centery="31795" centerz="7" radius="5">
+	<spawn centerx="32325" centery="31795" centerz="7" radius="3">
 		<npc name="Rowenna" x="-1" y="-1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32335" centery="31795" centerz="7" radius="5">
+	<spawn centerx="32335" centery="31795" centerz="7" radius="2">
 		<npc name="Cornelia" x="0" y="-1" z="7" spawntime="85" />
-		<npc name="Imalas" x="1" y="5" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32871" centery="31795" centerz="7" radius="6">
 		<monster name="pig" x="1" y="-2" z="7" spawntime="85" />
@@ -6139,6 +6133,12 @@
 		<monster name="poison spider" x="-2" y="2" z="7" spawntime="85" />
 		<monster name="poison spider" x="1" y="3" z="7" spawntime="85" />
 	</spawn>
+	<spawn centerx="32353" centery="31797" centerz="7" radius="3">
+		<npc name="Lector" x="0" y="-2" z="7" spawntime="85" />
+		<monster name="pig" x="0" y="1" z="7" spawntime="85" />
+		<monster name="pig" x="-1" y="3" z="7" spawntime="85" />
+		<monster name="chicken" x="0" y="3" z="7" spawntime="85" />
+	</spawn>
 	<spawn centerx="32576" centery="31797" centerz="7" radius="5">
 		<monster name="goblin" x="-1" y="1" z="7" spawntime="85" />
 		<monster name="spider" x="0" y="4" z="7" spawntime="85" />
@@ -6155,16 +6155,11 @@
 	<spawn centerx="33298" centery="31798" centerz="7" radius="5">
 		<monster name="deer" x="1" y="-1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32353" centery="31799" centerz="7" radius="4">
-		<monster name="pig" x="-1" y="1" z="7" spawntime="85" />
-		<monster name="chicken" x="0" y="1" z="7" spawntime="85" />
-	</spawn>
 	<spawn centerx="32241" centery="31800" centerz="7" radius="6">
 		<monster name="rabbit" x="-2" y="-1" z="7" spawntime="85" />
 		<monster name="rabbit" x="1" y="2" z="7" spawntime="85" />
 		<monster name="rabbit" x="2" y="2" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32335" centery="31800" centerz="7" radius="5" />
 	<spawn centerx="32746" centery="31800" centerz="7" radius="5">
 		<monster name="spider" x="1" y="-1" z="7" spawntime="85" />
 		<monster name="spider" x="0" y="2" z="7" spawntime="85" />
@@ -6191,6 +6186,9 @@
 	</spawn>
 	<spawn centerx="33266" centery="31801" centerz="7" radius="5">
 		<monster name="deer" x="-1" y="-1" z="7" spawntime="85" />
+	</spawn>
+	<spawn centerx="32335" centery="31802" centerz="7" radius="2">
+		<npc name="Imalas" x="1" y="-2" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="33258" centery="31802" centerz="7" radius="5">
 		<monster name="deer" x="-1" y="1" z="7" spawntime="85" />
@@ -6235,9 +6233,6 @@
 	<spawn centerx="33300" centery="31805" centerz="7" radius="5">
 		<monster name="deer" x="0" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32335" centery="31806" centerz="7" radius="5">
-		<npc name="Sarina" x="1" y="1" z="7" spawntime="85" />
-	</spawn>
 	<spawn centerx="32531" centery="31806" centerz="7" radius="6">
 		<monster name="goblin" x="1" y="-2" z="7" spawntime="85" />
 		<monster name="goblin" x="-2" y="2" z="7" spawntime="85" />
@@ -6251,6 +6246,9 @@
 	<spawn centerx="32179" centery="31807" centerz="7" radius="6">
 		<monster name="rat" x="1" y="-2" z="7" spawntime="85" />
 		<monster name="rat" x="2" y="2" z="7" spawntime="85" />
+	</spawn>
+	<spawn centerx="32335" centery="31808" centerz="7" radius="2">
+		<npc name="Sarina" x="1" y="-1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32960" centery="31808" centerz="7" radius="5">
 		<monster name="orc leader" x="0" y="0" z="7" spawntime="85" />
@@ -6452,7 +6450,7 @@
 		<monster name="rat" x="1" y="-1" z="7" spawntime="85" />
 		<monster name="rat" x="1" y="2" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32327" centery="31827" centerz="7" radius="5">
+	<spawn centerx="32327" centery="31827" centerz="7" radius="1">
 		<npc name="Nydala" x="0" y="1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32844" centery="31827" centerz="7" radius="6">
@@ -6500,10 +6498,10 @@
 		<monster name="wolf" x="1" y="1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32948" centery="31832" centerz="7" radius="5" />
-	<spawn centerx="33217" centery="31832" centerz="7" radius="5">
+	<spawn centerx="33217" centery="31832" centerz="7" radius="2">
 		<npc name="Iwan" x="-1" y="0" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="33228" centery="31832" centerz="7" radius="5">
+	<spawn centerx="33228" centery="31832" centerz="7" radius="3">
 		<npc name="Edvard" x="1" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32474" centery="31834" centerz="7" radius="5" />
@@ -6572,7 +6570,7 @@
 		<monster name="goblin" x="-3" y="1" z="7" spawntime="85" />
 		<monster name="Seagull" x="3" y="3" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="33213" centery="31845" centerz="7" radius="5">
+	<spawn centerx="33213" centery="31845" centerz="7" radius="2">
 		<monster name="dog" x="1" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32846" centery="31846" centerz="7" radius="6">
