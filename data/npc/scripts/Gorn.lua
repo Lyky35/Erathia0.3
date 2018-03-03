@@ -47,6 +47,7 @@ shopModule:addBuyableItem({'worm'},Cfworm,1)
 
 
 shopModule:addSellableItem({'blue book'},Cfbluebook,20)
+shopModule:addSellableItem({'backpack'},Cfbackpack,20)
 shopModule:addSellableItem({'closed trap'},Cfclosedtrap,75)
 shopModule:addSellableItem({'crowbar'},Cfcrowbar,50)
 shopModule:addSellableItem({'fishing rod'},Cffishingrod,40)
