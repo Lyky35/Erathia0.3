@@ -6090,7 +6090,7 @@
 		<monster name="cave rat" x="3" y="0" z="7" spawntime="85" />
 		<monster name="cave rat" x="0" y="2" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32353" centery="31794" centerz="7" radius="5">
+	<spawn centerx="32353" centery="31794" centerz="7" radius="4">
 		<npc name="Lector" x="1" y="0" z="7" spawntime="85" />
 		<monster name="pig" x="0" y="4" z="7" spawntime="85" />
 	</spawn>
@@ -6155,7 +6155,7 @@
 	<spawn centerx="33298" centery="31798" centerz="7" radius="5">
 		<monster name="deer" x="1" y="-1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32353" centery="31799" centerz="7" radius="5">
+	<spawn centerx="32353" centery="31799" centerz="7" radius="4">
 		<monster name="pig" x="-1" y="1" z="7" spawntime="85" />
 		<monster name="chicken" x="0" y="1" z="7" spawntime="85" />
 	</spawn>

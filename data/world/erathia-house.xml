@@ -318,4 +318,18 @@
 	<house name="Thrarhor I b (Shop)" houseid="329" entryx="33133" entryy="32811" entryz="7" rent="2100" townid="9" size="11" />
 	<house name="Thrarhor I c (Shop)" houseid="330" entryx="33127" entryy="32819" entryz="7" rent="2100" townid="9" size="11" />
 	<house name="Thrarhor I d (Shop)" houseid="331" entryx="33133" entryy="32819" entryz="7" rent="2100" townid="9" size="11" />
+	<house name="Central Plaza 1" houseid="332" entryx="32346" entryy="31812" entryz="7" rent="900" townid="4" size="9" />
+	<house name="Central Plaza 2" houseid="333" entryx="32346" entryy="31806" entryz="7" rent="900" townid="4" size="9" />
+	<house name="Central Plaza 3" houseid="334" entryx="32346" entryy="31800" entryz="7" rent="900" townid="4" size="9" />
+	<house name="Druids Retreat A" houseid="335" entryx="32277" entryy="31728" entryz="7" rent="3300" townid="4" size="26" />
+	<house name="Druids Retreat B" houseid="336" entryx="32272" entryy="31766" entryz="7" rent="2900" townid="4" size="24" />
+	<house name="Druids Retreat C" houseid="337" entryx="32283" entryy="31766" entryz="7" rent="2200" townid="4" size="17" />
+	<house name="Druids Retreat D" houseid="338" entryx="32325" entryy="31724" entryz="7" rent="2200" townid="4" size="22" />
+	<house name="East Lane 1a" houseid="339" entryx="32393" entryy="31797" entryz="7" rent="5400" townid="4" size="47" />
+	<house name="East Lane 1b" houseid="340" entryx="32395" entryy="31801" entryz="6" rent="4000" townid="4" size="34" />
+	<house name="East Lane 2" houseid="341" entryx="32400" entryy="31798" entryz="7" rent="11000" townid="4" size="85" />
+	<house name="Harrah I" houseid="342" entryx="33088" entryy="32826" entryz="7" rent="12100" guildhall="true" townid="9" size="96" />
+	<house name="Horakhal" houseid="343" entryx="33217" entryy="32835" entryz="6" rent="20300" guildhall="true" townid="9" size="166" />
+	<house name="Uthemath II" houseid="344" entryx="0" entryy="0" entryz="0" rent="9400" guildhall="true" townid="9" size="82" />
+	<house name="Ramen Tah" houseid="345" entryx="33174" entryy="32842" entryz="7" rent="12400" guildhall="true" townid="9" size="82" />
 </houses>
