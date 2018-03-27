@@ -21,6 +21,7 @@
 #define FS_DEPOTLOCKER_H_53AD8E0606A34070B87F792611F4F3F8
 
 #include "container.h"
+#include "inbox.h"
 
 class DepotLocker final : public Container
 {
@@ -34,6 +35,7 @@ class DepotLocker final : public Container
 			return this;
 		}
 
+		void removeInbox(Inbox* inbox);
 		//serialization
 		Attr_ReadValue readAttr(AttrTypes_t attr, PropStream& propStream) final;
 

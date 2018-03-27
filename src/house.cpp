@@ -30,21 +30,8 @@
 extern ConfigManager g_config;
 extern Game g_game;
 
-House::House(uint32_t _houseid) :
-	transfer_container(ITEM_LOCKER)
-{
-	isLoaded = false;
-	owner = 0;
-	posEntry.x = 0;
-	posEntry.y = 0;
-	posEntry.z = 0;
-	paidUntil = 0;
-	id = _houseid;
-	rentWarnings = 0;
-	rent = 0;
-	townid = 0;
-	transferItem = nullptr;
-}
+House::House(uint32_t houseId) : id(houseId) {}
+
 
 void House::addTile(HouseTile* tile)
 {
@@ -257,11 +244,8 @@ bool House::transferToDepot(Player* player) const
 		}
 	}
 
-	DepotLocker* depotLocker = player->getDepotLocker(townid);
-	if (depotLocker) {
-		for (Item* item : moveItemList) {
-			g_game.internalMoveItem(item->getParent(), depotLocker, INDEX_WHEREEVER, item, item->getItemCount(), nullptr, FLAG_NOLIMIT);
-		}
+	for (Item* item : moveItemList) {
+		g_game.internalMoveItem(item->getParent(), player->getInbox(), INDEX_WHEREEVER, item, item->getItemCount(), nullptr, FLAG_NOLIMIT);
 	}
 	return true;
 }
@@ -745,10 +729,7 @@ void Houses::payHouses(RentPeriod_t rentPeriod) const
 				std::ostringstream ss;
 				ss << "Warning! \nThe " << period << " rent of " << house->getRent() << " gold for your house \"" << house->getName() << "\" is payable. Have it within " << daysLeft << " days or you will lose this house.";
 				letter->setText(ss.str());
-				DepotLocker* depotLocker = player.getDepotLocker(town->getID());
-				if (depotLocker) {
-					g_game.internalAddItem(depotLocker, letter, INDEX_WHEREEVER, FLAG_NOLIMIT);
-				}
+				g_game.internalAddItem(player.getInbox(), letter, INDEX_WHEREEVER, FLAG_NOLIMIT);
 				house->setPayRentWarnings(house->getPayRentWarnings() + 1);
 			} else {
 				house->setOwner(0, true, &player);

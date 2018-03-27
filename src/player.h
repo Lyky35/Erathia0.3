@@ -29,6 +29,7 @@
 #include "protocolgame.h"
 #include "ioguild.h"
 #include "party.h"
+#include "inbox.h"
 #include "depotchest.h"
 #include "depotlocker.h"
 #include "guild.h"
@@ -235,6 +236,10 @@ class Player final : public Creature, public Cylinder
 
 		bool isInWar(const Player* player) const;
 		bool isInWarList(uint32_t guild_id) const;
+
+		Inbox* getInbox() const {
+			return inbox;
+		}
 
 		uint16_t getClientIcons() const;
 
@@ -1057,6 +1062,7 @@ class Player final : public Creature, public Cylinder
 		Npc* shopOwner;
 		Party* party;
 		Player* tradePartner;
+		Inbox* inbox;
 		ProtocolGame_ptr client;
 		SchedulerTask* walkTask;
 		Town* town;
