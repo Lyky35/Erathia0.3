@@ -334,31 +334,30 @@
 	<house name="Ramen Tah" houseid="345" entryx="33174" entryy="32842" entryz="7" rent="12400" guildhall="true" townid="9" size="82" />
 	<house name="Harbour Flats, Flat 11" houseid="346" entryx="32378" entryy="31835" entryz="6" rent="1300" townid="4" size="10" />
 	<house name="Harbour Flats, Flat 12" houseid="347" entryx="32382" entryy="31835" entryz="6" rent="1300" townid="4" size="10" />
-	<house name="Harbour Flats, Flat 13" houseid="348" entryx="32386" entryy="31835" entryz="6" rent="900" townid="4" size="0" />
-	<house name="Harbour Flats, Flat 14" houseid="349" entryx="32389" entryy="31835" entryz="6" rent="900" townid="4" size="12" />
-	<house name="Harbour Flats, Flat 15" houseid="350" entryx="32376" entryy="31841" entryz="6" rent="1000" townid="4" size="7" />
-	<house name="Harbour Flats, Flat 16" houseid="351" entryx="32380" entryy="31841" entryz="6" rent="1000" townid="4" size="7" />
-	<house name="Harbour Flats, Flat 17" houseid="352" entryx="32384" entryy="31841" entryz="6" rent="1000" townid="4" size="7" />
-	<house name="Harbour Flats, Flat 18" houseid="353" entryx="32388" entryy="31841" entryz="6" rent="1000" townid="4" size="7" />
-	<house name="Harbour Flats, Flat 21" houseid="354" entryx="32381" entryy="31834" entryz="5" rent="1900" townid="4" size="13" />
-	<house name="Harbour Flats, Flat 22" houseid="355" entryx="32385" entryy="31834" entryz="5" rent="2200" townid="4" size="16" />
-	<house name="Harbour Flats, Flat 23" houseid="356" entryx="32386" entryy="31843" entryz="5" rent="1000" townid="4" size="7" />
-	<house name="Harbour Lane 1 (Shop)" houseid="357" entryx="32365" entryy="31799" entryz="6" rent="2600" townid="4" size="19" />
-	<house name="Harbour Lane 2a (Shop)" houseid="358" entryx="32380" entryy="31808" entryz="7" rent="1700" townid="4" size="14" />
-	<house name="Harbour Lane 2b (Shop)" houseid="359" entryx="32383" entryy="31808" entryz="7" rent="1700" townid="4" size="14" />
-	<house name="Harbour Lane 3" houseid="360" entryx="32362" entryy="31824" entryz="7" rent="8400" townid="4" size="76" />
-	<house name="Lonely Sea Side Hostel" houseid="361" entryx="32319" entryy="31840" entryz="7" rent="28100" townid="4" size="216" />
-	<house name="Magician's Alley 1" houseid="362" entryx="32307" entryy="31800" entryz="7" rent="1900" townid="4" size="14" />
-	<house name="Magician's Alley 1a" houseid="363" entryx="32310" entryy="31795" entryz="6" rent="1300" townid="4" size="8" />
-	<house name="Magician's Alley 1b" houseid="364" entryx="32312" entryy="31795" entryz="6" rent="1000" townid="4" size="7" />
-	<house name="Magician's Alley 1c" houseid="365" entryx="32310" entryy="31798" entryz="6" rent="1200" townid="4" size="7" />
-	<house name="Magician's Alley 1d" houseid="366" entryx="32312" entryy="31798" entryz="6" rent="900" townid="4" size="6" />
-	<house name="Magician's Alley 4" houseid="367" entryx="32317" entryy="31821" entryz="7" rent="4900" townid="4" size="40" />
-	<house name="Magician's Alley 5a" houseid="368" entryx="32324" entryy="31803" entryz="7" rent="700" townid="4" size="4" />
-	<house name="Magician's Alley 5b" houseid="369" entryx="32327" entryy="31803" entryz="7" rent="1000" townid="4" size="7" />
-	<house name="Magician's Alley 5c" houseid="370" entryx="32323" entryy="31802" entryz="6" rent="2100" townid="4" size="15" />
-	<house name="Magician's Alley 5d" houseid="371" entryx="32324" entryy="31805" entryz="7" rent="1000" townid="4" size="7" />
-	<house name="Magician's Alley 5e" houseid="372" entryx="32327" entryy="31805" entryz="7" rent="1000" townid="4" size="7" />
-	<house name="Magician's Alley 5f" houseid="373" entryx="32323" entryy="31807" entryz="6" rent="2100" townid="4" size="15" />
-	<house name="Magician's Alley 8" houseid="374" entryx="32331" entryy="31820" entryz="7" rent="2600" townid="4" size="20" />
+	<house name="" houseid="349" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="12" />
+	<house name="" houseid="350" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="351" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="352" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="353" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="354" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="13" />
+	<house name="" houseid="355" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="16" />
+	<house name="" houseid="356" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="357" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="19" />
+	<house name="" houseid="358" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="14" />
+	<house name="" houseid="359" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="14" />
+	<house name="" houseid="360" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="76" />
+	<house name="" houseid="361" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="216" />
+	<house name="" houseid="362" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="14" />
+	<house name="" houseid="363" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="8" />
+	<house name="" houseid="364" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="365" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="366" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="6" />
+	<house name="" houseid="367" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="40" />
+	<house name="" houseid="368" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="4" />
+	<house name="" houseid="369" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="370" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="15" />
+	<house name="" houseid="371" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="372" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="7" />
+	<house name="" houseid="373" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="15" />
+	<house name="" houseid="374" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="20" />
 </houses>
