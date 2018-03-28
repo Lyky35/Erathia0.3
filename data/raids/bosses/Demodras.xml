@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+    <!--
+	// Raid System by 5mok3
+	// DO NOT CHANGE INTERVAL UNLESS YOU ARE SURE WHAT YOU ARE DOING!!
+	-->
+
+  <!--Announcements-->
+  <announce delay="1000" type="Event" message="The mating season of the dragons is at hand. Leave the plains of havoc as fast as you can." />
+  <announce delay="180000" type="Event" message="Dragons have gathered on the plains of havoc for their mating season. Beware!" />
+  <!--Single Spawns-->
+  <singlespawn delay="180000" name="Demodras" x="32776" y="32288" z="10" />
+  <!--Area Spawns-->
+  <areaspawn delay="170000" fromx="32770" fromy="32284" fromz="10" tox="32782" toy="32288" toz="10">
+    <monster name="Dragon Lord" amount="6" />
+    <monster name="Dragon" amount="3" />
+  </areaspawn>
+</raid>

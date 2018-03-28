@@ -31,7 +31,8 @@
 	<raid name="Necropharus" file="bosses/Necropharus.xml" interval2="1440" margin="60" />
 	<raid name="Orshabaal" file="bosses/Orshabaal.xml" interval2="1440" margin="60" />
 	<raid name="The Old Widow" file="bosses/The Old Widow.xml" interval2="1440" margin="60" />
-
+	<raid name="Demodras" file="bosses/Demodras.xml" interval2="1440" margin="60" />
+	
 	<!-- Regular Raids -->
 	<raid name="RatsThais" file="normal/ratsthais.xml" interval2="72000" margin="60" />
 	<raid name="OrcsThais" file="normal/OrcsThais.xml" interval2="72000" margin="60" />
