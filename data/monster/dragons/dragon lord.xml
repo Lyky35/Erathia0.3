@@ -37,12 +37,13 @@
 	</defenses>
 	<elements>
 		<element firePercent="100"/>
-		<element earthPercent="100"/>
+		<element earthPercent="35"/>
 	</elements>
 	<immunities>
 		<immunity lifedrain="1"/>
 		<immunity paralyze="1"/>
 		<immunity invisible="1"/>
+		<immunity fire="1"/>
 	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="ZCHHHHH" yell="1"/>
