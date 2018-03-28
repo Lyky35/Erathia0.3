@@ -148,6 +148,7 @@
 	<monster name="Dragon Hatchling" file="dragons/dragon hatchling.xml"/>
 	<monster name="Frost Dragon" file="dragons/frost dragon.xml"/>
 	<monster name="Undead Dragon" file="dragons/undead dragon.xml"/>
+	<monster name="Demodras" file="bosses/demodras.xml"/>
 
 	<!-- Dwarves -->
 	<monster name="Dwarf Geomancer" file="dwarves/dwarf geomancer.xml"/>
