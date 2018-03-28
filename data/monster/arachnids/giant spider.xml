@@ -36,6 +36,7 @@
 	<immunities>
 		<immunity lifedrain="1"/>
 		<immunity invisible="1"/>
+		<immunity earth="1"/>
 	</immunities>
 	<voices interval="1000" chance="5">
 	</voices>
