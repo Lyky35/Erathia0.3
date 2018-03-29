@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Dharalion" nameDescription="Dharalion" race="blood" experience="1200" speed="240" manacost="0">
-	<health now="1200" max="1200"/>
+<monster name="Dharalion" nameDescription="Dharalion" race="blood" experience="380" speed="240" manacost="0">
+	<health now="390" max="390"/>
 	<look type="203" corpse="2979"/>
 	<targetchange interval="1000" chance="7"/>
 	<targetstrategies nearest="10" health="10" damage="20" random="60"/>
@@ -19,7 +19,7 @@
 	</flags>
 	<attacks>
 		<attack name="melee" skill="30" attack="28"/>
-		<attack name="manadrain" chance="15" range="7" min="-30" max="-60"/>
+		<attack name="manadrain" chance="15" range="7" min="-467" max="-557"/>
 		<attack name="energy" chance="13" range="7" min="-70" max="-90">
 			<attribute key="shootEffect" value="energy"/>
 			<attribute key="areaEffect" value="energy"/>
@@ -32,7 +32,7 @@
 			<attribute key="areaEffect" value="poison"/>
 		</attack>
 	</attacks>
-	<defenses armor="15" defense="25">
+	<defenses armor="15" defense="39">
 		<defense name="healing" chance="20" min="90" max="120">
 			<attribute key="areaEffect" value="blueshimmer"/>
 		</defense>
@@ -46,6 +46,8 @@
 		<element earthPercent="100"/>
 	</elements>
 	<immunities>
+		<immunity fire="1" />
+		<immunity earth="1" />
 		<immunity lifedrain="1"/>	
 		<immunity outfit="1"/>
 		<immunity drunk="1"/>
