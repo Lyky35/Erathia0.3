@@ -41,7 +41,8 @@
 		<vocation name="Sorcerer"/>
 		<vocation name="Master Sorcerer"/>
 	</instant>
-	<instant group="attack" spellid="118" name="Poison Storm" words="exevo gran mas pox" lvl="50" mana="600" prem="0" selftarget="1" exhaustion="2000" groupcooldown="4000" needlearn="0" script="attack/poison storm.lua">
+	<instant group="attack" spellid="118" name="Poison Storm" words="exevo gran mas pox" lvl="50" mana="600" prem="0" selftarget="1" exhaustion="2000" groupcooldown="4000" needlearn="0" script="test-pstorm.lua">
+	<!--<instant group="attack" spellid="118" name="Poison Storm" words="exevo gran mas pox" lvl="50" mana="600" prem="0" selftarget="1" exhaustion="2000" groupcooldown="4000" needlearn="0" script="attack/poison storm.lua"> -->
 		<vocation name="Druid"/>
 		<vocation name="Elder Druid"/>
 	</instant>
@@ -577,5 +578,6 @@
 	<instant name="paralyze_warlock"  words="###99"  aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster2/paralyze_warlock.lua"/>
 	<instant name="skills_dipthrah"  words="###100"  aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster2/skills_dipthrah.lua"/>
 	<instant name="skills_morguthis"  words="###101"  aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster2/skills_morguthis.lua"/>
+	<instant name="dharalion skill reducer"  words="###102"  aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster3/skills_dhalarion.lua"/>
 	
 	</spells>
