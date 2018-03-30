@@ -354,6 +354,15 @@
 		<monster name="green djinn" x="2" y="1" z="3" spawntime="85" />
 		<monster name="gargoyle" x="3" y="1" z="3" spawntime="85" />
 	</spawn>
+	<spawn centerx="33008" centery="32644" centerz="3" radius="15">
+		<monster name="hydra" x="3" y="-7" z="3" spawntime="120" />
+		<monster name="serpent spawn" x="-14" y="1" z="3" spawntime="400" />
+		<monster name="hydra" x="-3" y="4" z="3" spawntime="100" />
+		<monster name="hydra" x="-8" y="13" z="3" spawntime="200" />
+	</spawn>
+	<spawn centerx="33025" centery="32647" centerz="3" radius="5">
+		<monster name="serpent spawn" x="1" y="0" z="3" spawntime="750" />
+	</spawn>
 	<spawn centerx="33062" centery="32668" centerz="3" radius="5" />
 	<spawn centerx="33067" centery="32668" centerz="3" radius="5" />
 	<spawn centerx="33067" centery="32673" centerz="3" radius="5" />
