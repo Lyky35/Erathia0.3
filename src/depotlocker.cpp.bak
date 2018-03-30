@@ -22,7 +22,7 @@
 #include "depotlocker.h"
 
 DepotLocker::DepotLocker(uint16_t _type) :
-	Container(_type)
+	Container(_type, 2)
 {
 	depotId = 0;
 	maxSize = 30;
@@ -57,4 +57,13 @@ void DepotLocker::postRemoveNotification(Thing* thing, const Cylinder* newParent
 	if (parent != nullptr) {
 		parent->postRemoveNotification(thing, newParent, index, LINK_PARENT);
 	}
+}
+
+void DepotLocker::removeInbox(Inbox* inbox)
+{
+	auto cit = std::find(itemlist.begin(), itemlist.end(), inbox);
+	if (cit == itemlist.end()) {
+		return;
+	}
+	itemlist.erase(cit);
 }
