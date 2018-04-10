@@ -10,6 +10,18 @@
   <announce delay="20000" type="Event" message="Orshabaal is about to make his way into the mortal realm. Run for your lives!" />
   <announce delay="60000" type="Event" message="Orshabaal has been summoned from hell to plague the lands of mortals once again." />
   <!--Single Spawns-->
-  <singlespawn delay="60000" name="Orshabaal" x="33207" y="31719" z="7" />
+	<areaspawn delay="1000" fromx="33113" fromy="33113" fromz="7" tox="33121" toy="31703" toz="7">
+		<monster name="Fire Elemental" amount="10" />
+	
+	<areaspawn delay="20000" fromx="33113" fromy="33113" fromz="7" tox="33121" toy="31703" toz="7">
+		<monster name="Demon" amount="2" />
+	
+	<areaspawn delay="20000" fromx="33113" fromy="33113" fromz="7" tox="33121" toy="31703" toz="7">
+		<monster name="Fire Elemental" amount="7" />
+	
+	<singlespawn delay="60000" name="Orshabaal" x="33118" y="31700" z="7" />
+	
+	<areaspawn delay="60000" fromx="33113" fromy="33113" fromz="7" tox="33121" toy="31703" toz="7">
+		<monster name="Demon" amount="2" />
   <!--Area Spawns-->
 </raid>

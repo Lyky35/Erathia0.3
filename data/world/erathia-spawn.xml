@@ -47251,6 +47251,11 @@
 	<spawn centerx="33298" centery="31667" centerz="15" radius="5">
 		<monster name="behemoth" x="1" y="0" z="15" spawntime="85" />
 	</spawn>
+	<spawn centerx="33205" centery="31669" centerz="15" radius="15">
+		<monster name="Demon" x="-10" y="-10" z="15" spawntime="75" />
+		<monster name="Demon" x="5" y="0" z="15" spawntime="120" />
+		<monster name="hellhound" x="-1" y="6" z="15" spawntime="450" />
+	</spawn>
 	<spawn centerx="33145" centery="31670" centerz="15" radius="5" />
 	<spawn centerx="33267" centery="31670" centerz="15" radius="5">
 		<monster name="behemoth" x="1" y="0" z="15" spawntime="85" />
