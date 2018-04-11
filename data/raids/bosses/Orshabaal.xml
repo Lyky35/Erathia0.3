@@ -12,16 +12,19 @@
   <!--Single Spawns-->
 	<areaspawn delay="1000" fromx="33113" fromy="33113" fromz="7" tox="33121" toy="31703" toz="7">
 		<monster name="Fire Elemental" amount="10" />
-	
+	</areaspawn>
 	<areaspawn delay="20000" fromx="33113" fromy="33113" fromz="7" tox="33121" toy="31703" toz="7">
 		<monster name="Demon" amount="2" />
+	</areaspawn>
 	
 	<areaspawn delay="20000" fromx="33113" fromy="33113" fromz="7" tox="33121" toy="31703" toz="7">
 		<monster name="Fire Elemental" amount="7" />
+	</areaspawn>
 	
 	<singlespawn delay="60000" name="Orshabaal" x="33118" y="31700" z="7" />
 	
 	<areaspawn delay="60000" fromx="33113" fromy="33113" fromz="7" tox="33121" toy="31703" toz="7">
 		<monster name="Demon" amount="2" />
+	</areaspawn>
   <!--Area Spawns-->
 </raid>
