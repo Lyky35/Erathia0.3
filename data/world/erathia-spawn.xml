@@ -8942,6 +8942,9 @@
 		<monster name="Elf Scout" x="0" y="1" z="7" spawntime="85" />
 		<monster name="Elf Scout" x="5" y="3" z="7" spawntime="85" />
 	</spawn>
+	<spawn centerx="32375" centery="32190" centerz="7" radius="5">
+		<npc name="Tom McRat" x="0" y="0" z="7" spawntime="70" />
+	</spawn>
 	<spawn centerx="32855" centery="32190" centerz="7" radius="5">
 		<monster name="bug" x="2" y="0" z="7" spawntime="85" />
 	</spawn>
