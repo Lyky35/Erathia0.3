@@ -1699,6 +1699,9 @@
 	<spawn centerx="33054" centery="32669" centerz="5" radius="5">
 		<monster name="dragon lord" x="0" y="-2" z="5" spawntime="85" />
 	</spawn>
+	<spawn centerx="32991" centery="32672" centerz="5" radius="5">
+		<monster name="phantasm" x="-2" y="-1" z="5" spawntime="3600" />
+	</spawn>
 	<spawn centerx="33070" centery="32674" centerz="5" radius="5">
 		<monster name="dragon" x="-1" y="0" z="5" spawntime="85" />
 	</spawn>

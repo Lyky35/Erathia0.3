@@ -2,11 +2,14 @@ local events = {
     'PlayerDeath',
     'LevelSave',
     'SvargrondArenaKill',
-    'DropLoot'
+    'DropLoot',
+    'Task',
+    'TaskRat'
 }
  
 local townIds = {1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12}
- 
+
+
 function onLogin(player)
     local loginStr = 'Welcome to ' .. configManager.getString(configKeys.SERVER_NAME) .. '!'
     if player:getLastLoginSaved() <= 0 then
@@ -44,10 +47,14 @@ function onLogin(player)
     if player:getStorageValue(2038) == 1 then -- Task System register if still has task
         player:registerEvent("TaskKill")
     end
- 
+
+	player:registerEvent("Task")
+
     for i = 1, #events do
         player:registerEvent(events[i])
 	end
 	player:registerEvent("KillingInTheNameOf")
+	player:registerEvent("Task")
+	player:registerEvent("TaskRat")
     return true
 end

@@ -9,3 +9,7 @@ dofile('data/lib/compat/compat.lua')
 
 -- Miscellaneous library - WIP
 dofile('data/lib/miscellaneous/miscellaneous.lua')
+
+-- Misc Task WIP
+dofile('data/lib/miscellaneous/task.lua')
+dofile('data/lib/miscellaneous/taskRat.lua')
