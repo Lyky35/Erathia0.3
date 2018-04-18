@@ -6493,7 +6493,7 @@
 		<monster name="rabbit" x="-4" y="1" z="7" spawntime="85" />
 		<monster name="spider" x="3" y="4" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32301" centery="31815" centerz="7" radius="5">
+	<spawn centerx="32301" centery="31815" centerz="7" radius="4">
 		<npc name="Padreia" x="1" y="-1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32530" centery="31815" centerz="7" radius="5">
