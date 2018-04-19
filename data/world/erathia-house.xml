@@ -334,6 +334,11 @@
 	<house name="Ramen Tah" houseid="345" entryx="33174" entryy="32842" entryz="7" rent="12400" guildhall="true" townid="9" size="82" />
 	<house name="Harbour Flats, Flat 11" houseid="346" entryx="32378" entryy="31835" entryz="6" rent="1300" townid="4" size="10" />
 	<house name="Harbour Flats, Flat 12" houseid="347" entryx="32382" entryy="31835" entryz="6" rent="1300" townid="4" size="10" />
+	<house name="" houseid="353" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
+	<house name="" houseid="355" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
+	<house name="" houseid="358" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
+	<house name="" houseid="360" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="76" />
+	<house name="" houseid="361" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="216" />
 	<house name="Harbour Flats, Flat 13" houseid="375" entryx="32386" entryy="31835" entryz="6" rent="900" townid="4" size="6" />
 	<house name="Harbour Flats, Flat 14" houseid="376" entryx="32389" entryy="31835" entryz="6" rent="900" townid="4" size="6" />
 	<house name="Harbour Flats, Flat 15" houseid="377" entryx="32376" entryy="31841" entryz="6" rent="1000" townid="4" size="7" />
@@ -361,4 +366,69 @@
 	<house name="Magician's Alley 5f" houseid="399" entryx="32323" entryy="31807" entryz="6" rent="2100" townid="4" size="15" />
 	<house name="Magician's Alley 8" houseid="400" entryx="32331" entryy="31820" entryz="7" rent="2600" townid="4" size="20" />
 	<house name="Nautic Observer" houseid="401" entryx="32483" entryy="31824" entryz="7" rent="15600" townid="4" size="145" />
+	<house name="Northern Street 1a" houseid="402" entryx="32355" entryy="31767" entryz="7" rent="2100" townid="4" size="15" />
+	<house name="Northern Street 1b" houseid="403" entryx="32355" entryy="31767" entryz="6" rent="2100" townid="4" size="15" />
+	<house name="Northern Street 1c" houseid="404" entryx="32357" entryy="31766" entryz="6" rent="1600" townid="4" size="10" />
+	<house name="Northern Street 3a" houseid="405" entryx="32368" entryy="31766" entryz="6" rent="1600" townid="4" size="10" />
+	<house name="Northern Street 3b" houseid="406" entryx="32371" entryy="31769" entryz="6" rent="1700" townid="4" size="11" />
+	<house name="Northern Street 5" houseid="407" entryx="32380" entryy="31771" entryz="7" rent="4700" townid="4" size="40" />
+	<house name="Northern Street 7" houseid="408" entryx="32389" entryy="31773" entryz="7" rent="3100" townid="4" size="34" />
+	<house name="Northport Village 1" houseid="409" entryx="32481" entryy="31614" entryz="7" rent="2500" townid="4" size="20" />
+	<house name="Northport Village 2" houseid="410" entryx="32481" entryy="31609" entryz="7" rent="2500" townid="4" size="20" />
+	<house name="Northport Village 3" houseid="411" entryx="32481" entryy="31611" entryz="6" rent="4800" townid="4" size="43" />
+	<house name="Northport Village 4" houseid="412" entryx="32491" entryy="31602" entryz="7" rent="4600" townid="4" size="41" />
+	<house name="Northport Village 5" houseid="413" entryx="32503" entryy="31604" entryz="7" rent="3100" townid="4" size="25" />
+	<house name="Northport Village 6" houseid="414" entryx="32502" entryy="31607" entryz="7" rent="3700" townid="4" size="31" />
+	<house name="Park Lane 1a" houseid="415" entryx="32326" entryy="31766" entryz="7" rent="2800" townid="4" size="20" />
+	<house name="Park Lane 1b" houseid="416" entryx="32335" entryy="31766" entryz="7" rent="2800" townid="4" size="20" />
+	<house name="Park Lane 2" houseid="417" entryx="32335" entryy="31769" entryz="7" rent="2200" townid="4" size="16" />
+	<house name="Park Lane 3a" houseid="418" entryx="32328" entryy="31764" entryz="6" rent="2500" townid="4" size="19" />
+	<house name="Park Lane 3b" houseid="419" entryx="32330" entryy="31763" entryz="6" rent="3200" townid="4" size="25" />
+	<house name="Park Lane 4" houseid="420" entryx="32327" entryy="31769" entryz="7" rent="2100" townid="4" size="16" />
+	<house name="Rosebud A" houseid="421" entryx="32265" entryy="31702" entryz="7" rent="2500" townid="4" size="22" />
+	<house name="Rosebud B" houseid="422" entryx="32263" entryy="31697" entryz="7" rent="2500" townid="4" size="22" />
+	<house name="Rosebud C" houseid="423" entryx="32272" entryy="31697" entryz="7" rent="3100" townid="4" size="26" />
+	<house name="Senja Village 10" houseid="424" entryx="32145" entryy="31674" entryz="7" rent="3300" townid="4" size="30" />
+	<house name="Senja Village 11" houseid="425" entryx="32141" entryy="31676" entryz="7" rent="5600" townid="4" size="50" />
+	<house name="Senja Village 1a" houseid="426" entryx="32160" entryy="31662" entryz="7" rent="1700" townid="4" size="15" />
+	<house name="Senja Village 1b" houseid="427" entryx="32162" entryy="31660" entryz="6" rent="3400" townid="4" size="24" />
+	<house name="Senja Village 2" houseid="428" entryx="32161" entryy="31665" entryz="7" rent="1700" townid="4" size="14" />
+	<house name="Senja Village 3" houseid="429" entryx="32155" entryy="31662" entryz="7" rent="3700" townid="4" size="32" />
+	<house name="Senja Village 4" houseid="430" entryx="32156" entryy="31665" entryz="7" rent="1700" townid="4" size="14" />
+	<house name="Senja Village 5" houseid="431" entryx="32149" entryy="31658" entryz="7" rent="2500" townid="4" size="20" />
+	<house name="Senja Village 6a" houseid="432" entryx="32152" entryy="31655" entryz="7" rent="1700" townid="4" size="14" />
+	<house name="Senja Village 6b" houseid="433" entryx="32157" entryy="31654" entryz="6" rent="1700" townid="4" size="13" />
+	<house name="Senja Village 7" houseid="434" entryx="32131" entryy="31659" entryz="6" rent="1700" townid="4" size="11" />
+	<house name="Senja Village 8" houseid="435" entryx="32136" entryy="31665" entryz="7" rent="3500" townid="4" size="27" />
+	<house name="Senja Village 9" houseid="436" entryx="32132" entryy="31671" entryz="7" rent="5500" townid="4" size="46" />
+	<house name="Theater Avenue 10" houseid="437" entryx="32314" entryy="31792" entryz="7" rent="2200" townid="4" size="17" />
+	<house name="Theater Avenue 11a" houseid="438" entryx="32315" entryy="31781" entryz="5" rent="2900" townid="4" size="24" />
+	<house name="Theater Avenue 11b" houseid="439" entryx="32314" entryy="31782" entryz="5" rent="1300" townid="4" size="10" />
+	<house name="Theater Avenue 11c" houseid="440" entryx="32310" entryy="31782" entryz="5" rent="1300" townid="4" size="10" />
+	<house name="Theater Avenue 12" houseid="441" entryx="32310" entryy="31792" entryz="7" rent="1900" townid="4" size="14" />
+	<house name="Theater Avenue 14 (Shop)" houseid="442" entryx="32301" entryy="31792" entryz="7" rent="4700" townid="4" size="38" />
+	<house name="Theater Avenue 5a" houseid="443" entryx="32361" entryy="31781" entryz="6" rent="1000" townid="4" size="7" />
+	<house name="Theater Avenue 5b" houseid="444" entryx="32361" entryy="31783" entryz="6" rent="1000" townid="4" size="7" />
+	<house name="Theater Avenue 5c" houseid="445" entryx="32359" entryy="31781" entryz="6" rent="1000" townid="4" size="7" />
+	<house name="Theater Avenue 5d" houseid="446" entryx="32359" entryy="31783" entryz="6" rent="1000" townid="4" size="7" />
+	<house name="Theater Avenue 6a" houseid="447" entryx="32377" entryy="31794" entryz="7" rent="1600" townid="4" size="10" />
+	<house name="Theater Avenue 6b" houseid="448" entryx="32376" entryy="31795" entryz="7" rent="500" townid="4" size="2" />
+	<house name="Theater Avenue 6c" houseid="449" entryx="32374" entryy="31794" entryz="7" rent="1600" townid="4" size="10" />
+	<house name="Theater Avenue 6d" houseid="450" entryx="32377" entryy="31794" entryz="6" rent="1600" townid="4" size="10" />
+	<house name="Theater Avenue 6e" houseid="451" entryx="32376" entryy="31795" entryz="6" rent="500" townid="4" size="2" />
+	<house name="Theater Avenue 6f" houseid="452" entryx="32374" entryy="31794" entryz="6" rent="1600" townid="4" size="10" />
+	<house name="Theater Avenue 7, Flat 01" houseid="453" entryx="32350" entryy="31786" entryz="7" rent="700" townid="4" size="4" />
+	<house name="Theater Avenue 7, Flat 02" houseid="454" entryx="32351" entryy="31783" entryz="7" rent="900" townid="4" size="6" />
+	<house name="Theater Avenue 7, Flat 03" houseid="455" entryx="32350" entryy="31779" entryz="7" rent="900" townid="4" size="6" />
+	<house name="Theater Avenue 7, Flat 04" houseid="456" entryx="32348" entryy="31779" entryz="7" rent="1100" townid="4" size="8" />
+	<house name="Theater Avenue 7, Flat 05" houseid="457" entryx="32346" entryy="31783" entryz="7" rent="900" townid="4" size="6" />
+	<house name="Theater Avenue 7, Flat 06" houseid="458" entryx="32347" entryy="31786" entryz="7" rent="700" townid="4" size="4" />
+	<house name="Theater Avenue 7, Flat 11" houseid="459" entryx="32350" entryy="31784" entryz="6" rent="1100" townid="4" size="8" />
+	<house name="Theater Avenue 7, Flat 12" houseid="460" entryx="32351" entryy="31783" entryz="6" rent="900" townid="4" size="6" />
+	<house name="Theater Avenue 7, Flat 13" houseid="461" entryx="32350" entryy="31779" entryz="6" rent="900" townid="4" size="6" />
+	<house name="Theater Avenue 7, Flat 14" houseid="462" entryx="32348" entryy="31779" entryz="6" rent="1100" townid="4" size="8" />
+	<house name="Theater Avenue 7, Flat 15" houseid="463" entryx="32346" entryy="31783" entryz="6" rent="900" townid="4" size="6" />
+	<house name="Theater Avenue 7, Flat 16" houseid="464" entryx="32347" entryy="31784" entryz="6" rent="900" townid="4" size="6" />
+	<house name="Theater Avenue 8a" houseid="465" entryx="32356" entryy="31795" entryz="6" rent="2600" townid="4" size="20" />
+	<house name="Theater Avenue 8b" houseid="466" entryx="32356" entryy="31792" entryz="5" rent="2600" townid="4" size="19" />
 </houses>

@@ -4649,7 +4649,7 @@
 	<spawn centerx="32483" centery="31595" centerz="7" radius="5">
 		<monster name="spider" x="1" y="-1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32492" centery="31595" centerz="7" radius="5">
+	<spawn centerx="32492" centery="31595" centerz="7" radius="2">
 		<monster name="chicken" x="1" y="-2" z="7" spawntime="85" />
 		<monster name="chicken" x="1" y="0" z="7" spawntime="85" />
 	</spawn>
@@ -4667,7 +4667,7 @@
 		<monster name="rabbit" x="0" y="-2" z="7" spawntime="85" />
 		<monster name="rabbit" x="-1" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32476" centery="31601" centerz="7" radius="5">
+	<spawn centerx="32476" centery="31601" centerz="7" radius="4">
 		<monster name="spider" x="-1" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32637" centery="31602" centerz="7" radius="6">
@@ -4675,7 +4675,7 @@
 		<monster name="snake" x="1" y="-1" z="7" spawntime="85" />
 		<monster name="snake" x="-1" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32486" centery="31605" centerz="7" radius="5">
+	<spawn centerx="32486" centery="31605" centerz="7" radius="3">
 		<npc name="Bruno" x="-1" y="-1" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32669" centery="31607" centerz="7" radius="5">
@@ -4700,10 +4700,10 @@
 	<spawn centerx="32015" centery="31614" centerz="7" radius="5">
 		<monster name="polar bear" x="-1" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32487" centery="31615" centerz="7" radius="5">
+	<spawn centerx="32487" centery="31615" centerz="7" radius="3">
 		<monster name="chicken" x="-1" y="1" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32500" centery="31617" centerz="7" radius="5">
+	<spawn centerx="32500" centery="31617" centerz="7" radius="3">
 		<monster name="chicken" x="-1" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32172" centery="31620" centerz="7" radius="5">
@@ -4973,7 +4973,7 @@
 	<spawn centerx="33136" centery="31670" centerz="7" radius="5">
 		<monster name="wasp" x="-4" y="2" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32139" centery="31671" centerz="7" radius="5">
+	<spawn centerx="32139" centery="31671" centerz="7" radius="1">
 		<npc name="Vera" x="1" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32379" centery="31671" centerz="7" radius="5">
