@@ -438,4 +438,5 @@
 	<house name="Nordic Stronghold" houseid="471" entryx="32297" entryy="31674" entryz="7" rent="41000" guildhall="true" townid="4" size="274" />
 	<house name="Senja Clanhall" houseid="472" entryx="32169" entryy="31664" entryz="7" rent="21500" guildhall="true" townid="4" size="161" />
 	<house name="Suntower" houseid="473" entryx="32341" entryy="31848" entryz="7" rent="23200" guildhall="true" townid="4" size="198" />
+	<house name="Darashia 1, Flat 01" houseid="474" entryx="33210" entryy="32412" entryz="7" rent="2500" townid="10" size="21" />
 </houses>
