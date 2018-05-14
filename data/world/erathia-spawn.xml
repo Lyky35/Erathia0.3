@@ -6641,8 +6641,8 @@
 		<monster name="wasp" x="-2" y="0" z="7" spawntime="85" />
 		<monster name="wasp" x="3" y="0" z="7" spawntime="85" />
 	</spawn>
-	<spawn centerx="32342" centery="31828" centerz="7" radius="5">
-		<npc name="Rachel" x="1" y="0" z="7" spawntime="85" />
+	<spawn centerx="32345" centery="31828" centerz="7" radius="2">
+		<npc name="Rachel" x="-2" y="0" z="7" spawntime="85" />
 	</spawn>
 	<spawn centerx="32500" centery="31829" centerz="7" radius="5" />
 	<spawn centerx="32827" centery="31829" centerz="7" radius="6">

@@ -431,4 +431,11 @@
 	<house name="Theater Avenue 7, Flat 16" houseid="464" entryx="32347" entryy="31784" entryz="6" rent="900" townid="4" size="6" />
 	<house name="Theater Avenue 8a" houseid="465" entryx="32356" entryy="31795" entryz="6" rent="2600" townid="4" size="20" />
 	<house name="Theater Avenue 8b" houseid="466" entryx="32356" entryy="31792" entryz="5" rent="2600" townid="4" size="19" />
+	<house name="House of Recreation" houseid="467" entryx="32280" entryy="31824" entryz="7" rent="40100" guildhall="true" townid="4" size="323" />
+	<house name="Moonkeep" houseid="468" entryx="32431" entryy="31761" entryz="7" rent="28800" guildhall="true" townid="4" size="220" />
+	<house name="Seawatch" houseid="469" entryx="32521" entryy="31601" entryz="7" rent="42200" guildhall="true" townid="4" size="257" />
+	<house name="Northport Clanhall" houseid="470" entryx="32468" entryy="31613" entryz="7" rent="16200" guildhall="true" townid="4" size="123" />
+	<house name="Nordic Stronghold" houseid="471" entryx="32297" entryy="31674" entryz="7" rent="41000" guildhall="true" townid="4" size="274" />
+	<house name="Senja Clanhall" houseid="472" entryx="32169" entryy="31664" entryz="7" rent="21500" guildhall="true" townid="4" size="161" />
+	<house name="Suntower" houseid="473" entryx="32341" entryy="31848" entryz="7" rent="23200" guildhall="true" townid="4" size="198" />
 </houses>
