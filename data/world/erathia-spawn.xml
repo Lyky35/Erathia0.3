@@ -3615,6 +3615,9 @@
 	<spawn centerx="32389" centery="30742" centerz="7" radius="5">
 		<npc name="Fiona" x="0" y="0" z="7" spawntime="85" />
 	</spawn>
+	<spawn centerx="32326" centery="31048" centerz="7" radius="1">
+		<npc name="Nilsor" x="-1" y="-1" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="32303" centery="31058" centerz="7" radius="5">
 		<monster name="winter wolf" x="0" y="0" z="7" spawntime="85" />
 	</spawn>
