@@ -334,11 +334,6 @@
 	<house name="Ramen Tah" houseid="345" entryx="33174" entryy="32842" entryz="7" rent="12400" guildhall="true" townid="9" size="82" />
 	<house name="Harbour Flats, Flat 11" houseid="346" entryx="32378" entryy="31835" entryz="6" rent="1300" townid="4" size="10" />
 	<house name="Harbour Flats, Flat 12" houseid="347" entryx="32382" entryy="31835" entryz="6" rent="1300" townid="4" size="10" />
-	<house name="" houseid="353" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
-	<house name="" houseid="355" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
-	<house name="" houseid="358" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="0" />
-	<house name="" houseid="360" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="76" />
-	<house name="" houseid="361" entryx="0" entryy="0" entryz="0" rent="0" townid="0" size="216" />
 	<house name="Harbour Flats, Flat 13" houseid="375" entryx="32386" entryy="31835" entryz="6" rent="900" townid="4" size="6" />
 	<house name="Harbour Flats, Flat 14" houseid="376" entryx="32389" entryy="31835" entryz="6" rent="900" townid="4" size="6" />
 	<house name="Harbour Flats, Flat 15" houseid="377" entryx="32376" entryy="31841" entryz="6" rent="1000" townid="4" size="7" />
