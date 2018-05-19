@@ -1,4 +1,8 @@
 <npc name="Sandra" script="Sandra.lua" floorchange="0" walkinterval="3000" >
 	<health now="100" max="100"/>
 	<look type="137" head="115" body="63" legs="95" feet="38"/>
+		<parameters>
+		<parameter key="message_greet" value="Oh, please come in, |PLAYERNAME|. What do you need?"/>
+		<parameter key="message_placedinqueue" value="Sorry |PLAYERNAME|, I am already talking to a customer. Wait a minute, please."/>
+		</parameters>
 </npc>
